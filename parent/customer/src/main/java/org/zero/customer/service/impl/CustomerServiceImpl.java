@@ -1,5 +1,6 @@
 package org.zero.customer.service.impl;
 
+import java.util.List;
 import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,11 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public Customer selectByPrimary(Integer custId) {
 		return mapper.selectByPrimaryKey(custId);
+	}
+
+	@Override
+	public List<Customer> selectByBean(Customer customer) {
+		return null;
 	}
 
 	@Override
