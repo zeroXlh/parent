@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <!-- 
+    ·首先读取在 properties 元素体内指定的属性。
+    ·然后根据 properties 元素中的 resource 属性读取类路径下属性文件，
+    	或根据 url属性指定的路径读取属性文件，并覆盖之前读取过的同名属性。
+    ·最后读取作为方法参数传递的属性，并覆盖之前读取过的同名属性。
+   -->
+  <properties resource="datasources.properties" >
+	<!-- 3.4.2开始，可以为占位符指定一个默认值，但是这个功能默认是关闭的，需要添加一个特定属性开启用它 
+		启用后注意使用的分隔符（默认是:）-->
+<!-- 	<property name="username" value="${username:ut_name}" /> -->
+	<!-- 启用默认值特性 -->
+<!-- 	<property name="org.apache.ibatis.parsing.PropertyParser.enable-default-value" value="true"/> -->
+  </properties>
+<!--   <settings> -->
+<!--   	<setting name="" value=""/> -->
+<!--   </settings> -->
+  
+  <typeHandlers>
+  	<typeHandler handler="org.zero.customer.MonthDayTypeHandler" javaType="java.time.MonthDay" />
+  </typeHandlers>
+  
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+<!--   	<package name="org.zero.customer.mapper"/>  xml文件和mapper接口必须在同一个包下 -->
+    <mapper resource="org/zero/customer/mapper/mapping/CCustAccountMapper.xml"/>
+    <mapper resource="org/zero/customer/mapper/mapping/CCustBankMapper.xml"/>
+    <mapper resource="org/zero/customer/mapper/mapping/CCustInfoMapper2.xml"/>
+    
+  </mappers>
+</configuration>

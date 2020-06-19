@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" th:href="@{~/website/css/xadmin.css}" media="all">
+<link rel="stylesheet" th:href="@{~/website/css/font.css}" media="all">
+</head>
+<body>
+	<div class="x-body">
+       <form class="layui-form layui-form-pane" id="addForm" >
+          <div class="layui-form-item">
+              <label class="layui-form-label">分公司</label>
+              <div class="layui-input-block">
+              	  <input type="text" id="branch" name="branch"  autocomplete="off" class="layui-input" placeholder="分公司" required lay-verify="required">
+              </div>
+          </div>
+          <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">地址</label>
+              <div class="layui-input-block">
+              	  <textarea name="address" id="address"  class="layui-textarea" required lay-verify="required" autocomplete="off" placeholder="地址"></textarea>
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">联系电话</label>
+              <div class="layui-input-block">
+              	  <input type="text" id="telephone" name="telephone"  autocomplete="off" class="layui-input" required lay-verify="required" placeholder="联系电话">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">排序</label>
+              <div class="layui-input-block">
+              	  <input type="number" id="order" name="order"  autocomplete="off" class="layui-input" placeholder="排序" required lay-verify="required">
+              </div>
+          </div>
+          <div class="layui-form-item" pane="">
+	      	 <label class="layui-form-label">状态</label>
+	      	 <div class="layui-input-block">
+	      		<input type="radio" name="status" th:value="1" title="显示" th:checked="checked"/>
+	      		<input type="radio" name="status" th:value="0" title="隐藏" />
+	  		 </div>
+	      </div>
+          <div class="layui-form-item">
+              <button  class="layui-btn" lay-submit lay-filter="add">立即提交</button>
+          </div>
+      </form>
+   </div>
+<script th:src="@{~/website/js/jquery.1.12.4.min.js}" charset="utf-8"></script>
+<script th:src="@{~/website/layui/layui.js}" charset="utf-8"></script>
+<script th:src="@{~/website/js/xadmin.js}" charset="utf-8"></script>
+<script th:src="@{~/website/js/jquery.ajax.js}" charset="utf-8"></script>
+<script type="text/javascript">
+	layui.config({base : '/website/js/modules/branchAddress/'}).use('branchAddress_add');	
+</script>
+</body>
+</html>

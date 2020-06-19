@@ -1,15 +1,31 @@
 server:
-  port: 8091
+  port: 8099
 
-spring:  application:    name: customer
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://47.115.170.102:3306/test?useUnicode=true\
-            &characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
-      username: test
-      password: 123
+spring:  application:    name: web
+    
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    
+  thymeleaf:
+    enabled: true
+    cache: false
+    check-template: true
+    check-template-location: true
+    mode: HTML5
+    prefix: classpath:templates/
+    template-resolver-order: 0
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
 
-mybatis:
-  mapper-locations:  - classpath:org/zero/customer/mapper/mapping/*.xml
+eureka: 
+  client: 
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#    healthcheck:
+#      enabled: true
+  instance:
+    prefer-ip-address: true

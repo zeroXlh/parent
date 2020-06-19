@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: common_header(~{::title}, ~{}, ~{})">
+<title>用户信息变更日志管理</title>
+</head>
+<body >
+<div class="main-container">
+	<form class="form-inline" role="form" id="query_form">
+		<table class="query_table" style="margin:15px auto; text-align: center; border-collapse: collapse;">
+		 	<tr>
+				<td>业务类型:</td>
+				<td>
+					<select id="businessType_query" name="businessType" class="form-control"></select>
+				</td>
+				<td>业务编号:</td>
+				<td><input name="businessNum" type="text" class="form-control" /></td>
+				<td>操作人:</td>
+				<td><input name="creator" class="form-control" type="text" /></td>
+<!-- 				<td>操作时间:</td> -->
+<!-- 				<td><input name="createTime" class="form-control" type="text" /></td> -->
+				<td>操作时间起:</td>
+				<td>
+					<input id="createTimeBegin" name="createTimeBegin" class="form-control Wdate A8disable"
+						onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'createTimeEnd\')}' })" />
+				</td>
+				<td>投资时间止:</td>
+				<td>
+					<input id ="createTimeEnd" name="createTimeEnd" class="form-control Wdate A8disable"
+						onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'createTimeBegin\') || \'%y-%M-%d\'}' })" />
+				</td>
+				<td rowspan="2"><button type="button" id="" class="btn btn-primary"
+				 	style="margin-left:50px;" onClick="logSearch('#log_tb')">查询</button></td>
+			</tr> 
+		 </table>
+    </form>
+    
+    <table id ="log_tb" class="table table-striped table-bordered table-hover"></table>
+    
+</div> 
+ 
+</body>
+<script type="text/javascript" th:src="@{~/js/logs/operate_log.js}"></script>
+</html>

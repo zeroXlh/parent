@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" th:href="@{~/website/css/xadmin.css}" media="all">
+<link rel="stylesheet" th:href="@{~/website/css/font.css}" media="all">
+<link rel="stylesheet" th:href="@{~/website/kindeditor/themes/default/default.css}" media="all"/>
+</head>
+<body>
+	<div class="x-body">
+       <form class="layui-form layui-form-pane" id="addForm">
+          <div class="layui-form-item">
+              <label class="layui-form-label">文章分类</label>
+              <div class="layui-input-inline">
+                  <select lay-filter="type" id="type" name="type">
+			        <option value="">分类类型</option>
+			        <option value="1">公司动态</option>
+			        <option value="2">投客活动</option>
+			        <option value="3">行业资讯</option>
+			        <option value="4">投资者教育</option>
+			      </select>
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">标题</label>
+              <div class="layui-input-block">
+              	  <input type="text" id="title" name="title"  autocomplete="off" class="layui-input" placeholder="标题">
+              </div>
+          </div>
+          <div class="layui-form-item" pane="">
+              <label class="layui-form-label">图片</label>
+              <div class="layui-input-block" style="padding: 5px">
+              	  <div style="display:inline-block;" id="newImg"></div>
+	              <button type="button" class="layui-btn" id="uploadImg">
+					  <i class="layui-icon">&#xe67c;</i>上传图片
+				  </button>
+			  </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">摘要</label>
+              <div class="layui-input-block">
+              	  <input type="text" id="summary" name="summary"  autocomplete="off" class="layui-input" placeholder="摘要">
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">来源</label>
+              <div class="layui-input-block">
+              	  <input type="text" id="linkUrl" name="linkUrl"  autocomplete="off" class="layui-input" placeholder="来源">
+              </div>
+          </div>
+          <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">文章内容</label>
+              <div class="layui-input-block">
+              	  <textarea name="content" id="content"  style="width:100%;height: 500px" class="layui-textarea"  autocomplete="off"></textarea>
+              	  <input type="hidden" id="h_content" name="h_content">
+              </div>
+          </div>
+          <div class="layui-form-item" pane="">
+	      	 <label class="layui-form-label">状态</label>
+	      	 <div class="layui-input-block">
+	      		<input type="radio" name="status" th:value="1" title="显示" th:checked="checked"/>
+	      		<input type="radio" name="status" th:value="0" title="隐藏" />
+	  		 </div>
+	      </div>
+          <div class="layui-form-item">
+              <button  class="layui-btn" lay-submit lay-filter="add">立即提交</button>
+          </div>
+      </form>
+   </div>
+<script th:src="@{~/website/js/jquery.1.12.4.min.js}" charset="utf-8"></script>
+<script th:src="@{~/website/layui/layui.js}" charset="utf-8"></script>
+<script th:src="@{~/website/js/xadmin.js}" charset="utf-8"></script>
+<script th:src="@{~/website/js/jquery.ajax.js}" charset="utf-8"></script>
+<script th:src="@{~/website/kindeditor/kindeditor.js}" charset="utf-8"></script>
+<script th:src="@{~/website/kindeditor/lang/zh-CN.js}" charset="utf-8"></script>
+<script type="text/javascript">
+	layui.config({base : '/website/js/modules/news/'}).use('news_add');	
+</script>
+</body>
+</html>

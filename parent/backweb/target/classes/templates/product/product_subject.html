@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: common_header(~{::title}, ~{}, ~{::.depend})">
+<title>产品科目管理</title>
+
+<script class="depend" th:src="@{~/js/asset/multi-ajaxfileupload.js}" type="text/javascript"></script>
+</head>
+<body >
+<div class="main-container">
+<!-- 	<form class="form-horizontal" role="form">水平 -->
+	<form class="form-inline" role="form" id="query_form">
+		<table class="query_table" style="margin:15px auto; text-align: center; border-collapse: collapse;">
+		 	<tr>
+				<td>产品名称:</td>
+				<td><input name="productName" type="text" class="form-control" /></td>
+				<td>摘牌方:</td>
+				<td><input name="partners" type="text" class="form-control" /></td>
+				<td>挂牌方:</td>
+				<td><input name="factoring" type="text" class="form-control" />
+				</td>
+				<td><button type="button" class="btn btn-primary"
+				 		style="margin-left:20px;" onClick="search('#pro_sub_tb')">查询</button></td>
+				<td><button type="button" class="btn btn-success" style="margin-left:20px;"
+					 	onClick="openDialog()" auth_permission="PRODUCT:ADD_PRODUCT_SUBJECT">创建</button></td>
+			</tr> 
+		 </table>
+    </form>
+    
+    <table id="pro_sub_tb" class="table table-striped table-bordered table-hover"></table>
+</div>  
+    <!-- 添加产品科目dialog -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content" style="width: 900px; z-index: -1;" >
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"> &times; </button>
+					<h4 class="modal-title" id="myModalLabel"></h4>
+				 </div>
+
+				<form class="form-horizontal" role="form" id="pro_sub_form" style="padding-left: 15px;">
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+						<label class="col-sm-4 control-label" for="productName">产品名称</label>
+						<div class="col-sm-7">
+							<input class="form-control" name="id" type="hidden" placeholder=""/>
+							<input class="form-control" name="productName" type="text"
+								   style="width: 90%;" placeholder=""/>
+						</div>
+					</div>
+
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="productType">产品类型</label>
+		                <div class="col-sm-7">
+		                    <input class="form-control" name="productType" type="text"
+		                    	 style="width: 90%;" placeholder="请输入要在预约页面显示的产品类型"/>
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="matchValue">匹配值</label>
+		                <div class="col-sm-7">
+		                    <input class="form-control" name="matchValue" type="text"
+		                    	 style="width: 90%;" placeholder="请输入上传文件时项目名的匹配值"/>
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="sumRaiseAmt">总募集金额</label>
+		                <div class="col-sm-7">
+		                    <input class="form-control" name="sumRaiseAmt" type="text"
+		                    	style="width: 90%;" placeholder=""/>
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="partners">摘牌方</label>
+		                <div class="col-sm-7">
+		                    <input class="form-control" name="partners" type="text"
+		                    	style="width: 90%;" placeholder=""/>
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="factoring">挂牌方</label>
+		                <div class="col-sm-7">
+		                    <input class="form-control" name="factoring" type="text"
+		                    	style="width: 90%;" placeholder=""/>
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="organization">挂牌机构</label>
+		                <div class="col-sm-7">
+		                    <input class="form-control" name="organization" type="text" 
+		                    	placeholder="" style="width: 90%;" />
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+						<label class="col-sm-4 control-label" for="riskLevel">风险等级</label>
+						<div class="col-sm-7">
+							<select class="form-control" id="riskLevel" name="riskLevel"
+									style="width: 90%;"></select>
+						</div>
+					</div>
+					<div class="col-sm-6" style="height: 96px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="orgDesc">挂牌机构描述</label>
+		                <div class="col-sm-7">
+		                	<textarea rows="3" cols="3"class="form-control" 
+		                		name="orgDesc" style="width: 90%;"></textarea>
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 96px; padding: 10px 0px 0px 10px;">
+						<label class="col-sm-4 control-label" for="riskManage">风控措施</label>
+						<div class="col-sm-7">
+		                	<textarea rows="3" cols="3"class="form-control"
+									  name="riskManage" style="width: 90%;"></textarea>
+						</div>
+					</div>
+
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="fileFlow">交易流程图</label>
+		                <div class="col-sm-7">
+		                    <input type="file" class="form-control" name="fileFlow" id="fileFlow"
+		                    	 style="width: 90%;" />
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+						<label class="col-sm-4 control-label" for="fileProtocol">协议模板</label>
+						<div class="col-sm-7">
+							<input type="file" class="form-control" name="fileProtocol" id="fileProtocol"
+								   style="width: 90%;" />
+						</div>
+					</div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="folderPath">文件夹名称</label>
+		                <div class="col-sm-7">
+		                    <input type="text" class="form-control" name="folderPath"
+		                    	placeholder="产品banner图和合同模板保存文件夹" style="width: 90%;" />
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="protocolPrefix">产品协议号前缀</label>
+		                <div class="col-sm-7">
+		                    <input type="text" class="form-control" name="protocolPrefix"
+		                    	placeholder="产品协议号前缀，如ZSLH-" style="width: 90%;" />
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 96px; padding: 10px 0px 0px 10px;">
+						<label class="col-sm-4 control-label" for="productPoints ">产品亮点</label>
+						<div class="col-sm-7">
+		                	<textarea rows="3" cols="3"class="form-control"
+									  name="productPoints" style="width: 90%;"></textarea>
+						</div>
+					</div>
+					<div class="col-sm-6" style="height: 96px; padding: 10px 0px 0px 10px;">
+		                <label class="col-sm-4 control-label" for="custCoordinate">客户签章坐标</label>
+		                <div class="col-sm-7">
+		                	<textarea class="form-control" rows="3" cols="3" name="custCoordinate"
+		                		placeholder="个人与企业用-隔开，同类型存在多个使用；分隔，例如：p,x,y;p1,x1,y1-p,x,y;p2,x2,y2"
+		                		style="width: 90%;"></textarea>
+		                </div>
+		            </div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;">
+						<label class="col-sm-4 control-label" for="orderNum">排序号</label>
+						<div class="col-sm-7">
+							<input class="form-control" type="text" name="orderNum" style="width: 90%;" />
+						</div>
+					</div>
+					<div class="col-sm-6" style="height: 48px; padding: 10px 0px 0px 10px;"></div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" onClick="saveProductSubject()">
+							<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存
+						</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+    
+</body>
+<script type="text/javascript" th:src="@{~/js/product/product_subject.js}"></script>
+</html>

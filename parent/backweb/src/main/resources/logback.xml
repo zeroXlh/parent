@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration  scan="true" scanPeriod="60 seconds" debug="false">
+    <contextName>logback</contextName>
+
+<!-- 	<property name="logpath" value="E:" /> -->
+
+    <!--输出到控制台-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36}-%L - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--按天生成日志-->
+    <appender name="logFile"  class="ch.qos.logback.core.rolling.RollingFileAppender">
+<!--         <prudent>true</prudent> -->
+		<file>log/out.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>
+                log/%d{yyyyMM, aux}/%d{yyyyMMdd}.log.gz
+            </FileNamePattern>
+	    <maxHistory>45</maxHistory>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36}-%L -%msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+<!--     <logger name="io.undertow.request" level="DEBUG" additivity="false"> -->
+<!--         <appender-ref ref="console"/> -->
+<!--         <appender-ref ref="logFile" /> -->
+<!--     </logger> -->
+    <logger name="com.hoper.jjs.mapper" level="DEBUG" additivity="false">
+        <appender-ref ref="console"/>
+        <appender-ref ref="logFile" />
+    </logger>
+    <logger name="com.hoper" level="INFO" additivity="false">
+        <appender-ref ref="console"/>
+        <appender-ref ref="logFile" />
+    </logger>
+    <root level="INFO">
+        <appender-ref ref="console"/>
+        <appender-ref ref="logFile" />
+    </root>
+</configuration>

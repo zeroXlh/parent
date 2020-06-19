@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: common_header(~{::title}, ~{}, ~{})">
+<title>客户银行卡变更日志管理</title>
+</head>
+<body >
+<div class="main-container">
+	<form class="form-inline" role="form" id="query_form">
+		<table class="query_table" style="margin:15px auto;text-align: center; border-collapse: collapse;">
+		 	<tr>
+				<td>客户编号:</td>
+				<td><input name="userId" type="text" class="form-control" /></td>
+				<td>银行卡编号:</td>
+				<td><input name="bankId" type="text" class="form-control" /></td>
+				<td>手机号:</td>
+				<td><input name="phoneNo" type="text" class="form-control" /></td>
+				<td>名称:</td>
+				<td><input name="custName" type="text" class="form-control" /></td>
+				<td>证件号:</td>
+				<td><input name="certNo" type="text" class="form-control" /></td>
+				<td><button type="button" id="" class="btn btn-primary"
+				 	style="margin-left:50px;" onClick="search('#bank_log_tb')">查询</button></td>
+			</tr> 
+		 </table>
+    </form>
+    
+    <table id ="bank_log_tb" class="table table-striped table-bordered table-hover"></table>
+    
+</div> 
+ 
+</body>
+<script type="text/javascript" th:src="@{~/js/logs/bank_log.js}"></script>
+</html>

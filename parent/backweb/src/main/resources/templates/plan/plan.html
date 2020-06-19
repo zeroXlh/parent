@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: common_header(~{::title}, ~{}, ~{})">
+<title>兑付计划管理</title>
+</head>
+<body>
+	<div class="main-container" >
+		<form class="form-inline" id="query_form">
+			<table class="query_table" style="margin:15px auto;">
+			 	<tr>
+			 		<td>投资人:</td>
+					<td><input name="custName" type="text" class="form-control" /></td>
+					<td>投资人手机:</td>
+					<td><input name="phoneNo" type="text" class="form-control" /></td>
+			 		<td>证件号:</td>
+					<td><input name="certNo" type="text" class="form-control" /></td>
+					<td>银行卡号:</td>
+					<td><input name="bankCode" type="text" class="form-control" /></td>
+<!-- 					<td>付款日期:</td> -->
+<!-- 					<td><input id="actualPayTime" name="payDate" onfocus="WdatePicker()" -->
+<!-- 							class="form-control Wdate A8disable" /></td> -->
+					<td rowspan="3">
+						<button type="button" class="btn btn-primary" style="margin-left:10px;"
+					 			onClick="search('#list')">查询</button>
+						<button type="button" class="btn btn-info" style="margin-left:10px;"
+					 			onClick="exoperExcel()" auth_permission="PLAN:EXPORT_PLAN">导出回款数据</button>
+						<button type="button" class="btn btn-danger" style="margin-left:10px;"
+					 			onClick="batchRepayment()" auth_permission="PLAN:CONFIRM_REPAYMENT">批量确认回款</button>
+						<button type="button" class="btn btn-danger" style="margin-left:10px;"
+					 			onClick="openPayDialog()" auth_permission="PLAN:CONFIRM_REPAYMENT">按期确认回款</button>
+				 	</td>
+				</tr>
+				<tr>
+					<td>产品:</td>
+					<td colspan="3">
+						<select name="productSubjectId" id="productSubjectIdQuery" class="form-control" 
+							style="width: 100%;"></select>
+					</td>
+					<td>期数:</td>
+					<td>
+						<select id="product_id" name="productId" class="form-control"></select>
+					</td>
+					<td>季度:</td>
+					<td><input id="" name="payQuarter" type="text" class="form-control" /></td>
+					
+				</tr>
+				<tr>
+					<td>付款日期始:</td>
+					<td><input id="payDateBegin" name="payDateBegin" class="form-control Wdate A8disable"
+							onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'payDateEnd\')}' })" /></td>
+					<td>付款日期止:</td>
+					<td><input id ="payDateEnd" name="payDateEnd" class="form-control Wdate A8disable" 
+							onfocus="WdatePicker({ minDate:'#F{$dp.$D(\'payDateBegin\') || \'%y-%M-%d\'}' })" /></td>
+					<td>费用项:</td>
+					<td><select name="type" class="form-control" >
+							<option value=''>---请选择---</option>
+							<option value='ALL'>全部</option>
+							<option value='PRIN'>本金</option>
+							<option value='INT'>利息</option>
+						</select>
+					</td>
+					<td>状态:</td>
+					<td><select name="status" class="form-control">
+						<option value="">---请选择---</option>
+						<option value="1">回款中</option>
+						<option value="2">已回款</option>
+						<option value="3">已退款</option>
+					</select></td>
+				</tr>
+			 </table>
+		</form>		
+		
+		<div class="table-responsive " style="margin-top:5px;" >
+			<table  class="table table-striped table-bordered table-hover" id="list"></table>
+		</div>
+		
+		<!-- 兑付计划详情dialog -->
+		<div class="modal fade" id="detailModal" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="detailModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"> &times; </button>
+						<h4 class="modal-title" id="detailModalLabel"></h4>
+					 </div>
+	
+					<form class="form-horizontal" role="form" id="detail_form" style="padding-left: 15px;">
+						<div class="form-group">
+			                <label class="col-sm-4 control-label" for="intAmt">利息（INT）：</label>
+			                <div class="col-sm-7">
+			                    <input class="form-control" id="intAmt" name="int" type="text" disabled="disabled" />
+			                </div>
+			            </div>
+						<div class="form-group">
+			                <label class="col-sm-4 control-label" for="addAmt">补息（ADD）：</label>
+			                <div class="col-sm-7">
+			                    <input class="form-control" id="addAmt" name="add" disabled="disabled" type="text"  />
+			                </div>
+			            </div>
+						<div class="form-group">
+			                <label class="col-sm-4 control-label" for="prinAmt">本金（PRIN）：</label>
+			                <div class="col-sm-7">
+			                    <input class="form-control" id="prinAmt" name="prin" type="text" placeholder="" disabled="disabled" />
+			                </div>
+			            </div>
+						<div class="modal-footer">
+<!-- 							<button type="button" class="btn btn-primary" onClick="confirmActualOrderAmt()"> -->
+<!-- 								<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存 -->
+<!-- 							</button> -->
+							<button type="button" class="btn btn-default" data-dismiss="modal">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 认购备注信息dialog -->
+		<div class="modal fade" id="order_remark_modal" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="order_remark_label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"> &times; </button>
+						<h4 class="modal-title" id="order_remark_label">备注信息</h4>
+					 </div>
+					 
+					 <div style="width:100%; height: 200px;padding: 20px;">
+						<p id="order_remark_p"></p>
+					 </div>
+						<div class="modal-footer">
+<!-- 							<button type="button" class="btn btn-primary" onClick="confirmActualOrderAmt()"> -->
+<!-- 								<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存 -->
+<!-- 							</button> -->
+							<button type="button" class="btn btn-default" data-dismiss="modal">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+							</button>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 按期确认回款dialog -->
+		<div class="modal fade" id="pay_modal" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="pay_label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"> &times; </button>
+						<h4 class="modal-title" id="pay_label">按期确认回款</h4>
+					</div>
+					 
+					<form class="form-horizontal" role="form" id="pay_form" style="padding-left: 15px;">
+						<div class="form-group">
+			                <label class="col-sm-3 control-label" for="productId">产品：</label>
+			                <div class="col-sm-7">
+			                    <select name="productId" id="payProductId" class="form-control" 
+									style="width: 100%;"></select>
+			                </div>
+			            </div>
+						<div class="form-group">
+			                <label class="col-sm-3 control-label" for="quqrter">季度：</label>
+			                <div class="col-sm-7">
+			                	<select class="form-control" id="payQuqrter" name="quarter"
+			                			style="width: 100%;" readonly="true"></select> 
+			                </div>
+			            </div>
+						<div class="modal-footer">
+							<button type="button" id="pay_bt" class="btn btn-primary" onClick="confirmPayment()">
+								<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>确认回款
+							</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+<script type="text/javascript" th:inline="javascript">
+var holidays_app = JSON.parse([[${application.holiday_application}]]);
+var interval_app = [[${application.interval_application}]];
+</script>
+<script th:src="@{~/js/plan/plan.js}" type="text/javascript"></script>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+  <head>
+	<TITLE>财富组织架构加载</TITLE>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" th:href="@{~/ztree/css/zTreeStyle/zTreeStyle.css}" />
+	
+	<script class="depend" type="text/javascript" th:src="@{~/ztree/js/jquery-1.4.4.min.js}"></script>
+	<script class="depend" type="text/javascript" th:src="@{~/ztree/js/jquery.ztree.core.js}"></script>
+	<script class="depend" type="text/javascript" th:src="@{~/ztree/js/jquery.ztree.excheck.js}"></script>
+	<script class="depend" type="text/javascript" th:src="@{~/ztree/js/jquery.ztree.exedit.js}"></script>
+	
+	
+	<SCRIPT type="text/javascript">
+		var setting = {
+			async: {
+				enable: true,
+				//url:"/hoper/backweb/caifu/invest/query",
+				autoParam:["id", "name=n", "level=lv"],
+				otherParam:{"otherParam":"zTreeAsyncTest"},
+				dataFilter: filter
+			},
+			view: {
+				expandSpeed:"fast",
+				//addHoverDom: addHoverDom,
+				//removeHoverDom: removeHoverDom,
+				selectedMulti: false,
+				nameIsHTML: true, 
+				fontCss: getFontCss
+			},
+			edit: {
+				enable: false
+				//editNameSelectAll: true,
+				//showRemoveBtn: showRemoveBtn,
+				//showRenameBtn: showRenameBtn //修改名称
+			},
+			data: {
+				simpleData: {
+					enable: true,
+					idKey:"id",
+					pIdKey:"pid"
+				},
+				
+		    key: {
+                     name: "name"  //zTree 节点数据保存节点名称的属性名称  默认值："name"
+                 }
+			},
+			callback: {
+				//beforeDrag: beforeDrag,
+				//beforeEditName: beforeEditName,
+				//beforeRemove: beforeRemove,
+				//beforeRename: beforeRename,
+				//onRemove: onRemove,
+				//onRename: onRename,
+				onClick: onClick
+
+			}
+		};
+		
+
+		function filter(treeId, parentNode, childNodes) {
+			if (!childNodes) return null;
+			for (var i=0, l=childNodes.length; i<l; i++) {
+				childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
+			}
+			return childNodes;
+		}
+		//删除之前调用方法
+		function beforeRemove(treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			zTree.selectNode(treeNode);
+			return confirm("确认删除 节点 -- " + treeNode.name + " 吗？");
+		}
+		
+		//删除节点回调方法
+		function onRemove(e, treeId, treeNode) {
+			showLog("[ "+getTime()+" onRemove ]&nbsp;&nbsp;&nbsp;&nbsp; " + treeNode.name);
+			var pid = treeNode.pid; //父级元素
+			var id = treeNode.id;  //当前元素
+			var nodeName = treeNode.name; //节点名称
+			$.ajax({
+                type:"get",
+                url:"/hoper/backweb/caifu/structure/deleteTree",
+                async:true,
+                enable:true, //异步加载时需要自动提交父节点属性的参数
+                data : {
+                	pid:pid,
+                    id : id,
+                    nodeName:nodeName
+                },
+                dataType : "json",
+                success:function(res){
+                  alert(res.msg);
+                  
+                }
+                });
+		}
+		
+		//新增(先增加节点，再修改名称)和改名(直接修改名称)都在此方法
+		function onRename(e, treeId, treeNode, isCancel) {
+			var pid = treeNode.pid; //父级元素
+			var id = treeNode.id;  //当前元素
+			var nodeName = treeNode.name; //节点名称
+			
+			$.ajax({
+                type:"get",
+                url:"/hoper/backweb/caifu/structure/updateTree",
+                async:true,
+                enable:true, //异步加载时需要自动提交父节点属性的参数
+                data : {
+                	pid:pid,
+                    id : id,
+                    nodeName:nodeName
+                },
+                dataType : "json",
+                success:function(res){
+                	if("succ"==res.msg){
+                		alert("操作成功");
+                		location.reload();
+                	}else{
+                		alert(res.msg);
+                	}
+                }
+                });
+			showLog((isCancel ? "<span style='color:red'>":"") + "[ "+getTime()+" onRename ]&nbsp;&nbsp;&nbsp;&nbsp; " + treeNode.name + (isCancel ? "</span>":""));
+		}
+		
+		function beforeRename(treeId, treeNode, newName) {
+			if (newName.length == 0) {
+				setTimeout(function() {
+					var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+					zTree.cancelEditName();
+					alert("节点名称不能为空.");
+				}, 0);
+				return false;
+			}
+			return true;
+		}
+
+		var newCount = 1;
+		//点击“+”触发的方法
+		function addHoverDom(treeId, treeNode) {
+			var sObj = $("#" + treeNode.tId + "_span");
+			if (treeNode.editNameFlag || $("#addBtn_"+treeNode.tId).length>0) return;
+			var addStr = "<span class='button add' id='addBtn_" + treeNode.tId
+				+ "' title='add node' onfocus='this.blur();'></span>";
+			sObj.after(addStr);
+			var btn = $("#addBtn_"+treeNode.tId);
+			if (btn) btn.bind("click", function(){
+				var pid = treeNode.id;
+				//弹出输入窗
+				showWindow(pid);
+				//var nodeName = $("#structName").val(); //获取输入名称
+				
+				
+				var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+				//zTree.addNodes(treeNode, {id:(100 + newCount), pId:treeNode.id, name:"new node" + (newCount++)});
+				return false;
+			});
+			
+		};
+		function removeHoverDom(treeId, treeNode) {
+			$("#addBtn_"+treeNode.tId).unbind().remove();
+		};
+		
+		//删除(只有下面没有子节点时才显示删除，如果是理财经理也不显示删除)
+		function showRemoveBtn(treeId, treeNode) {
+			return false;
+		}
+		
+		//重命名
+		function showRenameBtn(treeId, treeNode) {
+			
+			return false;
+			
+		}
+		
+		var log, className = "dark";
+		function beforeDrag(treeId, treeNodes) {
+			return false;
+		}
+		
+		function beforeEditName(treeId, treeNode) {
+			className = (className === "dark" ? "":"dark");
+			showLog("[ "+getTime()+" beforeEditName ]&nbsp;&nbsp;&nbsp;&nbsp; " + treeNode.name);
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			zTree.selectNode(treeNode);
+			setTimeout(function() {
+				if (confirm("进入节点 -- " + treeNode.name + " 的编辑状态吗？")) {
+					setTimeout(function() {
+						zTree.editName(treeNode);
+					}, 0);
+				}
+			}, 0);
+			return false;
+		}
+		
+		function showLog(str) {
+			if (!log) log = $("#log");
+			log.append("<li class='"+className+"'>"+str+"</li>");
+			if(log.children("li").length > 8) {
+				log.get(0).removeChild(log.children("li")[0]);
+			}
+		}
+		function getTime() {
+			var now= new Date(),
+			h=now.getHours(),
+			m=now.getMinutes(),
+			s=now.getSeconds(),
+			ms=now.getMilliseconds();
+			return (h+":"+m+":"+s+ " " +ms);
+		}
+		
+		function focusKey(e) {
+			if (key.hasClass("empty")) {
+				key.removeClass("empty");
+			}
+			
+		}
+		function blurKey(e) {
+			if (key.get(0).value === "") {
+				key.addClass("empty");
+			}
+			
+		}
+		var lastValue = "", nodeList = [], fontCss = {};
+		function clickRadio(e) {
+			lastValue = "";
+			searchNode(e);
+		}
+		function searchNode(e) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo"); //获取整个树形结构对象
+			var value = $.trim(key.get(0).value); //获取输入值
+			var keyType="name";
+			if (key.hasClass("empty")) {
+				value = "";
+			}
+			
+			if (lastValue === value) return;
+			lastValue = value;
+			if (value === "") return;
+			updateNodes(false);
+			
+			nodeList = zTree.getNodesByParamFuzzy(keyType, value);
+			updateNodes(true);
+			
+		}
+		function updateNodes(highlight) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			for( var i=0, l=nodeList.length; i<l; i++) {
+				nodeList[i].highlight = highlight;
+				zTree.updateNode(nodeList[i]);
+				
+				zTree.selectNode(nodeList[i]);//滚动到可视区域
+			}
+		}
+		
+		function getFontCss(treeId, treeNode) {
+			return (!!treeNode.highlight) ? {color:"#A60000", "font-weight":"bold"} : {color:"#333", "font-weight":"normal"};
+		}
+		function filter(node) {
+			return !node.isParent && node.isFirstNode;
+		}
+		
+		
+		//节点展开相关
+		function createNodes(maxNodesNumInLevel, maxLevel, curLevel, curPId) {
+			if (maxNodesNumInLevel<5) {
+				maxNodesNumInLevel = 5;
+			}
+			var nodes = [], num = 0;
+			while(num<3) {
+				num = parseInt(Math.random()*1024)%maxNodesNumInLevel+1;
+			}
+			for (var i=0; i<num; i++) {
+				var id = curPId ? curPId + "-" + i : "" + i, isParent = (parseInt(Math.random()*9999)%3!=0),
+				node = {id: id, pId : curPId, name : "N" + id};
+				nodes.push(node);
+				if (isParent && curLevel<maxLevel) {
+					nodes = nodes.concat(createNodes(maxNodesNumInLevel, maxLevel, curLevel+1, id));
+				}
+			}
+            return nodes;
+		}
+		var zNodes =createNodes(5, 5, 0);
+		
+		var curExpandNode = null;
+		function beforeExpand(treeId, treeNode) {
+			var pNode = curExpandNode ? curExpandNode.getParentNode():null;
+			var treeNodeP = treeNode.parentTId ? treeNode.getParentNode():null;
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			for(var i=0, l=!treeNodeP ? 0:treeNodeP.children.length; i<l; i++ ) {
+				if (treeNode !== treeNodeP.children[i]) {
+					zTree.expandNode(treeNodeP.children[i], false);
+				}
+			}
+			while (pNode) {
+				if (pNode === treeNode) {
+					break;
+				}
+				pNode = pNode.getParentNode();
+			}
+			if (!pNode) {
+				singlePath(treeNode);
+			}
+
+		}
+		
+		function singlePath(newNode) {
+			if (newNode === curExpandNode) return;
+            var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+                    rootNodes, tmpRoot, tmpTId, i, j, n;
+
+            if (!curExpandNode) {
+                tmpRoot = newNode;
+                while (tmpRoot) {
+                    tmpTId = tmpRoot.tId;
+                    tmpRoot = tmpRoot.getParentNode();
+                }
+                rootNodes = zTree.getNodes();
+                for (i=0, j=rootNodes.length; i<j; i++) {
+                    n = rootNodes[i];
+                    if (n.tId != tmpTId) {
+                        zTree.expandNode(n, false);
+                    }
+                }
+            } else if (curExpandNode && curExpandNode.open) {
+				if (newNode.parentTId === curExpandNode.parentTId) {
+					zTree.expandNode(curExpandNode, false);
+				} else {
+					var newParents = [];
+					while (newNode) {
+						newNode = newNode.getParentNode();
+						if (newNode === curExpandNode) {
+							newParents = null;
+							break;
+						} else if (newNode) {
+							newParents.push(newNode);
+						}
+					}
+					if (newParents!=null) {
+						var oldNode = curExpandNode;
+						var oldParents = [];
+						while (oldNode) {
+							oldNode = oldNode.getParentNode();
+							if (oldNode) {
+								oldParents.push(oldNode);
+							}
+						}
+						if (newParents.length>0) {
+							zTree.expandNode(oldParents[Math.abs(oldParents.length-newParents.length)-1], false);
+						} else {
+							zTree.expandNode(oldParents[oldParents.length-1], false);
+						}
+					}
+				}
+			}
+			curExpandNode = newNode;
+		}
+
+		function onExpand(event, treeId, treeNode) {
+			curExpandNode = treeNode;
+		}
+		
+		//点击结点，触发搜索条件变更
+		function onClick(e,treeId, treeNode) {
+			var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+			//zTree.expandNode(treeNode, null, null, null, true);
+			console.info("name=="+treeNode.name+"  treeId="+treeNode.id+" treeNode.parentId="+treeNode.pid);
+			$("#structure", parent.document).val(treeNode.name);
+			$("#parentId", parent.document).val(treeNode.id);
+			
+			
+		}
+		
+		//展开全部ztree树节点(b-(true:ztree-对象;false:树节点),childnodes-子节点或ztree对象,l-要展开到哪个层级)
+		function showztreemenuNum(b,childnodes,l) {
+			var zTreeObj =  $.fn.zTree.getZTreeObj("treeDemo");
+			if(b){
+				var rootnodes = zTreeObj.getNodes();
+				showztreemenuNum(false,rootnodes,l);//递归
+			}else{
+				var len=-1;
+				//if(!isNull(childnodes)&&!isNull((len=childnodes.length))&&len>0){
+					if(l<childnodes[0].level){
+						return;
+					}
+					for (var i = 0; i < len; i++) {
+						zTreeObj.expandNode(childnodes[i], true, false, false, true);
+						var child=childnodes[i].children;
+						showztreemenuNum(false,child,l);//递归
+					}
+				//}
+			}
+		}
+
+		
+		var key; 
+		$(document).ready(function(){
+            $.ajax({
+                 type:"get",
+                 url:"/hoper/backweb/caifu/structure/getMenuTreeList",
+                 async:true,
+                 success:function(res){
+                  //创建ztree必须使用的方法  参数1:用于展现 zTree的 DOM容器;参数2:zTree的配置数据;参数3:zTree的节点数据，json格式
+                  zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, res.treeList); //初始化树
+                  zTreeObj.expandAll(true);   //true 节点全部展开、false节点收缩
+                  
+                  showztreemenuNum(true,zTreeObj,3)//只展示到分公司
+                  
+                 key = $("#key"); //获取输入框
+      			 key.bind("focus", focusKey)
+      			.bind("blur", blurKey)
+      			.bind("propertychange", searchNode)
+      			.bind("input", searchNode);
+                  
+                     }
+                 });
+         });	
+		
+		
+	
+		
+	</SCRIPT>
+	<style type="text/css">
+.ztree li span.button.add {margin-left:2px; margin-right: -1px; background-position:-144px 0; vertical-align:top; *vertical-align:middle}
+	</style>
+<!-- </HEAD> -->
+
+
+<div class="content_wrap"> <!-- 树形结构样式 -->
+	<div class="zTreeDemoBackground left">
+		<ul id="treeDemo" class="ztree"></ul>
+	</div>
+</div>
+
+ <!-- 新增组织架构 -->
+<!-- 遮罩层 -->
+<div id="cover" style="background: #000; position: absolute; left: 0px; top: 0px; width: 100%; filter: alpha(opacity=30); opacity: 0.3; display: none; z-index: 2 ">
+</div>
+<!-- 弹窗 -->
+<div id="showdiv" style="width: 60%; margin: 0 auto; height: 9.5rem; border: 1px solid #999; display: none; position: absolute; top: 40%; left: 10%; z-index: 3; background: #fff">
+  <!-- 标题 -->
+  <div style="background: #F8F7F7; width: 100%; height: 2rem; font-size: 0.85rem; line-height: 2rem; border: 1px solid #999; text-align: center;" >
+    新增组织机构
+  </div>
+  <!-- 内容 -->
+  <div style="text-indent: 50px; height: 4rem; font-size: 0.85rem; padding: 0.5rem; line-height: 1.5rem; text-align: center"> 
+                                    名称:&nbsp;<input type="text" width="50px" name="structName" id="structName"> </input>    
+    
+    </div>
+  <!-- 按钮 -->
+  <div style="background: #418BCA; width: 40%; margin: 0 auto; height: 1.5rem; line-height: 1.5rem; text-align: center;color: #fff;margin-top: 1rem; -moz-border-radius: .128rem; -webkit-border-radius: .128rem; border-radius: .128rem;font-size: .59733rem;" onclick="submitWindow()">
+            确 定
+  </div>
+  <input id = "pid" type="hidden">
+</div>
+<script type="text/javascript">
+  // 弹窗
+  function showWindow(pid) {
+    $('#showdiv').show();  //显示弹窗
+    $('#cover').css('display','block'); //显示遮罩层
+    $('#cover').css('height',document.body.clientHeight+'px'); //设置遮罩层的高度为当前页面高度
+    $("#pid").val(pid);
+  }
+  // 关闭弹窗提交
+  function submitWindow(id,pid) {
+    $('#showdiv').hide();  //隐藏弹窗
+    $('#cover').css('display','none');   //显示遮罩层
+    
+    var structName = $("#structName").val();
+    var pid = $("#pid").val();
+    
+    if(structName==null||""==structName){
+    	alert("请输入组织名称");
+    	return;
+    }
+	$.ajax({
+        type:"get",
+        url:"/hoper/backweb/caifu/structure/updateTree",
+        async:true,
+        enable:true, //异步加载时需要自动提交父节点属性的参数
+        data : {
+        	pid:pid,
+            id : -1,
+            nodeName:structName
+        },
+        dataType : "json",
+        success:function(res){
+        	if("succ"==res.msg){
+        		alert("操作成功");
+        		location.reload();
+        	}else{
+        		alert(res.msg);
+        	}
+        }
+        });
+    
+    
+    
+  }
+</script>
+
+<script>
+ $("#clear").click(function(){
+	 $("#key").val("");
+	 
+ })
+</script>
+
+

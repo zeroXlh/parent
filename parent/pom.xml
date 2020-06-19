@@ -8,6 +8,7 @@
   <modules>
   	<module>backweb</module>
   	<module>customer</module>
+  	<module>customer-api</module>
   </modules>
   
   <properties>
@@ -16,10 +17,18 @@
   	<java.version>1.8</java.version>
   	<maven.compiler.source>1.8</maven.compiler.source>
    	<maven.compiler.target>1.8</maven.compiler.target>
+   	
+<!--    	<mybatis.version>3.5.5</mybatis.version> -->
+   	<mybatis-spring.version>2.0.5</mybatis-spring.version>
   </properties>
   
   <dependencyManagement>
   	<dependencies>
+  		<dependency>
+	        <groupId>org.zero</groupId>
+	        <artifactId>customer-api</artifactId>
+	        <version>${project.version}</version>
+	    </dependency>
 <!--   		<dependency> -->
 <!--   			<groupId>com.alibaba.cloud</groupId> -->
 <!--             <artifactId>spring-cloud-alibaba-dependencies</artifactId> -->
@@ -27,13 +36,13 @@
 <!--             <type>pom</type> -->
 <!--             <scope>import</scope> -->
 <!--   		</dependency> -->
-<!--   		<dependency> -->
-<!--   			<groupId>org.springframework.cloud</groupId> -->
-<!--             <artifactId>spring-cloud-dependencies</artifactId> -->
-<!--             <version>Hoxton.SR4</version> -->
-<!--             <type>pom</type> -->
-<!--             <scope>import</scope> -->
-<!--   		</dependency> -->
+  		<dependency>
+  			<groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Hoxton.SR4</version>
+            <type>pom</type>
+            <scope>import</scope>
+  		</dependency>
   		<dependency>
   			<groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-dependencies</artifactId>

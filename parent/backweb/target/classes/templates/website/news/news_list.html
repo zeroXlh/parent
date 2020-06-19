@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>财富资讯管理</title>
+<meta charset="utf-8">
+<link rel="stylesheet" th:href="@{~/website/css/xadmin.css}" media="all">
+<link rel="stylesheet" th:href="@{~/website/css/font.css}" media="all">
+<style>
+.layui-table-cell{
+    height:34px;
+    line-height: 34px;
+}
+</style>
+</head>
+<body>
+ 	<div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a href="javascript:void(0)">财富资讯管理</a>
+        <a><cite>财富资讯列表</cite></a>
+      </span>
+      <a class="layui-btn layui-btn-primary layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="refresh();" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:38px"></i></a>
+    </div>
+    <div class="x-body">
+		<div class="layui-row">
+	        <form class="layui-form layui-col-md12" id="sreachForm">
+	          <div class="layui-input-inline">
+		          <select lay-filter="type" id="type">
+			        <option value="-1">分类类型</option>
+			        <option value="1">公司动态</option>
+			        <option value="2">投客活动</option>
+			        <option value="3">行业资讯</option>
+			        <option value="4">投资者教育</option>
+			      </select>
+		      </div>
+		      <div class="layui-input-inline">
+		          <select lay-filter="status" id="status">
+			        <option value="-1">状态</option>
+			        <option value="1">显示</option>
+			        <option value="0">隐藏</option>
+			      </select>
+		      </div>
+	          <button class="layui-btn"  lay-submit="sreach" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+	        </form>
+       </div>
+      <table class="layui-table" id="newslist" lay-filter="newslist">
+      </table>
+      <script type="text/html" id="toolbar">
+      	<div class="layui-btn-container">
+			<button class="layui-btn" lay-event="add"><i class="layui-icon"></i>添加</button>
+      	</div>
+	  </script>
+      <script type="text/html" id="tableBar">
+			<button type="button" class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe642;</i></button>
+			<button type="button" class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del"><i class="layui-icon">&#xe640;</i></button>
+			{{#  if(d.top == 1){ }}
+				<button type="button" class="layui-btn layui-btn-sm layui-btn-normal" lay-event="cancelTop">取消</button>
+			{{#  } }} 
+			{{#  if(d.top == 0){ }}
+				<button type="button" class="layui-btn layui-btn-sm" lay-event="top">置顶</button>
+			{{#  } }} 
+      </script>
+    </div>
+<script th:src="@{~/website/js/jquery.1.12.4.min.js}" charset="utf-8"></script>
+<script th:src="@{~/website/layui/layui.js}" charset="utf-8"></script>
+<script th:src="@{~/website/js/xadmin.js}" charset="utf-8"></script>
+<script th:src="@{~/website/js/jquery.ajax.js}" charset="utf-8"></script>
+<script type="text/javascript">
+	layui.config({base : '/website/js/modules/news/'}).use('news_list');	
+</script>
+</body>
+</html>

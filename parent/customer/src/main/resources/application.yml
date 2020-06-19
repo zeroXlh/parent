@@ -3,13 +3,29 @@ server:
 
 spring:  application:    name: customer
   datasource:
+#    druid:
     type: com.alibaba.druid.pool.DruidDataSource
-    druid:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://47.115.170.102:3306/test?useUnicode=true\
-              &characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true 
-      username: test
-      password: 123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.115.170.102:3306/test?useUnicode=true\
+            &characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true 
+    username: test
+    password: 123
+    
+# 官方正在调试ribbon loadbalance，建议使用spring cloud balancer
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
 
 mybatis:
-  mapper-locations:  - classpath:org/zero/customer/mapper/mapping/*.xml
+  mapper-locations:#  - classpath:org.zero.customer.mapper.mapping.*.xml
+  - classpath:org/zero/customer/mapper/mapping/*.xml
+  
+eureka: 
+  client: 
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#    healthcheck:
+#      enabled: true
+  instance:
+    prefer-ip-address: true

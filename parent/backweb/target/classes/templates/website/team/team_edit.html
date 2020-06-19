@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" th:href="@{~/website/css/xadmin.css}" media="all">
+<link rel="stylesheet" th:href="@{~/website/css/font.css}" media="all">
+</head>
+<body>
+	<div class="x-body">
+       <form class="layui-form layui-form-pane" id="editForm">
+		  <div class="layui-form-item">
+              <label class="layui-form-label">分类</label>
+              <div class="layui-input-inline">
+                  <select id="teamType" name="teamType" lay-verify="required">
+			        <option value="">分类类型</option>
+			        <option value="1" th:selected="${obj.teamType == 1}">总裁</option>
+			        <option value="2" th:selected="${obj.teamType == 2}">区域总经理</option>
+			        <option value="3" th:selected="${obj.teamType == 3}">分公司总经理</option>
+			      </select>
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">姓名</label>
+              <div class="layui-input-block">
+              	  <input type="text" id="name" name="name"  autocomplete="off" class="layui-input" placeholder="姓名" required lay-verify="required" th:value="${obj.name}">
+              </div>
+          </div>
+          
+          <div class="layui-form-item" pane="">
+              <label class="layui-form-label">图片</label>
+              <div class="layui-input-block" style="padding: 5px">
+              	  <div style="display:inline-block;" id="oldImg" th:if="${obj.photoUrl != null}">
+        			  <img style="padding: 5px;" th:src="${obj.photoUrl +'?x-oss-process=image/resize,m_lfit,h_100,w_150'}">
+        			  <input type="hidden" name="photoUrl" id="photoUrl" th:value='${obj.photoUrl }' />
+        	  	  </div>
+              	  <div style="display:inline-block;" id="newImg"></div>
+	              <button type="button" class="layui-btn" id="uploadImg">
+					  <i class="layui-icon">&#xe67c;</i>上传图片
+				  </button>
+			  </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">职位</label>
+              <div class="layui-input-block">
+              	  <input type="text" id="position" name="position"  autocomplete="off" class="layui-input" required lay-verify="required" placeholder="职位" th:value="${obj.position}">
+              </div>
+          </div>
+          <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">人物简介</label>
+              <div class="layui-input-block">
+              	  <textarea name="profile" id="profile"  class="layui-textarea" required lay-verify="required" autocomplete="off" placeholder="人物简介" th:text="${obj.profile }"></textarea>
+              </div>
+          </div>
+          <div class="layui-form-item">
+              <label class="layui-form-label">排序</label>
+              <div class="layui-input-block">
+              	  <input type="number" id="order" name="order"  autocomplete="off" class="layui-input" placeholder="排序" required lay-verify="required" th:value="${obj.order}">
+              </div>
+          </div>
+          <div class="layui-form-item" pane="">
+	      	 <label class="layui-form-label">状态</label>
+	      	 <div class="layui-input-block">
+	      		<input type="radio" name="status" th:value="1" title="在职" th:checked="${obj.status==1}"/>
+	      		<input type="radio" name="status" th:value="0" title="离职" th:checked="${obj.status==0}"/>
+	  		 </div>
+	      </div>
+          <div class="layui-form-item">
+              <button  class="layui-btn" lay-submit lay-filter="edit">立即提交</button>
+              <input type="hidden" th:value="${obj.id }" id="id" name="id">
+          </div>
+      </form>
+   </div>
+<script th:src="@{~/website/js/jquery.1.12.4.min.js}" charset="utf-8"></script>
+<script th:src="@{~/website/layui/layui.js}" charset="utf-8"></script>
+<script th:src="@{~/website/js/xadmin.js}" charset="utf-8"></script>
+<script th:src="@{~/website/js/jquery.ajax.js}" charset="utf-8"></script>
+<script type="text/javascript">
+	layui.config({base : '/website/js/modules/team/'}).use('team_edit');
+</script>
+</body>
+</html>

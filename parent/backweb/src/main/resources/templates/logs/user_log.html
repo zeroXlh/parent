@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: common_header(~{::title}, ~{}, ~{})">
+<title>用户信息变更日志管理</title>
+</head>
+<body >
+<div class="main-container">
+	<form class="form-inline" role="form" id="query_form">
+		<table class="query_table" style="margin:15px auto; text-align: center; border-collapse: collapse;">
+		 	<tr>
+				<td>变更前手机号:</td>
+				<td><input name="phoneNoSource" type="text" class="form-control" /></td>
+				<td>变更前姓名:</td>
+				<td><input name="custNameSource" type="text" class="form-control" /></td>
+				<td>变更前证件号:</td>
+				<td><input name="certNoSource" class="form-control" type="text" /></td>
+				<td>客户编号:</td>
+				<td><input name="userId" class="form-control" type="text" /></td>
+				<td rowspan="2"><button type="button" id="" class="btn btn-primary"
+				 	style="margin-left:50px;" onClick="search('#user_log_tb')">查询</button></td>
+			</tr> 
+		 	<tr>
+				<td>变更后手机号:</td>
+				<td><input name="phoneNoTarget" type="text" class="form-control" /></td>
+				<td>变更后姓名:</td>
+				<td><input name="custNameTarget" type="text" class="form-control" /></td>
+				<td>变更后证件号:</td>
+				<td><input name="certNoTarget" class="form-control" /></td>
+			</tr> 
+		 </table>
+    </form>
+    
+    <table id ="user_log_tb" class="table table-striped table-bordered table-hover"></table>
+    
+</div> 
+ 
+</body>
+<script type="text/javascript" th:src="@{~/js/logs/user_log.js}"></script>
+</html>

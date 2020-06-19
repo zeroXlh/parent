@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>发展历程管理</title>
+<meta charset="utf-8">
+<link rel="stylesheet" th:href="@{~/website/css/xadmin.css}" media="all">
+<link rel="stylesheet" th:href="@{~/website/css/font.css}" media="all">
+<style>
+.layui-table-cell{
+    height:34px;
+    line-height: 34px;
+}
+</style>
+</head>
+<body>
+ 	<div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a href="javascript:void(0)">发展历程管理</a>
+        <a><cite>发展历程列表</cite></a>
+      </span>
+      <a class="layui-btn layui-btn-primary layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="refresh();" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:38px"></i></a>
+    </div>
+    <div class="x-body">
+    	
+      <table class="layui-table" id="eventlist" lay-filter="eventlist">
+      </table>
+      <script type="text/html" id="toolbar">
+      	<div class="layui-btn-container">
+			<button class="layui-btn" lay-event="add"><i class="layui-icon"></i>添加</button>
+      	</div>
+	  </script>
+      <script type="text/html" id="tableBar">
+			<button type="button" class="layui-btn layui-btn-sm" lay-event="edit"><i class="layui-icon">&#xe642;</i></button>
+			<button type="button" class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del"><i class="layui-icon">&#xe640;</i></button>
+      </script>
+    </div>
+<script th:src="@{~/website/js/jquery.1.12.4.min.js}" charset="utf-8"></script>
+<script th:src="@{~/website/layui/layui.js}" charset="utf-8"></script>
+<script th:src="@{~/website/js/xadmin.js}" charset="utf-8"></script>
+<script th:src="@{~/website/js/jquery.ajax.js}" charset="utf-8"></script>
+<script type="text/javascript">
+	layui.config({base : '/website/js/modules/event/'}).use('event_list');	
+</script>
+</body>
+</html>

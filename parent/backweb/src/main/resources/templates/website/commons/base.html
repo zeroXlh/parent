@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script type="text/javascript" th:inline="javascript">
+//用户操作权限缓存
+var authPermissions = [[${session.authPermission}]];
+function checkAuth(val) {
+	for (var i = 0; i < authPermissions.length; i++) {
+		if (authPermissions[i] == val)
+			return true;
+	}
+	return false;
+}
+</script>

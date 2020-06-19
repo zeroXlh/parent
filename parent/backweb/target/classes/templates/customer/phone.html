@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="base :: common_header(~{::title}, ~{}, ~{})">
+<title>客户手机管理</title>
+</head>
+<body >
+<div class="main-container">
+	<form class="form-inline" role="form" id="query_form">
+		<table class="query_table" style="margin:15px auto; text-align: center; border-collapse: collapse;">
+		 	<tr>
+		 		<td>手机编号:</td>
+				<td><input name="id" type="text" class="form-control" /></td>
+		 		<td>客户编号:</td>
+				<td><input name="userId" type="text" class="form-control" /></td>
+				<td>手机号:</td>
+				<td><input name="phoneNo" type="text" class="form-control" /></td>
+				<td>名称:</td>
+				<td><input name="custName" type="text" class="form-control" /></td>
+				<td>证件号:</td>
+				<td><input name="certNo" class="form-control" /></td>
+<!-- 				<td>客户类型:</td> -->
+<!-- 				<td><select name="userType" class="form-control"> -->
+<!-- 						<option value="">---请选择---</option> -->
+<!-- 						<option value="0">个人用户</option> -->
+<!-- 						<option value="1">企业用户</option> -->
+<!-- 					</select> -->
+<!-- 				</td> -->
+				<td><button type="button" id="" class="btn btn-primary"
+				 	style="margin-left:50px;" onClick="search()">查询</button></td>
+			</tr>
+		 </table>
+    </form>
+    
+    <table id ="phone_tb" class="table table-striped table-bordered table-hover"></table>
+    
+    <!-- 更新客户dialog -->
+	<div class="modal fade" id="custModal" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" aria-hidden="true"> &times; </button>
+					<h4 class="modal-title" id="myModalLabel"></h4>
+				 </div>
+
+				<form class="form-horizontal" role="form" id="cust_form" style="padding-left: 15px;">
+					<div class="form-group">
+		                <label class="col-sm-4 control-label" for="custName">客户名称：</label>
+		                <div class="col-sm-7">
+							<input class="form-control" type="hidden" name="id" />
+							<input class="form-control" type="text" name="custName"  />
+		                </div>
+		            </div>
+					<div class="form-group">
+		                <label class="col-sm-4 control-label" for="userType">用户类型：</label>
+		                <div class="col-sm-7">
+							<select class="form-control" name="userType">
+								<option value="0">个人用户</option>
+								<option value="1">企业用户</option>
+							</select>
+		                </div>
+		            </div>
+					<div class="form-group">
+		                <label class="col-sm-4 control-label" for="phoneNo">手机号：</label>
+		                <div class="col-sm-7">
+		                    <input class="form-control" id="phoneNo" name="phoneNo" type="text" placeholder="" />
+		                </div>
+		            </div>
+					<div class="form-group">
+		                <label class="col-sm-4 control-label" for="certNo">身份证号：</label>
+		                <div class="col-sm-7">
+		                    <input class="form-control" name="certNo" type="text" placeholder=""/>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <label class="col-sm-4 control-label" for="remark">备注：</label>
+		                <div class="col-sm-7">
+							<textarea class="form-control" name="remark" style=""></textarea>
+		                </div>
+		            </div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" onClick="saveCustomer()">
+							<span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>保存
+						</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div> 
+ 
+</body>
+<script type="text/javascript" th:src="@{~/js/customer/phone.js}"></script>
+</html>
