@@ -1,0 +1,79 @@
+
+html,body{
+	height:100%;
+	width:100%;
+	background: url(../images/zct.jpg) no-repeat center center;
+	background-size:1920px 1000px;
+	perspective:500px;
+}
+*{
+		font-family:"仿宋";
+}
+.login{
+	width:500px;
+	height:400px;
+	position: relative;
+	top: 0;
+	margin: 12% auto;
+	background:rgba(255,255,255,1);
+	border-radius: 10px;
+    color: #316E9B;
+    animation: cc 2s ease-in-out ;
+}
+.login header{
+	
+    padding: 10px;
+    border-bottom: 1px solid #27d;
+}
+.login header h1{
+	margin:0;
+	padding:0;
+	text-align: center;
+	font-family:'幼圆';
+    font-size: 2.5em;
+    line-height: 40px;
+}
+.sr{
+	padding:30px 90px;
+}
+.name{
+	margin-top:30px;
+	position:relative;
+	margin-bottom:20px;
+	clear:both;
+	border:1px solid #316E9B;
+	width: 100%;
+    height: 40px;
+    border-radius:3.5px;
+}
+.name label{
+	position: absolute;
+    color: #316E9B;
+    top: 10px;
+    left: 10px;
+}
+.name_inp{
+	padding-left: 34px;
+	height: 38px;
+    line-height: 40px;
+    line-height: 36px\9;
+    border: none;
+    background-color: #fff;
+   width:100%;
+   color:#316E9B;
+   font-size:1.5em;
+   outline:none;
+}
+.dl{
+	width:320px;
+	height:40px;
+	border-radius: 6px;
+	background:#316E9B;
+	line-height:40px;
+	display:block;
+	margin-top:40px;
+	color:#fff;
+	border:0;
+	font-size:23px;
+}
+

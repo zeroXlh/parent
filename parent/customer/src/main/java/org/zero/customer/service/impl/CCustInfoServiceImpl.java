@@ -8,8 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.zero.customer.model.CCustInfo;
+import org.zero.customer.model.CCustInfoVo;
 import org.zero.customer.service.CCustInfoService;
 import org.zero.customer.service.mapper.CCustInfoMapper;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 
 @Service
 public class CCustInfoServiceImpl implements CCustInfoService {
@@ -41,6 +45,16 @@ public class CCustInfoServiceImpl implements CCustInfoService {
 	@Override
 	public List<CCustInfo> findByColumn(CCustInfo custInfo) {
 		return mapper.selectByColumn(custInfo);
+	}
+
+	@Override
+	public PageInfo<CCustInfoVo> page(CCustInfoVo cCustInfoVo) {
+		PageHelper.startPage(cCustInfoVo.getPageNum(), cCustInfoVo.getPageSize());
+//		PageHelper.startPage(pageNum, pageSize,"");
+		
+		List<CCustInfoVo> list = mapper.selectExtendByColumn(cCustInfoVo);
+		
+		return new PageInfo<>(list);
 	}
 
 	@Override

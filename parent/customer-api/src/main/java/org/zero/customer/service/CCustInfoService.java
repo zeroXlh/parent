@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Objects;
 
 import org.zero.customer.model.CCustInfo;
+import org.zero.customer.model.CCustInfoVo;
+
+import com.github.pagehelper.PageInfo;
 
 public interface CCustInfoService {
 	int add(CCustInfo custInfo) throws Exception;
@@ -22,7 +25,7 @@ public interface CCustInfoService {
 
 	List<CCustInfo> findByColumn(CCustInfo custInfo);
 
-	// PageI
+	PageInfo<CCustInfoVo> page(CCustInfoVo cCustInfoVo);
 
 	int updateByPrimaryKeySelective(Integer custId, CCustInfo custInfo) throws Exception;
 

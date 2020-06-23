@@ -39,7 +39,7 @@
 <!--   	<package name="org.zero.customer.mapper"/>  xml文件和mapper接口必须在同一个包下 -->
     <mapper resource="org/zero/customer/mapper/mapping/CCustAccountMapper.xml"/>
     <mapper resource="org/zero/customer/mapper/mapping/CCustBankMapper.xml"/>
-    <mapper resource="org/zero/customer/mapper/mapping/CCustInfoMapper2.xml"/>
+    <mapper resource="org/zero/customer/mapper/mapping/CCustInfoMapper.xml"/>
     
   </mappers>
 </configuration>

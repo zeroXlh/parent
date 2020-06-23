@@ -23,7 +23,7 @@
   </resultMap>
   <resultMap extends="BaseResultMap" id="voResultMap" type="org.zero.customer.model.CCustInfoVo">
 	<association property="custAccount" column="account_id" 
-		javaType="org.zero.customer.model.CCustAccount" resultMap="custAccount" >
+		javaType="org.zero.customer.model.CCustAccount">
 		<id column="account_id" jdbcType="INTEGER" property="accountId" />
 	    <result column="cust_id" jdbcType="INTEGER" property="custId" />
 	    <result column="phone_no" jdbcType="CHAR" property="phoneNo" />

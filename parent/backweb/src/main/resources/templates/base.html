@@ -59,19 +59,19 @@ var productSubjectCombo = [[${application.productSubjectCombo}]];
 var companyMapping = [[${application.companyMapping}]];
 var companyCombo = [[${application.companyCombo}]];
 
-$(function () {
-	if (pcg_fun.isEmpty(productSubjectMapping)) {
-		jQuery.get("/hoper/backweb/assist/cache/productSubjectMapping", {}, function(data) {
-			if (1 == data.code) {
-				productSubjectMapping = data.data;
-			} else if (0 == data.code) {
-				alert(data.msg);
-			} else {
-				alert(data);
-			}
-		}, "json");
-	}
-});
+// $(function () {
+// 	if (pcg_fun.isEmpty(productSubjectMapping)) {
+// 		jQuery.get("/hoper/backweb/assist/cache/productSubjectMapping", {}, function(data) {
+// 			if (1 == data.code) {
+// 				productSubjectMapping = data.data;
+// 			} else if (0 == data.code) {
+// 				alert(data.msg);
+// 			} else {
+// 				alert(data);
+// 			}
+// 		}, "json");
+// 	}
+// });
 
 function getQueryString(name) {
     try {
