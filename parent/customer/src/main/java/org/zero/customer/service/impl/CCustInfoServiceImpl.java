@@ -2,10 +2,10 @@ package org.zero.customer.service.impl;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 import org.zero.customer.model.CCustInfo;
 import org.zero.customer.model.CCustInfoVo;
@@ -21,10 +21,12 @@ public class CCustInfoServiceImpl implements CCustInfoService {
 	private CCustInfoMapper mapper;
 
 	@Override
+	@Transactional
 	public int add(CCustInfo custInfo) throws Exception {
 		Objects.requireNonNull(custInfo);
 
-		Optional.ofNullable(findByCertNo(custInfo.getCertNo())).orElseThrow(() -> new RuntimeException("证件号已注册"));
+		if (Objects.nonNull(custInfo.getCertNo()))
+			throw new RuntimeException("证件号已注册：" + custInfo.getCertNo());
 
 		return mapper.insert(custInfo);
 	}
@@ -48,24 +50,26 @@ public class CCustInfoServiceImpl implements CCustInfoService {
 	}
 
 	@Override
-	public PageInfo<CCustInfoVo> page(CCustInfoVo cCustInfoVo) {
-		PageHelper.startPage(cCustInfoVo.getPageNum(), cCustInfoVo.getPageSize());
-//		PageHelper.startPage(pageNum, pageSize,"");
-		
+	public PageInfo<CCustInfoVo> page(CCustInfoVo cCustInfoVo, Integer pageNum, Integer pageSize) {
+		PageHelper.startPage(pageNum, pageSize);
+		// PageHelper.startPage(pageNum, pageSize,"");
+
 		List<CCustInfoVo> list = mapper.selectExtendByColumn(cCustInfoVo);
-		
+
 		return new PageInfo<>(list);
 	}
 
 	@Override
+	@Transactional
 	public int updateByPrimaryKeySelective(Integer custId, CCustInfo custInfo) throws Exception {
 		Objects.requireNonNull(custId);
 		Objects.requireNonNull(custInfo);
 		custInfo.setCustId(custId);
 
-		Optional.ofNullable(custInfo.getCertNo()).ifPresent((c) -> {
-			Optional.ofNullable(findByCertNo(c)).orElseThrow(() -> new RuntimeException("证件号已注册"));
-		});
+		// Optional.ofNullable(custInfo.getCertNo()).ifPresent((c) -> {
+		// Optional.ofNullable(findByCertNo(c)).orElseThrow(() -> new
+		// RuntimeException("证件号已注册"));
+		// });
 
 		return mapper.updateByPrimaryKeySelective(custInfo);
 	}

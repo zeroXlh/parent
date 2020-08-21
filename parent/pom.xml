@@ -9,6 +9,10 @@
   	<module>backweb</module>
   	<module>customer</module>
   	<module>customer-api</module>
+  	<module>user-api</module>
+  	<module>product</module>
+  	<module>product-api</module>
+  	<module>component</module>
   </modules>
   
   <properties>
@@ -27,6 +31,21 @@
   		<dependency>
 	        <groupId>org.zero</groupId>
 	        <artifactId>customer-api</artifactId>
+	        <version>${project.version}</version>
+	    </dependency>
+  		<dependency>
+	        <groupId>org.zero</groupId>
+	        <artifactId>user-api</artifactId>
+	        <version>${project.version}</version>
+	    </dependency>
+  		<dependency>
+	        <groupId>org.zero</groupId>
+	        <artifactId>product-api</artifactId>
+	        <version>${project.version}</version>
+	    </dependency>
+  		<dependency>
+	        <groupId>org.zero</groupId>
+	        <artifactId>component</artifactId>
 	        <version>${project.version}</version>
 	    </dependency>
 <!-- 	    <dependency> -->
@@ -73,4 +92,11 @@
   		</plugins>
   	</pluginManagement>
   </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.alibaba</groupId>
+  		<artifactId>fastjson</artifactId>
+  		<version>1.2.58</version>
+  	</dependency>
+  </dependencies>
 </project>

@@ -1,0 +1,580 @@
+2020-07-06 09:49:52 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor-225 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-06 09:49:53 [restartedMain] INFO  org.zero.user.UserApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 09:49:55 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=3ddc60da-af1e-3398-947d-b5e676a19da8
+2020-07-06 09:49:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8092 (http)
+2020-07-06 09:49:55 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8092"]
+2020-07-06 09:49:55 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 09:49:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 09:49:55 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 09:49:55 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 2169 ms
+2020-07-06 09:49:55 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure-56 -Init DruidDataSource
+2020-07-06 09:49:56 [restartedMain] INFO  c.alibaba.druid.pool.DruidDataSource-994 -{dataSource-1} inited
+2020-07-06 09:49:57 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 09:49:57 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 09:49:57 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 09:49:57 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 09:49:57 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 09:49:58 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer-58 -LiveReload server is running on port 35729
+2020-07-06 09:49:58 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 09:49:58 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 09:49:58 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 09:49:58 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 09:49:58 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 09:49:58 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 09:49:58 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 09:49:59 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 09:49:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 09:49:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 09:49:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 09:49:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 09:49:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 09:49:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 09:49:59 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 09:50:00 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 09:50:00 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 09:50:00 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 09:50:00 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594000200156 with initial instances count: 0
+2020-07-06 09:50:00 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application USER with eureka with status UP
+2020-07-06 09:50:00 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594000200160, current=UP, previous=STARTING]
+2020-07-06 09:50:00 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_USER/YOS-01604151651:user:8092: registering service...
+2020-07-06 09:50:00 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8092"]
+2020-07-06 09:50:00 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8092 (http) with context path ''
+2020-07-06 09:50:00 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8092
+2020-07-06 09:50:00 [restartedMain] INFO  org.zero.user.UserApplication-61 -Started UserApplication in 7.787 seconds (JVM running for 8.981)
+2020-07-06 09:50:00 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_USER/YOS-01604151651:user:8092 - registration status: 204
+2020-07-06 09:50:30 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 09:50:30 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 09:50:30 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 09:50:30 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 09:50:30 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 09:50:30 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: false
+2020-07-06 09:50:30 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 09:50:30 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 09:51:50 [http-nio-8092-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-06 09:51:50 [http-nio-8092-exec-1] INFO  o.s.web.servlet.DispatcherServlet-525 -Initializing Servlet 'dispatcherServlet'
+2020-07-06 09:51:50 [http-nio-8092-exec-1] INFO  o.s.web.servlet.DispatcherServlet-547 -Completed initialization in 6 ms
+2020-07-06 09:51:50 [http-nio-8092-exec-1] INFO  o.z.user.controller.UserController-59 -根据用户名获取用户，userName：[admin]
+2020-07-06 09:51:50 [http-nio-8092-exec-1] DEBUG o.z.u.service.impl.UUserServiceImpl-49 -根据userName查找用户，userName：[admin]
+2020-07-06 09:51:51 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByUserName-137 -==>  Preparing: select user_id, user_name, password, user_type, realname, phone_no, dept_code, company, create_time, creator, enabled from u_user where user_name = ?
+2020-07-06 09:51:51 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByUserName-137 -==> Parameters: admin(String)
+2020-07-06 09:51:51 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByUserName-137 -<==      Total: 1
+2020-07-06 09:51:51 [http-nio-8092-exec-2] INFO  o.z.user.controller.UserController-42 -根据用户名获取用户，userName：[admin]
+2020-07-06 09:51:51 [http-nio-8092-exec-2] DEBUG o.z.u.service.impl.UUserServiceImpl-49 -根据userName查找用户，userName：[admin]
+2020-07-06 09:51:51 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectByUserName-137 -==>  Preparing: select user_id, user_name, password, user_type, realname, phone_no, dept_code, company, create_time, creator, enabled from u_user where user_name = ?
+2020-07-06 09:51:51 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectByUserName-137 -==> Parameters: admin(String)
+2020-07-06 09:51:51 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectByUserName-137 -<==      Total: 1
+2020-07-06 09:51:51 [http-nio-8092-exec-4] INFO  o.z.user.controller.UserController-70 -根据用户编号获取用户菜单，userId：[1]
+2020-07-06 09:51:51 [http-nio-8092-exec-4] DEBUG o.z.u.s.impl.UMenuInfoServiceImpl-54 -根据用户查找菜单，userId：[1]
+2020-07-06 09:51:51 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectByUser-137 -==>  Preparing: select t.permission_code, t.menu_name, t.menu_url, t.parent_menu, t.css_style, t.enabled from u_menu_info t, u_role_auth rm, u_role r, u_user_role ur where r.role_code = ur.role_code and rm.role_code = r.role_code and rm.permission_code = t.permission_code and ur.enabled = 1 and r.enabled = 1 and rm.enabled = 1 and t.enabled = 1 and ur.user_id = ?
+2020-07-06 09:51:51 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectByUser-137 -==> Parameters: 1(Integer)
+2020-07-06 09:51:51 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectByUser-137 -<==      Total: 54
+2020-07-06 09:51:51 [http-nio-8092-exec-5] INFO  o.z.user.controller.UserController-82 -根据用户编号获取用户权限，userId：[1]
+2020-07-06 09:51:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.i.UOperatePermissionServiceImpl-55 -根据用户查找菜单权限，userId：[1]
+2020-07-06 09:51:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectByUser-137 -==>  Preparing: select t.permission_code, t.permission_name, t.permission_url, t.enabled from u_operate_permission t, u_role_auth rm, u_role r, u_user_role ur where r.role_code = ur.role_code and rm.role_code = r.role_code and rm.permission_code = t.permission_code and ur.enabled = 1 and r.enabled = 1 and rm.enabled = 1 and t.enabled = 1 and ur.user_id = ?
+2020-07-06 09:51:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectByUser-137 -==> Parameters: 1(Integer)
+2020-07-06 09:51:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectByUser-137 -<==      Total: 18
+2020-07-06 09:52:01 [http-nio-8092-exec-6] INFO  o.z.u.c.RoleClientController-29 -分页角色，参数：[{"enabled":true}]，[1]，[10]
+2020-07-06 09:52:01 [http-nio-8092-exec-6] DEBUG o.z.u.service.impl.URoleServiceImpl-60 -分页角色，role：[{"enabled":true}]，pageNum：[1]，pageSize：[10]
+2020-07-06 09:52:01 [http-nio-8092-exec-6] DEBUG o.z.u.service.impl.URoleServiceImpl-48 -根据column查找角色，role：[{"enabled":true}]
+2020-07-06 09:52:01 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role WHERE enabled = ?
+2020-07-06 09:52:01 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: true(Boolean)
+2020-07-06 09:52:02 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 09:52:02 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -==>  Preparing: select role_code, role_name, create_time, enabled from u_role WHERE enabled = ? LIMIT ?
+2020-07-06 09:52:02 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -==> Parameters: true(Boolean), 10(Integer)
+2020-07-06 09:52:02 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -<==      Total: 2
+2020-07-06 09:53:28 [http-nio-8092-exec-9] INFO  o.z.user.controller.UserController-59 -根据用户名获取用户，userName：[admin]
+2020-07-06 09:53:28 [http-nio-8092-exec-9] DEBUG o.z.u.service.impl.UUserServiceImpl-49 -根据userName查找用户，userName：[admin]
+2020-07-06 09:53:28 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectByUserName-137 -==>  Preparing: select user_id, user_name, password, user_type, realname, phone_no, dept_code, company, create_time, creator, enabled from u_user where user_name = ?
+2020-07-06 09:53:28 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectByUserName-137 -==> Parameters: admin(String)
+2020-07-06 09:53:28 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectByUserName-137 -<==      Total: 1
+2020-07-06 09:53:28 [http-nio-8092-exec-10] INFO  o.z.user.controller.UserController-42 -根据用户名获取用户，userName：[admin]
+2020-07-06 09:53:28 [http-nio-8092-exec-10] DEBUG o.z.u.service.impl.UUserServiceImpl-49 -根据userName查找用户，userName：[admin]
+2020-07-06 09:53:28 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByUserName-137 -==>  Preparing: select user_id, user_name, password, user_type, realname, phone_no, dept_code, company, create_time, creator, enabled from u_user where user_name = ?
+2020-07-06 09:53:28 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByUserName-137 -==> Parameters: admin(String)
+2020-07-06 09:53:28 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByUserName-137 -<==      Total: 1
+2020-07-06 09:53:28 [http-nio-8092-exec-3] INFO  o.z.user.controller.UserController-70 -根据用户编号获取用户菜单，userId：[1]
+2020-07-06 09:53:28 [http-nio-8092-exec-3] DEBUG o.z.u.s.impl.UMenuInfoServiceImpl-54 -根据用户查找菜单，userId：[1]
+2020-07-06 09:53:28 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectByUser-137 -==>  Preparing: select t.permission_code, t.menu_name, t.menu_url, t.parent_menu, t.css_style, t.enabled from u_menu_info t, u_role_auth rm, u_role r, u_user_role ur where r.role_code = ur.role_code and rm.role_code = r.role_code and rm.permission_code = t.permission_code and ur.enabled = 1 and r.enabled = 1 and rm.enabled = 1 and t.enabled = 1 and ur.user_id = ?
+2020-07-06 09:53:28 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectByUser-137 -==> Parameters: 1(Integer)
+2020-07-06 09:53:28 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectByUser-137 -<==      Total: 54
+2020-07-06 09:53:28 [http-nio-8092-exec-7] INFO  o.z.user.controller.UserController-82 -根据用户编号获取用户权限，userId：[1]
+2020-07-06 09:53:28 [http-nio-8092-exec-7] DEBUG o.z.u.s.i.UOperatePermissionServiceImpl-55 -根据用户查找菜单权限，userId：[1]
+2020-07-06 09:53:28 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByUser-137 -==>  Preparing: select t.permission_code, t.permission_name, t.permission_url, t.enabled from u_operate_permission t, u_role_auth rm, u_role r, u_user_role ur where r.role_code = ur.role_code and rm.role_code = r.role_code and rm.permission_code = t.permission_code and ur.enabled = 1 and r.enabled = 1 and rm.enabled = 1 and t.enabled = 1 and ur.user_id = ?
+2020-07-06 09:53:28 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByUser-137 -==> Parameters: 1(Integer)
+2020-07-06 09:53:28 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByUser-137 -<==      Total: 18
+2020-07-06 09:53:32 [http-nio-8092-exec-1] INFO  o.z.u.c.RoleClientController-29 -分页角色，参数：[{"enabled":true}]，[1]，[10]
+2020-07-06 09:53:32 [http-nio-8092-exec-1] DEBUG o.z.u.service.impl.URoleServiceImpl-60 -分页角色，role：[{"enabled":true}]，pageNum：[1]，pageSize：[10]
+2020-07-06 09:53:32 [http-nio-8092-exec-1] DEBUG o.z.u.service.impl.URoleServiceImpl-48 -根据column查找角色，role：[{"enabled":true}]
+2020-07-06 09:53:32 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role WHERE enabled = ?
+2020-07-06 09:53:32 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: true(Boolean)
+2020-07-06 09:53:32 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 09:53:32 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -==>  Preparing: select role_code, role_name, create_time, enabled from u_role WHERE enabled = ? LIMIT ?
+2020-07-06 09:53:32 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -==> Parameters: true(Boolean), 10(Integer)
+2020-07-06 09:53:32 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -<==      Total: 2
+2020-07-06 09:54:40 [http-nio-8092-exec-4] INFO  o.z.u.c.RoleAuthClientController-32 -分页查找角色未授权菜单，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 09:54:40 [http-nio-8092-exec-4] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-106 -分页查找角色未授权菜单，roleAuthVo：[{"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 09:54:40 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_menu_info o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code)
+2020-07-06 09:54:40 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -==> Parameters: R003(String)
+2020-07-06 09:54:40 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -<==      Total: 1
+2020-07-06 09:54:40 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -==>  Preparing: SELECT menu_name, permission_code, parent_menu FROM u_menu_info o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code) order by permission_code ASC LIMIT ?
+2020-07-06 09:54:40 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -==> Parameters: R003(String), 10(Integer)
+2020-07-06 09:54:40 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -<==      Total: 10
+2020-07-06 09:54:40 [http-nio-8092-exec-5] INFO  o.z.u.c.RoleAuthClientController-40 -分页查找角色已授权菜单，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 09:54:40 [http-nio-8092-exec-5] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-95 -分页查找角色已授权菜单，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 09:54:40 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_menu_info o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 09:54:40 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 09:54:40 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -<==      Total: 1
+2020-07-06 09:54:40 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.menu_name, o.parent_menu FROM u_role_auth t, u_menu_info o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 09:54:40 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 09:54:40 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -<==      Total: 10
+2020-07-06 09:54:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 09:59:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:04:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:07:52 [http-nio-8092-exec-8] INFO  o.z.u.c.RoleAuthClientController-32 -分页查找角色未授权菜单，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:07:52 [http-nio-8092-exec-8] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-106 -分页查找角色未授权菜单，roleAuthVo：[{"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:07:53 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_menu_info o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code)
+2020-07-06 10:07:53 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -==> Parameters: R003(String)
+2020-07-06 10:07:53 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -<==      Total: 1
+2020-07-06 10:07:53 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -==>  Preparing: SELECT menu_name, permission_code, parent_menu FROM u_menu_info o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code) order by permission_code ASC LIMIT ?
+2020-07-06 10:07:53 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -==> Parameters: R003(String), 10(Integer)
+2020-07-06 10:07:53 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -<==      Total: 10
+2020-07-06 10:07:53 [http-nio-8092-exec-9] INFO  o.z.u.c.RoleAuthClientController-40 -分页查找角色已授权菜单，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:07:53 [http-nio-8092-exec-9] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-95 -分页查找角色已授权菜单，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:07:53 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_menu_info o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 10:07:53 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:07:53 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -<==      Total: 1
+2020-07-06 10:07:53 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.menu_name, o.parent_menu FROM u_role_auth t, u_menu_info o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:07:53 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:07:53 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -<==      Total: 10
+2020-07-06 10:07:54 [http-nio-8092-exec-10] INFO  o.z.u.c.RoleClientController-29 -分页角色，参数：[{"enabled":true}]，[1]，[10]
+2020-07-06 10:07:54 [http-nio-8092-exec-10] DEBUG o.z.u.service.impl.URoleServiceImpl-60 -分页角色，role：[{"enabled":true}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:07:54 [http-nio-8092-exec-10] DEBUG o.z.u.service.impl.URoleServiceImpl-48 -根据column查找角色，role：[{"enabled":true}]
+2020-07-06 10:07:54 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role WHERE enabled = ?
+2020-07-06 10:07:54 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: true(Boolean)
+2020-07-06 10:07:54 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 10:07:54 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -==>  Preparing: select role_code, role_name, create_time, enabled from u_role WHERE enabled = ? LIMIT ?
+2020-07-06 10:07:54 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -==> Parameters: true(Boolean), 10(Integer)
+2020-07-06 10:07:54 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -<==      Total: 2
+2020-07-06 10:07:58 [http-nio-8092-exec-3] INFO  o.z.u.c.RoleAuthClientController-32 -分页查找角色未授权菜单，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:07:58 [http-nio-8092-exec-3] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-106 -分页查找角色未授权菜单，roleAuthVo：[{"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:07:58 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_menu_info o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code)
+2020-07-06 10:07:58 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -==> Parameters: R003(String)
+2020-07-06 10:07:58 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -<==      Total: 1
+2020-07-06 10:07:58 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -==>  Preparing: SELECT menu_name, permission_code, parent_menu FROM u_menu_info o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code) order by permission_code ASC LIMIT ?
+2020-07-06 10:07:58 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -==> Parameters: R003(String), 10(Integer)
+2020-07-06 10:07:58 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -<==      Total: 10
+2020-07-06 10:07:58 [http-nio-8092-exec-7] INFO  o.z.u.c.RoleAuthClientController-40 -分页查找角色已授权菜单，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:07:58 [http-nio-8092-exec-7] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-95 -分页查找角色已授权菜单，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:07:58 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_menu_info o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 10:07:58 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:07:58 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -<==      Total: 1
+2020-07-06 10:07:58 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.menu_name, o.parent_menu FROM u_role_auth t, u_menu_info o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:07:58 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:07:58 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -<==      Total: 10
+2020-07-06 10:09:42 [http-nio-8092-exec-2] INFO  o.z.u.c.RoleAuthClientController-48 -分页查找角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:09:42 [http-nio-8092-exec-2] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-84 -分页查找角色未授权操作，roleAuthVo：[{"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:09:42 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code)
+2020-07-06 10:09:42 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==> Parameters: R003(String)
+2020-07-06 10:09:42 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:09:42 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==>  Preparing: SELECT permission_name, permission_code FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code) order by permission_code LIMIT ?
+2020-07-06 10:09:42 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==> Parameters: R003(String), 10(Integer)
+2020-07-06 10:09:42 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth-137 -<==      Total: 10
+2020-07-06 10:09:42 [http-nio-8092-exec-4] INFO  o.z.u.c.RoleAuthClientController-56 -分页查找角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:09:42 [http-nio-8092-exec-4] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-73 -分页查找角色授权操作，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:09:42 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 10:09:42 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:09:42 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:09:42 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.permission_name FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:09:42 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:09:42 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -<==      Total: 10
+2020-07-06 10:09:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:10:10 [http-nio-8092-exec-5] INFO  o.z.u.c.RoleAuthClientController-56 -分页查找角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:10:10 [http-nio-8092-exec-5] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-73 -分页查找角色授权操作，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:10:10 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 10:10:10 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:10:10 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:10:10 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.permission_name FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:10:10 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:10:10 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -<==      Total: 10
+2020-07-06 10:10:29 [http-nio-8092-exec-6] INFO  o.z.u.c.RoleAuthClientController-48 -分页查找角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:10:29 [http-nio-8092-exec-6] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-84 -分页查找角色未授权操作，roleAuthVo：[{"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:10:29 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code)
+2020-07-06 10:10:29 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==> Parameters: R003(String)
+2020-07-06 10:10:29 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:10:29 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==>  Preparing: SELECT permission_name, permission_code FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code) order by permission_code LIMIT ?
+2020-07-06 10:10:29 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==> Parameters: R003(String), 10(Integer)
+2020-07-06 10:10:29 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectNonAuth-137 -<==      Total: 10
+2020-07-06 10:10:29 [http-nio-8092-exec-8] INFO  o.z.u.c.RoleAuthClientController-56 -分页查找角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:10:29 [http-nio-8092-exec-8] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-73 -分页查找角色授权操作，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:10:29 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 10:10:29 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:10:29 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:10:29 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.permission_name FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:10:29 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:10:29 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -<==      Total: 10
+2020-07-06 10:12:06 [http-nio-8092-exec-10] INFO  o.z.u.c.RoleClientController-29 -分页角色，参数：[{"enabled":true}]，[1]，[10]
+2020-07-06 10:12:06 [http-nio-8092-exec-10] DEBUG o.z.u.service.impl.URoleServiceImpl-60 -分页角色，role：[{"enabled":true}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:12:06 [http-nio-8092-exec-10] DEBUG o.z.u.service.impl.URoleServiceImpl-48 -根据column查找角色，role：[{"enabled":true}]
+2020-07-06 10:12:06 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role WHERE enabled = ?
+2020-07-06 10:12:06 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: true(Boolean)
+2020-07-06 10:12:06 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 10:12:06 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -==>  Preparing: select role_code, role_name, create_time, enabled from u_role WHERE enabled = ? LIMIT ?
+2020-07-06 10:12:06 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -==> Parameters: true(Boolean), 10(Integer)
+2020-07-06 10:12:06 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -<==      Total: 2
+2020-07-06 10:12:10 [http-nio-8092-exec-3] INFO  o.z.u.c.RoleAuthClientController-32 -分页查找角色未授权菜单，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:12:10 [http-nio-8092-exec-3] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-106 -分页查找角色未授权菜单，roleAuthVo：[{"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:12:10 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_menu_info o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code)
+2020-07-06 10:12:10 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -==> Parameters: R003(String)
+2020-07-06 10:12:10 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu_COUNT-137 -<==      Total: 1
+2020-07-06 10:12:10 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -==>  Preparing: SELECT menu_name, permission_code, parent_menu FROM u_menu_info o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code) order by permission_code ASC LIMIT ?
+2020-07-06 10:12:10 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -==> Parameters: R003(String), 10(Integer)
+2020-07-06 10:12:10 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectNonAuthMenu-137 -<==      Total: 10
+2020-07-06 10:12:10 [http-nio-8092-exec-7] INFO  o.z.u.c.RoleAuthClientController-40 -分页查找角色已授权菜单，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:12:10 [http-nio-8092-exec-7] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-95 -分页查找角色已授权菜单，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:12:10 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_menu_info o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 10:12:10 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:12:10 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -<==      Total: 1
+2020-07-06 10:12:10 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.menu_name, o.parent_menu FROM u_role_auth t, u_menu_info o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:12:10 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:12:10 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -<==      Total: 10
+2020-07-06 10:12:47 [http-nio-8092-exec-1] INFO  o.z.u.c.RoleAuthClientController-40 -分页查找角色已授权菜单，参数：[{"enabled":true,"roleCode":"R003"}]，[6]，[10]
+2020-07-06 10:12:47 [http-nio-8092-exec-1] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-95 -分页查找角色已授权菜单，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[6]，pageSize：[10]
+2020-07-06 10:12:47 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_menu_info o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 10:12:47 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:12:47 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectAuthMenu_COUNT-137 -<==      Total: 1
+2020-07-06 10:12:47 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.menu_name, o.parent_menu FROM u_role_auth t, u_menu_info o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?, ?
+2020-07-06 10:12:47 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -==> Parameters: R003(String), true(Boolean), 50(Integer), 10(Integer)
+2020-07-06 10:12:47 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectAuthMenu-137 -<==      Total: 5
+2020-07-06 10:14:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:19:48 [http-nio-8092-exec-4] INFO  o.z.u.c.RoleClientController-29 -分页角色，参数：[{"enabled":true}]，[1]，[10]
+2020-07-06 10:19:48 [http-nio-8092-exec-4] DEBUG o.z.u.service.impl.URoleServiceImpl-60 -分页角色，role：[{"enabled":true}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:19:48 [http-nio-8092-exec-4] DEBUG o.z.u.service.impl.URoleServiceImpl-48 -根据column查找角色，role：[{"enabled":true}]
+2020-07-06 10:19:49 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role WHERE enabled = ?
+2020-07-06 10:19:49 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: true(Boolean)
+2020-07-06 10:19:50 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 10:19:50 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -==>  Preparing: select role_code, role_name, create_time, enabled from u_role WHERE enabled = ? LIMIT ?
+2020-07-06 10:19:50 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -==> Parameters: true(Boolean), 10(Integer)
+2020-07-06 10:19:50 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.URoleMapper.selectByColumn-137 -<==      Total: 2
+2020-07-06 10:19:51 [http-nio-8092-exec-5] INFO  o.z.u.c.RoleAuthClientController-48 -分页查找角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:19:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-84 -分页查找角色未授权操作，roleAuthVo：[{"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:19:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code)
+2020-07-06 10:19:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==> Parameters: R003(String)
+2020-07-06 10:19:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:19:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==>  Preparing: SELECT permission_name, permission_code FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code) order by permission_code LIMIT ?
+2020-07-06 10:19:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==> Parameters: R003(String), 10(Integer)
+2020-07-06 10:19:51 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectNonAuth-137 -<==      Total: 10
+2020-07-06 10:19:51 [http-nio-8092-exec-6] INFO  o.z.u.c.RoleAuthClientController-56 -分页查找角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:19:51 [http-nio-8092-exec-6] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-73 -分页查找角色授权操作，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:19:51 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 10:19:51 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:19:51 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:19:51 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.permission_name FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:19:51 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:19:51 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -<==      Total: 10
+2020-07-06 10:19:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:24:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:29:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:34:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:36:12 [http-nio-8092-exec-9] INFO  o.z.u.c.RoleAuthClientController-56 -分页查找角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:36:12 [http-nio-8092-exec-9] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-73 -分页查找角色授权操作，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:36:14 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 10:36:14 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:36:14 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:36:14 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.permission_name FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:36:14 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:36:14 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -<==      Total: 10
+2020-07-06 10:39:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:41:38 [http-nio-8092-exec-3] INFO  o.z.u.c.RoleAuthClientController-56 -分页查找角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:41:38 [http-nio-8092-exec-3] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-73 -分页查找角色授权操作，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:41:39 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ?
+2020-07-06 10:41:39 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:41:39 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:41:39 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.permission_name FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:41:39 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:41:39 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -<==      Total: 10
+2020-07-06 10:44:59 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:45:16 [Thread-8] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application USER with eureka with status DOWN
+2020-07-06 10:45:16 [Thread-8] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594003516436, current=DOWN, previous=UP]
+2020-07-06 10:45:16 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_USER/YOS-01604151651:user:8092: registering service...
+2020-07-06 10:45:16 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 10:45:16 [Thread-8] INFO  c.alibaba.druid.pool.DruidDataSource-2029 -{dataSource-1} closing ...
+2020-07-06 10:45:16 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_USER/YOS-01604151651:user:8092 - registration status: 204
+2020-07-06 10:45:16 [Thread-8] INFO  c.alibaba.druid.pool.DruidDataSource-2101 -{dataSource-1} closed
+2020-07-06 10:45:16 [Thread-8] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 10:45:19 [Thread-8] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 10:45:19 [Thread-8] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_USER/YOS-01604151651:user:8092 - deregister  status: 200
+2020-07-06 10:45:19 [Thread-8] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 10:45:19 [restartedMain] INFO  org.zero.user.UserApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 10:45:20 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=3ddc60da-af1e-3398-947d-b5e676a19da8
+2020-07-06 10:45:20 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8092 (http)
+2020-07-06 10:45:20 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8092"]
+2020-07-06 10:45:20 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 10:45:20 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 10:45:20 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 10:45:20 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 514 ms
+2020-07-06 10:45:20 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure-56 -Init DruidDataSource
+2020-07-06 10:45:20 [restartedMain] INFO  c.alibaba.druid.pool.DruidDataSource-994 -{dataSource-2} inited
+2020-07-06 10:45:20 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 10:45:20 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 10:45:20 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 10:45:20 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer-58 -LiveReload server is running on port 35729
+2020-07-06 10:45:20 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 10:45:20 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 10:45:20 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 10:45:20 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 10:45:20 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 10:45:20 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 10:45:20 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 10:45:21 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 10:45:21 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594003521074 with initial instances count: 2
+2020-07-06 10:45:21 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application USER with eureka with status UP
+2020-07-06 10:45:21 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594003521074, current=UP, previous=STARTING]
+2020-07-06 10:45:21 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_USER/YOS-01604151651:user:8092: registering service...
+2020-07-06 10:45:21 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_USER/YOS-01604151651:user:8092 - registration status: 204
+2020-07-06 10:45:21 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8092"]
+2020-07-06 10:45:21 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8092 (http) with context path ''
+2020-07-06 10:45:21 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8092
+2020-07-06 10:45:21 [restartedMain] INFO  org.zero.user.UserApplication-61 -Started UserApplication in 1.477 seconds (JVM running for 3329.802)
+2020-07-06 10:45:21 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener-63 -Condition evaluation unchanged
+2020-07-06 10:45:28 [http-nio-8092-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-06 10:45:28 [http-nio-8092-exec-1] INFO  o.s.web.servlet.DispatcherServlet-525 -Initializing Servlet 'dispatcherServlet'
+2020-07-06 10:45:28 [http-nio-8092-exec-1] INFO  o.s.web.servlet.DispatcherServlet-547 -Completed initialization in 4 ms
+2020-07-06 10:45:28 [http-nio-8092-exec-1] INFO  o.z.u.c.RoleAuthClientController-48 -分页查找角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:45:28 [http-nio-8092-exec-1] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-84 -分页查找角色未授权操作，roleAuthVo：[{"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:45:28 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code)
+2020-07-06 10:45:28 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==> Parameters: R003(String)
+2020-07-06 10:45:28 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:45:28 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==>  Preparing: SELECT permission_name, permission_code FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code) order by permission_code LIMIT ?
+2020-07-06 10:45:28 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==> Parameters: R003(String), 10(Integer)
+2020-07-06 10:45:28 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectNonAuth-137 -<==      Total: 10
+2020-07-06 10:45:28 [http-nio-8092-exec-3] INFO  o.z.u.c.RoleAuthClientController-56 -分页查找角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:45:28 [http-nio-8092-exec-3] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-73 -分页查找角色授权操作，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:45:28 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.permission_code = o.permission_code AND t.enabled = ?
+2020-07-06 10:45:28 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:45:28 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:46:04 [http-nio-8092-exec-4] INFO  o.z.u.c.RoleAuthClientController-63 -新增角色权限，参数：[{"permissionCode":"A1001","roleCode":"R003"}]
+2020-07-06 10:46:04 [http-nio-8092-exec-4] INFO  o.z.u.s.impl.URoleAuthServiceImpl-32 -插入角色权限信息，userRole：[{"permissionCode":"A1001","roleCode":"R003"}]
+2020-07-06 10:46:04 [http-nio-8092-exec-4] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-57 -根据primary key查找角色权限信息，userRoleKey：[{"permissionCode":"A1001","roleCode":"R003"}]
+2020-07-06 10:46:04 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -==>  Preparing: select role_code, permission_code, enabled from u_role_auth where role_code = ? and permission_code = ?
+2020-07-06 10:46:04 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -==> Parameters: R003(String), A1001(String)
+2020-07-06 10:46:04 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -<==      Total: 0
+2020-07-06 10:46:04 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.insertSelective-137 -==>  Preparing: insert into u_role_auth ( role_code, permission_code ) values ( ?, ? )
+2020-07-06 10:46:04 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.insertSelective-137 -==> Parameters: R003(String), A1001(String)
+2020-07-06 10:46:04 [http-nio-8092-exec-4] DEBUG o.z.u.s.m.U.insertSelective-137 -<==    Updates: 1
+2020-07-06 10:46:04 [http-nio-8092-exec-2] INFO  o.z.u.c.RoleAuthClientController-48 -分页查找角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:46:04 [http-nio-8092-exec-2] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-84 -分页查找角色未授权操作，roleAuthVo：[{"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:46:04 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code)
+2020-07-06 10:46:04 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==> Parameters: R003(String)
+2020-07-06 10:46:04 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:46:04 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==>  Preparing: SELECT permission_name, permission_code FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code) order by permission_code LIMIT ?
+2020-07-06 10:46:04 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==> Parameters: R003(String), 10(Integer)
+2020-07-06 10:46:04 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth-137 -<==      Total: 10
+2020-07-06 10:46:07 [http-nio-8092-exec-6] INFO  o.z.u.c.RoleAuthClientController-56 -分页查找角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:46:07 [http-nio-8092-exec-6] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-73 -分页查找角色授权操作，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:46:07 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.permission_code = o.permission_code AND t.enabled = ?
+2020-07-06 10:46:07 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:46:07 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:46:07 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.permission_name FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.permission_code = o.permission_code AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:46:07 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:46:07 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -<==      Total: 1
+2020-07-06 10:46:15 [http-nio-8092-exec-7] INFO  o.z.u.c.RoleAuthClientController-63 -新增角色权限，参数：[{"permissionCode":"A1002","roleCode":"R003"}]
+2020-07-06 10:46:15 [http-nio-8092-exec-7] INFO  o.z.u.s.impl.URoleAuthServiceImpl-32 -插入角色权限信息，userRole：[{"permissionCode":"A1002","roleCode":"R003"}]
+2020-07-06 10:46:15 [http-nio-8092-exec-7] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-57 -根据primary key查找角色权限信息，userRoleKey：[{"permissionCode":"A1002","roleCode":"R003"}]
+2020-07-06 10:46:15 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -==>  Preparing: select role_code, permission_code, enabled from u_role_auth where role_code = ? and permission_code = ?
+2020-07-06 10:46:15 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -==> Parameters: R003(String), A1002(String)
+2020-07-06 10:46:15 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -<==      Total: 0
+2020-07-06 10:46:15 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.insertSelective-137 -==>  Preparing: insert into u_role_auth ( role_code, permission_code ) values ( ?, ? )
+2020-07-06 10:46:15 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.insertSelective-137 -==> Parameters: R003(String), A1002(String)
+2020-07-06 10:46:15 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.insertSelective-137 -<==    Updates: 1
+2020-07-06 10:46:15 [http-nio-8092-exec-8] INFO  o.z.u.c.RoleAuthClientController-48 -分页查找角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:46:15 [http-nio-8092-exec-8] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-84 -分页查找角色未授权操作，roleAuthVo：[{"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:46:15 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code)
+2020-07-06 10:46:15 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==> Parameters: R003(String)
+2020-07-06 10:46:15 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:46:15 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==>  Preparing: SELECT permission_name, permission_code FROM u_operate_permission o WHERE o.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_role_auth t WHERE t.role_code = ? AND t.permission_code = o.permission_code) order by permission_code LIMIT ?
+2020-07-06 10:46:15 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuth-137 -==> Parameters: R003(String), 10(Integer)
+2020-07-06 10:46:15 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectNonAuth-137 -<==      Total: 10
+2020-07-06 10:46:18 [http-nio-8092-exec-5] INFO  o.z.u.c.RoleAuthClientController-56 -分页查找角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:46:18 [http-nio-8092-exec-5] DEBUG o.z.u.s.impl.URoleAuthServiceImpl-73 -分页查找角色授权操作，roleAuthVo：[{"enabled":true,"roleCode":"R003"}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:46:18 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.permission_code = o.permission_code AND t.enabled = ?
+2020-07-06 10:46:18 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==> Parameters: R003(String), true(Boolean)
+2020-07-06 10:46:18 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:46:18 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==>  Preparing: SELECT t.role_code, t.permission_code, t.enabled, o.permission_name FROM u_role_auth t, u_operate_permission o WHERE t.role_code = ? AND o.enabled = 1 AND t.permission_code = o.permission_code AND t.enabled = ? order by permission_code LIMIT ?
+2020-07-06 10:46:18 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -==> Parameters: R003(String), true(Boolean), 10(Integer)
+2020-07-06 10:46:18 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.URoleAuthMapper.selectAuth-137 -<==      Total: 2
+2020-07-06 10:50:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:55:03 [http-nio-8092-exec-10] INFO  o.z.u.c.DepartmentClientController-42 -获取部门列表，参数：[org.zero.user.model.UDepartment@12df304b]
+2020-07-06 10:55:03 [http-nio-8092-exec-10] DEBUG o.z.u.s.impl.UDepartmentServiceImpl-50 -根据column查找部门，department：[org.zero.user.model.UDepartment@12df304b]
+2020-07-06 10:55:04 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByColumn-137 -==>  Preparing: select dept_code, dept_name, parent_dept, dept_leader, creator, create_time, enabled from u_department WHERE enabled = ?
+2020-07-06 10:55:04 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByColumn-137 -==> Parameters: true(Boolean)
+2020-07-06 10:55:04 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByColumn-137 -<==      Total: 1
+2020-07-06 10:55:04 [http-nio-8092-exec-1] INFO  o.z.user.controller.UserController-94 -分页用户，参数：[org.zero.user.model.UUser@1f4da643]，[1]，[10]
+2020-07-06 10:55:04 [http-nio-8092-exec-1] DEBUG o.z.u.service.impl.UUserServiceImpl-56 -根据columns查找用户，user：[org.zero.user.model.UUser@1f4da643]
+2020-07-06 10:55:04 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_user WHERE enabled = ?
+2020-07-06 10:55:04 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: true(Boolean)
+2020-07-06 10:55:04 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 10:55:04 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.UUserMapper.selectByColumn-137 -==>  Preparing: select user_id, user_name, password, user_type, realname, phone_no, dept_code, company, create_time, creator, enabled from u_user WHERE enabled = ? LIMIT ?
+2020-07-06 10:55:04 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.UUserMapper.selectByColumn-137 -==> Parameters: true(Boolean), 10(Integer)
+2020-07-06 10:55:04 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.UUserMapper.selectByColumn-137 -<==      Total: 1
+2020-07-06 10:55:13 [http-nio-8092-exec-3] INFO  o.z.user.controller.UserController-94 -分页用户，参数：[org.zero.user.model.UUser@1e12f982]，[1]，[10]
+2020-07-06 10:55:13 [http-nio-8092-exec-3] DEBUG o.z.u.service.impl.UUserServiceImpl-56 -根据columns查找用户，user：[org.zero.user.model.UUser@1e12f982]
+2020-07-06 10:55:13 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_user
+2020-07-06 10:55:13 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: 
+2020-07-06 10:55:13 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 10:55:13 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.UUserMapper.selectByColumn-137 -==>  Preparing: select user_id, user_name, password, user_type, realname, phone_no, dept_code, company, create_time, creator, enabled from u_user LIMIT ?
+2020-07-06 10:55:13 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.UUserMapper.selectByColumn-137 -==> Parameters: 10(Integer)
+2020-07-06 10:55:13 [http-nio-8092-exec-3] DEBUG o.z.u.s.m.UUserMapper.selectByColumn-137 -<==      Total: 2
+2020-07-06 10:55:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:56:35 [http-nio-8092-exec-2] INFO  o.z.u.c.UserRoleClientController-31 -分页用户未授权角色，参数：[{"userId":1}]，[1]，[10]
+2020-07-06 10:56:35 [http-nio-8092-exec-2] DEBUG o.z.u.s.impl.UUserRoleServiceImpl-86 -分页查找用户未授权角色，userRoleVo：[{"userId":1}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:56:35 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_role r WHERE r.enabled = 1 AND NOT EXISTS (SELECT 1 FROM u_user_role u WHERE r.role_code = u.role_code AND u.user_id = ?)
+2020-07-06 10:56:35 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -==> Parameters: 1(Integer)
+2020-07-06 10:56:35 [http-nio-8092-exec-2] DEBUG o.z.u.s.m.U.selectNonAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:56:35 [http-nio-8092-exec-6] INFO  o.z.u.c.UserRoleClientController-39 -分页用户授权角色，参数：[{"enabled":true,"userId":1}]，[1]，[10]
+2020-07-06 10:56:35 [http-nio-8092-exec-6] DEBUG o.z.u.s.impl.UUserRoleServiceImpl-75 -分页查找用户授权角色，userRoleVo：[{"enabled":true,"userId":1}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:56:35 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_user_role t, u_role r WHERE t.role_code = r.role_code AND r.enabled = 1 AND user_id = ?
+2020-07-06 10:56:35 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -==> Parameters: 1(Integer)
+2020-07-06 10:56:35 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.U.selectAuth_COUNT-137 -<==      Total: 1
+2020-07-06 10:56:35 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.UUserRoleMapper.selectAuth-137 -==>  Preparing: SELECT t.user_id, t.role_code, t.enabled, r.role_name FROM u_user_role t, u_role r WHERE t.role_code = r.role_code AND r.enabled = 1 AND user_id = ? order by role_code LIMIT ?
+2020-07-06 10:56:35 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.UUserRoleMapper.selectAuth-137 -==> Parameters: 1(Integer), 10(Integer)
+2020-07-06 10:56:35 [http-nio-8092-exec-6] DEBUG o.z.u.s.m.UUserRoleMapper.selectAuth-137 -<==      Total: 2
+2020-07-06 10:56:40 [http-nio-8092-exec-7] INFO  o.z.u.c.DepartmentClientController-29 -分页部门，参数：[org.zero.user.model.UDepartment@5528e562]，[1]，[10]
+2020-07-06 10:56:40 [http-nio-8092-exec-7] DEBUG o.z.u.s.impl.UDepartmentServiceImpl-56 -分页部门，department：[org.zero.user.model.UDepartment@5528e562]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:56:40 [http-nio-8092-exec-7] DEBUG o.z.u.s.impl.UDepartmentServiceImpl-50 -根据column查找部门，department：[org.zero.user.model.UDepartment@5528e562]
+2020-07-06 10:56:40 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_department
+2020-07-06 10:56:40 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: 
+2020-07-06 10:56:40 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 10:56:40 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByColumn-137 -==>  Preparing: select dept_code, dept_name, parent_dept, dept_leader, creator, create_time, enabled from u_department LIMIT ?
+2020-07-06 10:56:40 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByColumn-137 -==> Parameters: 10(Integer)
+2020-07-06 10:56:40 [http-nio-8092-exec-7] DEBUG o.z.u.s.m.U.selectByColumn-137 -<==      Total: 1
+2020-07-06 10:57:07 [http-nio-8092-exec-8] INFO  o.z.u.c.DepartmentClientController-49 -新增部门，参数：[org.zero.user.model.UDepartment@b7064f0]
+2020-07-06 10:57:07 [http-nio-8092-exec-8] INFO  o.z.u.s.impl.UDepartmentServiceImpl-29 -插入部门信息，department：[org.zero.user.model.UDepartment@b7064f0]
+2020-07-06 10:57:07 [http-nio-8092-exec-8] DEBUG o.z.u.s.impl.UDepartmentServiceImpl-43 -根据primary key查找部门，deptCode：[D002]
+2020-07-06 10:57:07 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -==>  Preparing: select dept_code, dept_name, parent_dept, dept_leader, creator, create_time, enabled from u_department where dept_code = ?
+2020-07-06 10:57:07 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -==> Parameters: D002(String)
+2020-07-06 10:57:07 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -<==      Total: 0
+2020-07-06 10:57:07 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.UDepartmentMapper.insert-137 -==>  Preparing: insert into u_department (dept_code, dept_name, parent_dept, dept_leader, creator, create_time, enabled) values (?, ?, ?, ?, ?, ?, ?)
+2020-07-06 10:57:07 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.UDepartmentMapper.insert-137 -==> Parameters: D002(String), 营销部门(String), D001(String), liuning(String), null, null, true(Boolean)
+2020-07-06 10:57:07 [http-nio-8092-exec-8] DEBUG o.z.u.s.m.UDepartmentMapper.insert-137 -<==    Updates: 1
+2020-07-06 10:57:07 [http-nio-8092-exec-5] INFO  o.z.u.c.DepartmentClientController-29 -分页部门，参数：[org.zero.user.model.UDepartment@109b5c23]，[1]，[10]
+2020-07-06 10:57:07 [http-nio-8092-exec-5] DEBUG o.z.u.s.impl.UDepartmentServiceImpl-56 -分页部门，department：[org.zero.user.model.UDepartment@109b5c23]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:57:07 [http-nio-8092-exec-5] DEBUG o.z.u.s.impl.UDepartmentServiceImpl-50 -根据column查找部门，department：[org.zero.user.model.UDepartment@109b5c23]
+2020-07-06 10:57:07 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_department
+2020-07-06 10:57:07 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: 
+2020-07-06 10:57:07 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 10:57:07 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectByColumn-137 -==>  Preparing: select dept_code, dept_name, parent_dept, dept_leader, creator, create_time, enabled from u_department LIMIT ?
+2020-07-06 10:57:07 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectByColumn-137 -==> Parameters: 10(Integer)
+2020-07-06 10:57:07 [http-nio-8092-exec-5] DEBUG o.z.u.s.m.U.selectByColumn-137 -<==      Total: 2
+2020-07-06 10:57:11 [http-nio-8092-exec-9] INFO  o.z.u.c.MenuClientController-30 -分页菜单，参数：[{}]，[1]，[10]
+2020-07-06 10:57:11 [http-nio-8092-exec-9] DEBUG o.z.u.s.impl.UMenuInfoServiceImpl-60 -分页菜单，menuInfo：[{}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:57:11 [http-nio-8092-exec-9] DEBUG o.z.u.s.impl.UMenuInfoServiceImpl-48 -根据column查找菜单，menuInfo：[{}]
+2020-07-06 10:57:11 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_menu_info
+2020-07-06 10:57:11 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: 
+2020-07-06 10:57:11 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 10:57:11 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectByColumn-137 -==>  Preparing: select permission_code, menu_name, menu_url, parent_menu, css_style, enabled from u_menu_info LIMIT ?
+2020-07-06 10:57:11 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectByColumn-137 -==> Parameters: 10(Integer)
+2020-07-06 10:57:11 [http-nio-8092-exec-9] DEBUG o.z.u.s.m.U.selectByColumn-137 -<==      Total: 10
+2020-07-06 10:57:30 [http-nio-8092-exec-10] INFO  o.z.u.c.MenuClientController-37 -根据primary获取菜单，参数：[1100]
+2020-07-06 10:57:30 [http-nio-8092-exec-10] DEBUG o.z.u.s.impl.UMenuInfoServiceImpl-41 -根据primary key查找菜单，permissionCode：[1100]
+2020-07-06 10:57:30 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -==>  Preparing: select permission_code, menu_name, menu_url, parent_menu, css_style, enabled from u_menu_info where permission_code = ?
+2020-07-06 10:57:30 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -==> Parameters: 1100(String)
+2020-07-06 10:57:30 [http-nio-8092-exec-10] DEBUG o.z.u.s.m.U.selectByPrimaryKey-137 -<==      Total: 1
+2020-07-06 10:58:10 [http-nio-8092-exec-1] INFO  o.z.u.c.AuthClientController-27 -分页授权操作权限，参数：[{}]，[1]，[10]
+2020-07-06 10:58:10 [http-nio-8092-exec-1] DEBUG o.z.u.s.i.UOperatePermissionServiceImpl-62 -分页操作权限，operatePermission：[{}]，pageNum：[1]，pageSize：[10]
+2020-07-06 10:58:10 [http-nio-8092-exec-1] DEBUG o.z.u.s.i.UOperatePermissionServiceImpl-49 -根据column查找操作权限，operatePermission：[{}]
+2020-07-06 10:58:10 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==>  Preparing: SELECT count(0) FROM u_operate_permission
+2020-07-06 10:58:10 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -==> Parameters: 
+2020-07-06 10:58:10 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn_COUNT-137 -<==      Total: 1
+2020-07-06 10:58:10 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn-137 -==>  Preparing: select permission_code, permission_name, permission_url, enabled from u_operate_permission LIMIT ?
+2020-07-06 10:58:10 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn-137 -==> Parameters: 10(Integer)
+2020-07-06 10:58:10 [http-nio-8092-exec-1] DEBUG o.z.u.s.m.U.selectByColumn-137 -<==      Total: 10
+2020-07-06 11:00:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:05:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:10:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:15:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:20:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:25:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:30:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:35:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:40:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:45:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:50:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:55:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:00:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:05:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:10:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:15:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:20:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:25:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:30:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:35:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:40:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:45:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:50:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:55:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:00:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:05:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:10:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:15:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:20:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:25:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:30:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:35:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:40:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:45:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:50:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:55:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:00:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:05:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:10:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:15:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:20:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:25:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:30:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:35:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:40:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:45:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:50:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:55:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:00:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:05:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:10:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:15:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:20:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:25:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:30:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:35:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:40:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:45:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:50:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:55:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 16:00:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 16:05:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 16:10:21 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin-159 -Application shutdown requested.
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application USER with eureka with status DOWN
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594023040553, current=DOWN, previous=UP]
+2020-07-06 16:10:40 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_USER/YOS-01604151651:user:8092: registering service...
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  c.alibaba.druid.pool.DruidDataSource-2029 -{dataSource-2} closing ...
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  c.alibaba.druid.pool.DruidDataSource-2101 -{dataSource-2} closed
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 16:10:40 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_USER/YOS-01604151651:user:8092 - registration status: 204
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_USER/YOS-01604151651:user:8092 - deregister  status: 200
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Pausing ProtocolHandler ["http-nio-8092"]
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.catalina.core.StandardService-173 -Stopping service [Tomcat]
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Stopping ProtocolHandler ["http-nio-8092"]
+2020-07-06 16:10:40 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Destroying ProtocolHandler ["http-nio-8092"]

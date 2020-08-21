@@ -3,11 +3,13 @@
  */
 $(function() {
 	loadTable();
+	
+	
 });
 
 function loadTable() {
 	$('#list').bootstrapTable({
-		url : "/hoper/backweb/jjsDepartment/page",
+		url : "/hoper/backweb/department/page",
         dataType: "json",
         method: "GET",
         striped: true,//是否显示行间隔色
@@ -46,14 +48,18 @@ var columns = [
 		title : "部门名称",
 		align : "center"
 	}, {
+		field : "parentDept",
+		title : "上级部门",
+		align : "center"
+	}, {
 		field : "deptLeader",
 		title : "部门负责人",
 		align : "center"
 	}, {
-		field : "status",
-		title : "状态",
+		field : "enabled",
+		title : "是否启用",
 		align : "center",
-		formatter : statusForamt
+		formatter : enabledFormat
 	}, {
 		field : "createTime",
 		title : "创建时间",
@@ -64,18 +70,9 @@ var columns = [
 		title : "创建人",
 		align : "center"
 	}, {
-		field : "lastUpdateTime",
-		title : "最后更新时间",
-		align : "center",
-		formatter : jsonTimeFormat
-	}, {
-		field : "lastUpdateUser",
-		title : "最后更新人",
-		align : "center"
-	}, {
 		field : "void",
 		title : "操作",
-		align : "left",
+		align : "center",
 		formatter : operateFormat
 	}
 ];
@@ -84,19 +81,19 @@ var deptValidator = $("#dept_form").validate({
 	rules : {
 		deptCode : {
 			"required" : true,
-			"utfmaxlength" : 8
+			"maxlength" : 4
 		},
 		deptName : {
 			"required" : true,
-			"utfmaxlength" : 100
+			"maxlength" : 20
 		},
 //		deptLeader : "required",
-		status : "required"
+		enabled : "required"
 	}
 });
 
-var checkUpd = checkAuth("USER:UPDATE_DEPARTMENT");
-var checkEnable = checkAuth("USER:ENABLE_OR_DISABLE_DEPARTMENT");
+var checkUpd = checkAuth("A1008");
+var checkEnable = checkAuth("A1009");
 function operateFormat(value, row, index) {
 	var s ='';
 	if (checkUpd)
@@ -116,7 +113,7 @@ function operateFormat(value, row, index) {
 }
 
 function enable(deptCode) {
-	jQuery.post("/hoper/backweb/jjsDepartment/enable", {
+	jQuery.post("/hoper/backweb/department/enable", {
 		"deptCode" : deptCode
 	}, function(data) {
 		if (1 == data.code) {
@@ -131,7 +128,7 @@ function enable(deptCode) {
 }
 
 function disable(deptCode) {
-	jQuery.post("/hoper/backweb/jjsDepartment/disable", {
+	jQuery.post("/hoper/backweb/department/disable", {
 		"deptCode" : deptCode
 	}, function(data) {
 		if (1 == data.code) {
@@ -154,7 +151,7 @@ function openDialog() {
 }
 
 function openUpdDialog(deptCode) {
-	jQuery.get("/hoper/backweb/jjsDepartment/getDepartmentById", {
+	jQuery.get("/hoper/backweb/department/fetchByPrimary", {
 		"deptCode" : deptCode
 	}, function(data) {
 		if (1 == data.code) {
@@ -180,10 +177,10 @@ function saveDepartment() {
 		return;
 	}
 	var json = $("#dept_form").serializeJson();
-	var url = "/hoper/backweb/jjsDepartment/add";
+	var url = "/hoper/backweb/department/add";
 	if (pcg_fun.isEmpty(json.deptCode)) {
 		json.deptCode = $("#deptCode").val();
-		url = "/hoper/backweb/jjsDepartment/update";
+		url = "/hoper/backweb/department/update";
 	}
 	jQuery.post(url, json, function(data) {
 		if (1 == data.code) {

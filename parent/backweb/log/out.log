@@ -1,301 +1,936 @@
-2020-06-22 14:10:14 [main] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
-2020-06-22 14:10:15 [main] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=aa37065f-b929-338c-b3d2-ee9c30d7d00f
-2020-06-22 14:10:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
-2020-06-22 14:10:15 [main] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:10:15 [main] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
-2020-06-22 14:10:15 [main] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-06-22 14:10:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
-2020-06-22 14:10:15 [main] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 734 ms
-2020-06-22 14:10:15 [main] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
-2020-06-22 14:10:15 [main] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-06-22 14:10:15 [main] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
-2020-06-22 14:10:15 [main] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-06-22 14:10:15 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-22 14:10:16 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
-2020-06-22 14:10:16 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
-2020-06-22 14:10:16 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
-2020-06-22 14:10:16 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
-2020-06-22 14:10:16 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
-2020-06-22 14:10:16 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
-2020-06-22 14:10:16 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
-2020-06-22 14:10:16 [main] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1592806216935 with initial instances count: 1
-2020-06-22 14:10:16 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
-2020-06-22 14:10:16 [main] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1592806216935, current=UP, previous=STARTING]
-2020-06-22 14:10:16 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
-2020-06-22 14:10:16 [main] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:10:16 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
-2020-06-22 14:10:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
-2020-06-22 14:10:16 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
-2020-06-22 14:10:17 [main] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 2.671 seconds (JVM running for 3.281)
-2020-06-22 14:10:44 [http-nio-8099-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-22 14:10:44 [http-nio-8099-exec-1] INFO  o.s.web.servlet.DispatcherServlet-525 -Initializing Servlet 'dispatcherServlet'
-2020-06-22 14:10:44 [http-nio-8099-exec-1] INFO  o.s.web.servlet.DispatcherServlet-547 -Completed initialization in 0 ms
-2020-06-22 14:10:45 [http-nio-8099-exec-1] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /customer/customer/customer
-2020-06-22 14:10:45 [http-nio-8099-exec-2] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /favicon.ico
-2020-06-22 14:15:16 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin-159 -Application shutdown requested.
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1592806612333, current=DOWN, previous=UP]
-2020-06-22 14:16:52 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
-2020-06-22 14:16:52 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Pausing ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.catalina.core.StandardService-173 -Stopping service [Tomcat]
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Destroying Spring FrameworkServlet 'dispatcherServlet'
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Stopping ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:16:52 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Destroying ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:18:35 [main] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
-2020-06-22 14:18:35 [main] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=dd8ca0ba-7a6f-34db-93fa-0a8851c3a4ec
-2020-06-22 14:18:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
-2020-06-22 14:18:35 [main] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:18:35 [main] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
-2020-06-22 14:18:35 [main] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-06-22 14:18:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
-2020-06-22 14:18:36 [main] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 890 ms
-2020-06-22 14:18:36 [main] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
-2020-06-22 14:18:36 [main] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-06-22 14:18:36 [main] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
-2020-06-22 14:18:36 [main] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-06-22 14:18:36 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-22 14:18:36 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
-2020-06-22 14:18:36 [main] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2020-06-22 14:18:36 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
-2020-06-22 14:18:36 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
-2020-06-22 14:18:36 [main] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
-2020-06-22 14:18:37 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
-2020-06-22 14:18:37 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
-2020-06-22 14:18:37 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
-2020-06-22 14:18:37 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
-2020-06-22 14:18:37 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
-2020-06-22 14:18:37 [main] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1592806717506 with initial instances count: 1
-2020-06-22 14:18:37 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
-2020-06-22 14:18:37 [main] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1592806717506, current=UP, previous=STARTING]
-2020-06-22 14:18:37 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
-2020-06-22 14:18:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:18:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
-2020-06-22 14:18:37 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
-2020-06-22 14:18:37 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
-2020-06-22 14:18:37 [main] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 3.236 seconds (JVM running for 3.939)
-2020-06-22 14:18:41 [http-nio-8099-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-22 14:18:41 [http-nio-8099-exec-1] INFO  o.s.web.servlet.DispatcherServlet-525 -Initializing Servlet 'dispatcherServlet'
-2020-06-22 14:18:41 [http-nio-8099-exec-1] INFO  o.s.web.servlet.DispatcherServlet-547 -Completed initialization in 0 ms
-2020-06-22 14:18:42 [http-nio-8099-exec-3] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/bootstrap-table.css
-2020-06-22 14:18:42 [http-nio-8099-exec-2] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/bootstrap.min.css
-2020-06-22 14:18:42 [http-nio-8099-exec-7] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/bootstrap-editable.css
-2020-06-22 14:18:42 [http-nio-8099-exec-9] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/jquery-confirm.min.css
-2020-06-22 14:18:42 [http-nio-8099-exec-5] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/bootstrap-select.css
-2020-06-22 14:18:42 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/bootstrapValidator.min.css
-2020-06-22 14:18:42 [http-nio-8099-exec-2] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /css/framework.css
-2020-06-22 14:18:42 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/jquery-2.0.3.min.js
-2020-06-22 14:18:42 [http-nio-8099-exec-3] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/jquery.validate.js
-2020-06-22 14:18:42 [http-nio-8099-exec-5] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/jquery-validate-extension.js
-2020-06-22 14:18:42 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-select.js
-2020-06-22 14:18:42 [http-nio-8099-exec-2] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap.min.js
-2020-06-22 14:18:42 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/My97DatePicker/4.8/WdatePicker.js
-2020-06-22 14:18:42 [http-nio-8099-exec-9] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/jquery-confirm.min.js
-2020-06-22 14:18:42 [http-nio-8099-exec-2] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/md5-min.js
-2020-06-22 14:18:42 [http-nio-8099-exec-8] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/common.js
-2020-06-22 14:18:42 [http-nio-8099-exec-3] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/commons.js
-2020-06-22 14:18:42 [http-nio-8099-exec-10] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/asset/plug_lib/defaults-zh_CN.js
-2020-06-22 14:18:42 [http-nio-8099-exec-7] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/combo_commons.js
-2020-06-22 14:18:42 [http-nio-8099-exec-5] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-table-zh-CN.js
-2020-06-22 14:18:42 [http-nio-8099-exec-6] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-table.js
-2020-06-22 14:18:42 [http-nio-8099-exec-1] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/customer/customer.js
-2020-06-22 14:18:42 [http-nio-8099-exec-8] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/identityCardValidate.js
-2020-06-22 14:18:42 [http-nio-8099-exec-10] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/jquery.validate.js
-2020-06-22 14:18:42 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/auth_permission.js
-2020-06-22 14:18:42 [http-nio-8099-exec-9] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/jquery-validate-extension.js
-2020-06-22 14:18:42 [http-nio-8099-exec-2] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-table.js
-2020-06-22 14:18:42 [http-nio-8099-exec-7] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-table-zh-CN.js
-2020-06-22 14:18:42 [http-nio-8099-exec-3] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-select.js
-2020-06-22 14:18:42 [http-nio-8099-exec-1] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/asset/plug_lib/defaults-zh_CN.js
-2020-06-22 14:18:42 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/jquery-confirm.min.js
-2020-06-22 14:18:42 [http-nio-8099-exec-6] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/My97DatePicker/4.8/WdatePicker.js
-2020-06-22 14:18:42 [http-nio-8099-exec-5] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/md5-min.js
-2020-06-22 14:18:42 [http-nio-8099-exec-10] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/common.js
-2020-06-22 14:18:42 [http-nio-8099-exec-8] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/commons.js
-2020-06-22 14:18:42 [http-nio-8099-exec-9] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/combo_commons.js
-2020-06-22 14:18:42 [http-nio-8099-exec-2] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/identityCardValidate.js
-2020-06-22 14:18:42 [http-nio-8099-exec-7] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/auth_permission.js
-2020-06-22 14:18:42 [http-nio-8099-exec-3] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/customer/customer.js
-2020-06-22 14:19:39 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/bootstrap.min.css
-2020-06-22 14:19:39 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/bootstrapValidator.min.css
-2020-06-22 14:19:39 [http-nio-8099-exec-6] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/bootstrap-table.css
-2020-06-22 14:19:39 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/bootstrap-select.css
-2020-06-22 14:19:39 [http-nio-8099-exec-8] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /css/framework.css
-2020-06-22 14:19:39 [http-nio-8099-exec-10] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/jquery-confirm.min.css
-2020-06-22 14:19:39 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/jquery-2.0.3.min.js
-2020-06-22 14:19:39 [http-nio-8099-exec-8] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/jquery.validate.js
-2020-06-22 14:19:39 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/jquery-validate-extension.js
-2020-06-22 14:19:39 [http-nio-8099-exec-6] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap.min.js
-2020-06-22 14:19:39 [http-nio-8099-exec-8] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-select.js
-2020-06-22 14:19:39 [http-nio-8099-exec-9] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-table-zh-CN.js
-2020-06-22 14:19:39 [http-nio-8099-exec-5] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/css/bootstrap-editable.css
-2020-06-22 14:19:39 [http-nio-8099-exec-6] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/asset/plug_lib/defaults-zh_CN.js
-2020-06-22 14:19:39 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/jquery-confirm.min.js
-2020-06-22 14:19:39 [http-nio-8099-exec-5] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/My97DatePicker/4.8/WdatePicker.js
-2020-06-22 14:19:39 [http-nio-8099-exec-6] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/common.js
-2020-06-22 14:19:39 [http-nio-8099-exec-5] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/combo_commons.js
-2020-06-22 14:19:39 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/md5-min.js
-2020-06-22 14:19:39 [http-nio-8099-exec-5] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/auth_permission.js
-2020-06-22 14:19:39 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/commons.js
-2020-06-22 14:19:39 [http-nio-8099-exec-2] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/customer/customer.js
-2020-06-22 14:19:39 [http-nio-8099-exec-10] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-table.js
-2020-06-22 14:19:39 [http-nio-8099-exec-6] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/identityCardValidate.js
-2020-06-22 14:19:39 [http-nio-8099-exec-5] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/jquery.validate.js
-2020-06-22 14:19:39 [http-nio-8099-exec-7] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/jquery-validate-extension.js
-2020-06-22 14:19:39 [http-nio-8099-exec-3] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-table.js
-2020-06-22 14:19:39 [http-nio-8099-exec-9] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-table-zh-CN.js
-2020-06-22 14:19:39 [http-nio-8099-exec-1] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/bootstrap-select.js
-2020-06-22 14:19:39 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/asset/plug_lib/defaults-zh_CN.js
-2020-06-22 14:19:39 [http-nio-8099-exec-8] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/jquery-confirm.min.js
-2020-06-22 14:19:39 [http-nio-8099-exec-2] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/My97DatePicker/4.8/WdatePicker.js
-2020-06-22 14:19:39 [http-nio-8099-exec-10] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/md5-min.js
-2020-06-22 14:19:39 [http-nio-8099-exec-6] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /assets/js/common/common.js
-2020-06-22 14:19:39 [http-nio-8099-exec-5] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/commons.js
-2020-06-22 14:19:39 [http-nio-8099-exec-7] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/combo_commons.js
-2020-06-22 14:19:39 [http-nio-8099-exec-3] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/identityCardValidate.js
-2020-06-22 14:19:39 [http-nio-8099-exec-9] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/commons/auth_permission.js
-2020-06-22 14:19:39 [http-nio-8099-exec-1] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /js/customer/customer.js
-2020-06-22 14:19:40 [http-nio-8099-exec-4] WARN  o.s.web.servlet.PageNotFound-1251 -No mapping for GET /favicon.ico
-2020-06-22 14:23:37 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 14:28:37 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 14:33:37 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin-159 -Application shutdown requested.
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1592807704591, current=DOWN, previous=UP]
-2020-06-22 14:35:04 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
-2020-06-22 14:35:04 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Pausing ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.catalina.core.StandardService-173 -Stopping service [Tomcat]
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Destroying Spring FrameworkServlet 'dispatcherServlet'
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Stopping ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:35:04 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Destroying ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:35:10 [main] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
-2020-06-22 14:35:11 [main] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=dd8ca0ba-7a6f-34db-93fa-0a8851c3a4ec
-2020-06-22 14:35:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
-2020-06-22 14:35:11 [main] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:35:11 [main] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
-2020-06-22 14:35:11 [main] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
-2020-06-22 14:35:11 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
-2020-06-22 14:35:11 [main] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 922 ms
-2020-06-22 14:35:11 [main] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
-2020-06-22 14:35:11 [main] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-06-22 14:35:11 [main] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
-2020-06-22 14:35:11 [main] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-06-22 14:35:12 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
-2020-06-22 14:35:12 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
-2020-06-22 14:35:12 [main] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2020-06-22 14:35:12 [main] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
-2020-06-22 14:35:12 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
-2020-06-22 14:35:12 [main] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
-2020-06-22 14:35:12 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
-2020-06-22 14:35:12 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
-2020-06-22 14:35:12 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
-2020-06-22 14:35:12 [main] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
-2020-06-22 14:35:13 [main] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
-2020-06-22 14:35:13 [main] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1592807713276 with initial instances count: 2
-2020-06-22 14:35:13 [main] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
-2020-06-22 14:35:13 [main] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1592807713276, current=UP, previous=STARTING]
-2020-06-22 14:35:13 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
-2020-06-22 14:35:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
-2020-06-22 14:35:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
-2020-06-22 14:35:13 [main] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
-2020-06-22 14:35:13 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
-2020-06-22 14:35:13 [main] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 3.205 seconds (JVM running for 3.915)
-2020-06-22 14:35:22 [http-nio-8099-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-06-22 14:35:22 [http-nio-8099-exec-1] INFO  o.s.web.servlet.DispatcherServlet-525 -Initializing Servlet 'dispatcherServlet'
-2020-06-22 14:35:22 [http-nio-8099-exec-1] INFO  o.s.web.servlet.DispatcherServlet-547 -Completed initialization in 15 ms
-2020-06-22 14:40:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 14:45:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 14:50:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 14:55:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:00:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:05:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:10:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:15:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:20:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:25:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:30:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:35:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:40:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:45:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:50:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 15:55:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:00:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:05:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:10:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:15:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:20:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:25:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:30:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:35:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:40:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:45:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:50:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 16:55:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:00:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:05:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:10:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:15:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:20:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:25:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:30:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:35:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:40:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:45:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
-2020-06-22 17:49:22 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin-159 -Application shutdown requested.
-2020-06-22 17:49:22 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
-2020-06-22 17:49:22 [RMI TCP Connection(2)-127.0.0.1] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1592819362373, current=DOWN, previous=UP]
-2020-06-22 17:49:22 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
-2020-06-22 17:49:22 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
-2020-06-22 17:49:22 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
-2020-06-22 17:49:22 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
-2020-06-22 17:49:25 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
-2020-06-22 17:49:25 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
-2020-06-22 17:49:25 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
-2020-06-22 17:49:25 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Pausing ProtocolHandler ["http-nio-8099"]
-2020-06-22 17:49:25 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.catalina.core.StandardService-173 -Stopping service [Tomcat]
-2020-06-22 17:49:25 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Destroying Spring FrameworkServlet 'dispatcherServlet'
-2020-06-22 17:49:25 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Stopping ProtocolHandler ["http-nio-8099"]
-2020-06-22 17:49:25 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Destroying ProtocolHandler ["http-nio-8099"]
+2020-07-06 09:50:10 [background-preinit] DEBUG o.h.v.m.ResourceBundleMessageInterpolator-89 -Loaded expression factory via original TCCL
+2020-07-06 09:50:10 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor-225 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-06 09:50:10 [restartedMain] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 09:50:12 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=a33b7235-18ed-3993-a48c-5a542cff62c2
+2020-07-06 09:50:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.AuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:50:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.DepartmentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:50:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.MenuClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:50:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleAuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:50:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:50:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:50:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserRoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:50:12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
+2020-07-06 09:50:12 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
+2020-07-06 09:50:12 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 09:50:12 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 09:50:12 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 09:50:12 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 1800 ms
+2020-07-06 09:50:13 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-61 -Unable to start LiveReload server
+2020-07-06 09:50:13 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 09:50:13 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 09:50:13 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 09:50:13 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 09:50:13 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 09:50:13 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
+2020-07-06 09:50:13 [restartedMain] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-06 09:50:14 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 09:50:14 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 09:50:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 09:50:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 09:50:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 09:50:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 09:50:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 09:50:14 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 09:50:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 09:50:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 09:50:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 09:50:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 09:50:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 09:50:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 09:50:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 09:50:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 09:50:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 09:50:15 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 09:50:15 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594000215004 with initial instances count: 0
+2020-07-06 09:50:15 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
+2020-07-06 09:50:15 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594000215007, current=UP, previous=STARTING]
+2020-07-06 09:50:15 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 09:50:15 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
+2020-07-06 09:50:15 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
+2020-07-06 09:50:15 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
+2020-07-06 09:50:15 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 09:50:15 [restartedMain] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 5.09 seconds (JVM running for 6.086)
+2020-07-06 09:50:44 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 09:50:44 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 09:50:44 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 09:50:44 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 09:50:44 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 09:50:44 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: false
+2020-07-06 09:50:44 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 09:50:45 [DiscoveryClient-CacheRefreshExecutor-0] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 09:51:45 [http-nio-8099-exec-9] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-06 09:51:45 [http-nio-8099-exec-9] INFO  o.s.web.servlet.DispatcherServlet-525 -Initializing Servlet 'dispatcherServlet'
+2020-07-06 09:51:45 [http-nio-8099-exec-9] INFO  o.s.web.servlet.DispatcherServlet-547 -Completed initialization in 7 ms
+2020-07-06 09:51:50 [http-nio-8099-exec-7] INFO  o.z.b.controller.LoginController-49 -login system，请求参数：[admin]，[202CB962AC59075B964B07152D234B70]
+2020-07-06 09:51:51 [http-nio-8099-exec-7] INFO  o.z.b.controller.LoginController-56 -登录查询用户信息：[org.zero.user.model.UUser@9b706fb]
+2020-07-06 09:51:51 [http-nio-8099-exec-7] INFO  o.z.b.controller.LoginController-61 -测试代码成功：org.zero.user.model.UUser@2e41acb6
+2020-07-06 09:51:51 [http-nio-8099-exec-7] DEBUG o.z.b.controller.LoginController-79 -菜单权限信息: [{"cssStyle":"icon-user","enabled":true,"menuName":"用户系统","permissionCode":"1100"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"角色管理","menuUrl":"/hoper/backweb/user/role","parentMenu":"1100","permissionCode":"1102"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"用户管理","menuUrl":"/hoper/backweb/user/user","parentMenu":"1100","permissionCode":"1103"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"部门管理","menuUrl":"/hoper/backweb/user/department","parentMenu":"1100","permissionCode":"1104"}, {"cssStyle":"icon-user","enabled":true,"menuName":"客户系统","permissionCode":"1200"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"客户管理","menuUrl":"/hoper/backweb/customer/customer","parentMenu":"1200","permissionCode":"1201"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"客户手机管理","menuUrl":"/hoper/backweb/customer/phone","parentMenu":"1200","permissionCode":"1202"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"客户银行卡管理","menuUrl":"/hoper/backweb/customer/bank","parentMenu":"1200","permissionCode":"1203"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"企业客户注册管理","menuUrl":"/hoper/backweb/customer/register","parentMenu":"1200","permissionCode":"1204"}, {"cssStyle":"icon-cog","enabled":true,"menuName":"产品系统","permissionCode":"1300"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"产品科目管理","menuUrl":"/hoper/backweb/product/productSubject","parentMenu":"1300","permissionCode":"1301"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"产品管理","menuUrl":"/hoper/backweb/product/product","parentMenu":"1300","permissionCode":"1302"}, {"cssStyle":"icon-yen","enabled":true,"menuName":"业务系统","permissionCode":"1400"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"认购管理","menuUrl":"/hoper/backweb/subscription/substription","parentMenu":"1400","permissionCode":"1401"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"回款计划管理","menuUrl":"/hoper/backweb/plan/plan","parentMenu":"1400","permissionCode":"1402"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"签章合同管理","menuUrl":"/hoper/backweb/contract/contract","parentMenu":"1400","permissionCode":"1403"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"合同书管理","menuUrl":"/hoper/backweb/contract/nonSignContract","parentMenu":"1400","permissionCode":"1404"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"回款日历管理","menuUrl":"/hoper/backweb/plan/planCalendar","parentMenu":"1400","permissionCode":"1405"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"订单统计管理","menuUrl":"/hoper/backweb/order/orderStatistics","parentMenu":"1400","permissionCode":"1406"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"认购备注管理","menuUrl":"/hoper/backweb/order/orderRemark","parentMenu":"1400","permissionCode":"1407"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"预约认购管理","menuUrl":"/hoper/backweb/subscription/preOrder","parentMenu":"1400","permissionCode":"1408"}, {"cssStyle":"icon-briefcase","enabled":true,"menuName":"参数系统","menuUrl":"","permissionCode":"1500"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"参数管理","menuUrl":"/hoper/backweb/param/parameter","parentMenu":"1500","permissionCode":"1501"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"打款账户管理","menuUrl":"/hoper/backweb/paymentAccount/paymentAccount","parentMenu":"1500","permissionCode":"1502"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"签章坐标管理","menuUrl":"/hoper/backweb/param/coordinate","parentMenu":"1500","permissionCode":"1503"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"系统缓存管理","menuUrl":"/hoper/backweb/param/cache","parentMenu":"1500","permissionCode":"1504"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"银行机构管理","menuUrl":"/hoper/backweb/param/organization","parentMenu":"1500","permissionCode":"1505"}, {"enabled":true,"menuName":"节假日管理","menuUrl":"/hoper/backweb/param/holiday","parentMenu":"1500","permissionCode":"1506"}, {"cssStyle":"icon-file","enabled":true,"menuName":"日志系统","permissionCode":"1600"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"系统操作日志管理","menuUrl":"/hoper/backweb/logs/operateLog","parentMenu":"1600","permissionCode":"1601"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"银行卡信息变更日志管理","menuUrl":"/hoper/backweb/log/bankLog","parentMenu":"1600","permissionCode":"1602"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"认购订单信息变更日志管理","menuUrl":"/hoper/backweb/log/substriptionLog","parentMenu":"1600","permissionCode":"1603"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"琥珀人数据推送日志管理","menuUrl":"/hoper/backweb/log/pushDataLog","parentMenu":"1600","permissionCode":"1604"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"文件上传日志管理","menuUrl":"/hoper/backweb/log/uploadLog","parentMenu":"1600","permissionCode":"1605"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"短信日志管理","menuUrl":"/hoper/backweb/log/smsLog","parentMenu":"1600","permissionCode":"1606"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"第三方认证日志管理","menuUrl":"/hoper/backweb/log/authLog","parentMenu":"1600","permissionCode":"1607"}, {"cssStyle":"icon-user","enabled":true,"menuName":"财富系统","menuUrl":"","permissionCode":"1700"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"财富投资管理","menuUrl":"/hoper/backweb/caifu/invest","parentMenu":"1700","permissionCode":"1701"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"财富邀请管理","menuUrl":"/hoper/backweb/caifu/invite","parentMenu":"1700","permissionCode":"1702"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"员工管理","menuUrl":"/hoper/backweb/caifu/employee","parentMenu":"1700","permissionCode":"1703"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"组织架构管理","menuUrl":"/hoper/backweb/caifu/structure","parentMenu":"1700","permissionCode":"1704"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"职务管理","menuUrl":"/hoper/backweb/caifu/position","parentMenu":"1700","permissionCode":"1705"}, {"cssStyle":"icon-inbox","enabled":true,"menuName":"官网系统","menuUrl":"","permissionCode":"1800"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"财富资讯管理","menuUrl":"/hoper/backweb/website/news/newsInit","parentMenu":"1800","permissionCode":"1801"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"发展历程管理","menuUrl":"/hoper/backweb/website/event/eventInit","parentMenu":"1800","permissionCode":"1802"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"轮播图管理","menuUrl":"/hoper/backweb/website/banner/bannerInit","parentMenu":"1800","permissionCode":"1803"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"员工风采管理","menuUrl":"/hoper/backweb/website/style/staffStyleInit","parentMenu":"1800","permissionCode":"1804"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"管理团队管理","menuUrl":"/hoper/backweb/website/team/teamInit","parentMenu":"1800","permissionCode":"1805"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"分支机构管理","menuUrl":"/hoper/backweb/website/branchAddress/branchAddressInit","parentMenu":"1800","permissionCode":"1806"}, {"cssStyle":"icon-bookmark","enabled":true,"menuName":"报表系统","permissionCode":"1900"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"存量报表","menuUrl":"/zcthd/backweb/reports/stockRepostView","parentMenu":"1900","permissionCode":"1901"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"菜单管理","menuUrl":"/hoper/backweb/user/menu","parentMenu":"1100","permissionCode":"M1001"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"授权操作管理","menuUrl":"/hoper/backweb/user/auth","parentMenu":"1100","permissionCode":"M1002"}, {"cssStyle":"icon-user","enabled":true,"menuName":"用户系统","permissionCode":"1100"}]
+2020-07-06 09:51:51 [http-nio-8099-exec-7] DEBUG o.z.b.controller.LoginController-83 -操作权限信息: [{"enabled":true,"permissionCode":"A1001","permissionName":"创建授权操作"}, {"enabled":true,"permissionCode":"A1002","permissionName":"修改授权操作"}, {"enabled":true,"permissionCode":"A1003","permissionName":"启用/禁用授权操作"}, {"enabled":true,"permissionCode":"A1004","permissionName":"添加菜单"}, {"enabled":true,"permissionCode":"A1005","permissionName":"修改菜单"}, {"enabled":true,"permissionCode":"A1006","permissionName":"启用/禁用菜单"}, {"enabled":true,"permissionCode":"A1007","permissionName":"添加部门"}, {"enabled":true,"permissionCode":"A1008","permissionName":"修改部门"}, {"enabled":true,"permissionCode":"A1009","permissionName":"启用/禁用部门"}, {"enabled":true,"permissionCode":"A1010","permissionName":"创建用户"}, {"enabled":true,"permissionCode":"A1011","permissionName":"修改用户"}, {"enabled":true,"permissionCode":"A1012","permissionName":"启用/禁用用户"}, {"enabled":true,"permissionCode":"A1013","permissionName":"创建角色"}, {"enabled":true,"permissionCode":"A1014","permissionName":"修改角色"}, {"enabled":true,"permissionCode":"A1015","permissionName":"启用/禁用角色"}, {"enabled":true,"permissionCode":"A1020","permissionName":"用户授权角色"}, {"enabled":true,"permissionCode":"A1021","permissionName":"角色授权菜单"}, {"enabled":true,"permissionCode":"A1022","permissionName":"角色授权操作"}]
+2020-07-06 09:51:51 [http-nio-8099-exec-7] DEBUG o.z.b.controller.LoginController-86 -处理后的操作权限信息: [A1008, A1009, A1002, A1013, A1003, A1014, A1011, A1022, A1001, A1012, A1006, A1007, A1004, A1015, A1005, A1020, A1010, A1021]
+2020-07-06 09:52:01 [http-nio-8099-exec-1] INFO  o.z.b.controller.user.RoleController-29 -分页角色，参数：[{"enabled":true}]，[1]，[10]
+2020-07-06 09:52:05 [http-nio-8099-exec-9] ERROR org.thymeleaf.TemplateEngine-1136 -[THYMELEAF][http-nio-8099-exec-9] Exception processing template "user/role_Auth": Error resolving template [user/role_Auth], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/role_Auth], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-06 09:52:05 [http-nio-8099-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]-175 -Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/role_Auth], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/role_Auth], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-06 09:53:10 [Thread-2] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
+2020-07-06 09:53:10 [Thread-2] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594000390190, current=DOWN, previous=UP]
+2020-07-06 09:53:10 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 09:53:10 [Thread-2] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 09:53:10 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 09:53:10 [Thread-2] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 09:53:13 [Thread-2] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 09:53:13 [Thread-2] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
+2020-07-06 09:53:13 [Thread-2] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 09:53:13 [restartedMain] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=a33b7235-18ed-3993-a48c-5a542cff62c2
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.AuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.DepartmentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.MenuClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleAuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserRoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
+2020-07-06 09:53:14 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
+2020-07-06 09:53:14 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 09:53:14 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 09:53:14 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 505 ms
+2020-07-06 09:53:14 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Cannot deserialize session attribute [LOGIN_USER_MENU] for session [A2801D9662D6ACAF15881042CBBF872E]
+2020-07-06 09:53:14 [restartedMain] ERROR o.a.catalina.session.StandardManager-175 -Exception loading sessions from persistent storage
+java.io.StreamCorruptedException: invalid type code: 00
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1599)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:2285)
+	at java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:561)
+	at java.lang.Throwable.readObject(Throwable.java:914)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1158)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2176)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2067)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1571)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.apache.catalina.session.StandardSession.doReadObject(StandardSession.java:1555)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:1049)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:218)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:162)
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:354)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5168)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:468)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.zero.backweb.BackWebApplication.main(BackWebApplication.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2020-07-06 09:53:14 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-61 -Unable to start LiveReload server
+2020-07-06 09:53:14 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 09:53:14 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
+2020-07-06 09:53:14 [restartedMain] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-06 09:53:14 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 09:53:14 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 09:53:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 09:53:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 09:53:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 09:53:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 09:53:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 09:53:14 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 09:53:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 09:53:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 09:53:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 09:53:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 09:53:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 09:53:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 09:53:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 09:53:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 09:53:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 09:53:15 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 09:53:15 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594000395001 with initial instances count: 2
+2020-07-06 09:53:15 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
+2020-07-06 09:53:15 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594000395002, current=UP, previous=STARTING]
+2020-07-06 09:53:15 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 09:53:15 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 09:53:15 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
+2020-07-06 09:53:15 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
+2020-07-06 09:53:15 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
+2020-07-06 09:53:15 [restartedMain] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 1.55 seconds (JVM running for 186.036)
+2020-07-06 09:53:15 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener-63 -Condition evaluation unchanged
+2020-07-06 09:53:26 [http-nio-8099-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-06 09:53:26 [http-nio-8099-exec-1] INFO  o.s.web.servlet.DispatcherServlet-525 -Initializing Servlet 'dispatcherServlet'
+2020-07-06 09:53:26 [http-nio-8099-exec-1] INFO  o.s.web.servlet.DispatcherServlet-547 -Completed initialization in 4 ms
+2020-07-06 09:53:28 [http-nio-8099-exec-6] INFO  o.z.b.controller.LoginController-49 -login system，请求参数：[admin]，[202CB962AC59075B964B07152D234B70]
+2020-07-06 09:53:28 [http-nio-8099-exec-6] INFO  o.z.b.controller.LoginController-56 -登录查询用户信息：[org.zero.user.model.UUser@4a385f76]
+2020-07-06 09:53:28 [http-nio-8099-exec-6] INFO  o.z.b.controller.LoginController-61 -测试代码成功：org.zero.user.model.UUser@633b6373
+2020-07-06 09:53:28 [http-nio-8099-exec-6] DEBUG o.z.b.controller.LoginController-79 -菜单权限信息: [{"cssStyle":"icon-user","enabled":true,"menuName":"用户系统","permissionCode":"1100"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"角色管理","menuUrl":"/hoper/backweb/user/role","parentMenu":"1100","permissionCode":"1102"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"用户管理","menuUrl":"/hoper/backweb/user/user","parentMenu":"1100","permissionCode":"1103"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"部门管理","menuUrl":"/hoper/backweb/user/department","parentMenu":"1100","permissionCode":"1104"}, {"cssStyle":"icon-user","enabled":true,"menuName":"客户系统","permissionCode":"1200"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"客户管理","menuUrl":"/hoper/backweb/customer/customer","parentMenu":"1200","permissionCode":"1201"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"客户手机管理","menuUrl":"/hoper/backweb/customer/phone","parentMenu":"1200","permissionCode":"1202"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"客户银行卡管理","menuUrl":"/hoper/backweb/customer/bank","parentMenu":"1200","permissionCode":"1203"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"企业客户注册管理","menuUrl":"/hoper/backweb/customer/register","parentMenu":"1200","permissionCode":"1204"}, {"cssStyle":"icon-cog","enabled":true,"menuName":"产品系统","permissionCode":"1300"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"产品科目管理","menuUrl":"/hoper/backweb/product/productSubject","parentMenu":"1300","permissionCode":"1301"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"产品管理","menuUrl":"/hoper/backweb/product/product","parentMenu":"1300","permissionCode":"1302"}, {"cssStyle":"icon-yen","enabled":true,"menuName":"业务系统","permissionCode":"1400"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"认购管理","menuUrl":"/hoper/backweb/subscription/substription","parentMenu":"1400","permissionCode":"1401"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"回款计划管理","menuUrl":"/hoper/backweb/plan/plan","parentMenu":"1400","permissionCode":"1402"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"签章合同管理","menuUrl":"/hoper/backweb/contract/contract","parentMenu":"1400","permissionCode":"1403"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"合同书管理","menuUrl":"/hoper/backweb/contract/nonSignContract","parentMenu":"1400","permissionCode":"1404"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"回款日历管理","menuUrl":"/hoper/backweb/plan/planCalendar","parentMenu":"1400","permissionCode":"1405"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"订单统计管理","menuUrl":"/hoper/backweb/order/orderStatistics","parentMenu":"1400","permissionCode":"1406"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"认购备注管理","menuUrl":"/hoper/backweb/order/orderRemark","parentMenu":"1400","permissionCode":"1407"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"预约认购管理","menuUrl":"/hoper/backweb/subscription/preOrder","parentMenu":"1400","permissionCode":"1408"}, {"cssStyle":"icon-briefcase","enabled":true,"menuName":"参数系统","menuUrl":"","permissionCode":"1500"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"参数管理","menuUrl":"/hoper/backweb/param/parameter","parentMenu":"1500","permissionCode":"1501"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"打款账户管理","menuUrl":"/hoper/backweb/paymentAccount/paymentAccount","parentMenu":"1500","permissionCode":"1502"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"签章坐标管理","menuUrl":"/hoper/backweb/param/coordinate","parentMenu":"1500","permissionCode":"1503"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"系统缓存管理","menuUrl":"/hoper/backweb/param/cache","parentMenu":"1500","permissionCode":"1504"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"银行机构管理","menuUrl":"/hoper/backweb/param/organization","parentMenu":"1500","permissionCode":"1505"}, {"enabled":true,"menuName":"节假日管理","menuUrl":"/hoper/backweb/param/holiday","parentMenu":"1500","permissionCode":"1506"}, {"cssStyle":"icon-file","enabled":true,"menuName":"日志系统","permissionCode":"1600"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"系统操作日志管理","menuUrl":"/hoper/backweb/logs/operateLog","parentMenu":"1600","permissionCode":"1601"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"银行卡信息变更日志管理","menuUrl":"/hoper/backweb/log/bankLog","parentMenu":"1600","permissionCode":"1602"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"认购订单信息变更日志管理","menuUrl":"/hoper/backweb/log/substriptionLog","parentMenu":"1600","permissionCode":"1603"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"琥珀人数据推送日志管理","menuUrl":"/hoper/backweb/log/pushDataLog","parentMenu":"1600","permissionCode":"1604"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"文件上传日志管理","menuUrl":"/hoper/backweb/log/uploadLog","parentMenu":"1600","permissionCode":"1605"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"短信日志管理","menuUrl":"/hoper/backweb/log/smsLog","parentMenu":"1600","permissionCode":"1606"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"第三方认证日志管理","menuUrl":"/hoper/backweb/log/authLog","parentMenu":"1600","permissionCode":"1607"}, {"cssStyle":"icon-user","enabled":true,"menuName":"财富系统","menuUrl":"","permissionCode":"1700"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"财富投资管理","menuUrl":"/hoper/backweb/caifu/invest","parentMenu":"1700","permissionCode":"1701"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"财富邀请管理","menuUrl":"/hoper/backweb/caifu/invite","parentMenu":"1700","permissionCode":"1702"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"员工管理","menuUrl":"/hoper/backweb/caifu/employee","parentMenu":"1700","permissionCode":"1703"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"组织架构管理","menuUrl":"/hoper/backweb/caifu/structure","parentMenu":"1700","permissionCode":"1704"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"职务管理","menuUrl":"/hoper/backweb/caifu/position","parentMenu":"1700","permissionCode":"1705"}, {"cssStyle":"icon-inbox","enabled":true,"menuName":"官网系统","menuUrl":"","permissionCode":"1800"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"财富资讯管理","menuUrl":"/hoper/backweb/website/news/newsInit","parentMenu":"1800","permissionCode":"1801"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"发展历程管理","menuUrl":"/hoper/backweb/website/event/eventInit","parentMenu":"1800","permissionCode":"1802"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"轮播图管理","menuUrl":"/hoper/backweb/website/banner/bannerInit","parentMenu":"1800","permissionCode":"1803"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"员工风采管理","menuUrl":"/hoper/backweb/website/style/staffStyleInit","parentMenu":"1800","permissionCode":"1804"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"管理团队管理","menuUrl":"/hoper/backweb/website/team/teamInit","parentMenu":"1800","permissionCode":"1805"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"分支机构管理","menuUrl":"/hoper/backweb/website/branchAddress/branchAddressInit","parentMenu":"1800","permissionCode":"1806"}, {"cssStyle":"icon-bookmark","enabled":true,"menuName":"报表系统","permissionCode":"1900"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"存量报表","menuUrl":"/zcthd/backweb/reports/stockRepostView","parentMenu":"1900","permissionCode":"1901"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"菜单管理","menuUrl":"/hoper/backweb/user/menu","parentMenu":"1100","permissionCode":"M1001"}, {"cssStyle":"icon-glass","enabled":true,"menuName":"授权操作管理","menuUrl":"/hoper/backweb/user/auth","parentMenu":"1100","permissionCode":"M1002"}, {"cssStyle":"icon-user","enabled":true,"menuName":"用户系统","permissionCode":"1100"}]
+2020-07-06 09:53:28 [http-nio-8099-exec-6] DEBUG o.z.b.controller.LoginController-83 -操作权限信息: [{"enabled":true,"permissionCode":"A1001","permissionName":"创建授权操作"}, {"enabled":true,"permissionCode":"A1002","permissionName":"修改授权操作"}, {"enabled":true,"permissionCode":"A1003","permissionName":"启用/禁用授权操作"}, {"enabled":true,"permissionCode":"A1004","permissionName":"添加菜单"}, {"enabled":true,"permissionCode":"A1005","permissionName":"修改菜单"}, {"enabled":true,"permissionCode":"A1006","permissionName":"启用/禁用菜单"}, {"enabled":true,"permissionCode":"A1007","permissionName":"添加部门"}, {"enabled":true,"permissionCode":"A1008","permissionName":"修改部门"}, {"enabled":true,"permissionCode":"A1009","permissionName":"启用/禁用部门"}, {"enabled":true,"permissionCode":"A1010","permissionName":"创建用户"}, {"enabled":true,"permissionCode":"A1011","permissionName":"修改用户"}, {"enabled":true,"permissionCode":"A1012","permissionName":"启用/禁用用户"}, {"enabled":true,"permissionCode":"A1013","permissionName":"创建角色"}, {"enabled":true,"permissionCode":"A1014","permissionName":"修改角色"}, {"enabled":true,"permissionCode":"A1015","permissionName":"启用/禁用角色"}, {"enabled":true,"permissionCode":"A1020","permissionName":"用户授权角色"}, {"enabled":true,"permissionCode":"A1021","permissionName":"角色授权菜单"}, {"enabled":true,"permissionCode":"A1022","permissionName":"角色授权操作"}]
+2020-07-06 09:53:28 [http-nio-8099-exec-6] DEBUG o.z.b.controller.LoginController-86 -处理后的操作权限信息: [A1008, A1009, A1002, A1013, A1003, A1014, A1011, A1022, A1001, A1012, A1006, A1007, A1004, A1015, A1005, A1020, A1010, A1021]
+2020-07-06 09:53:32 [http-nio-8099-exec-8] INFO  o.z.b.controller.user.RoleController-29 -分页角色，参数：[{"enabled":true}]，[1]，[10]
+2020-07-06 09:53:33 [http-nio-8099-exec-1] ERROR org.thymeleaf.TemplateEngine-1136 -[THYMELEAF][http-nio-8099-exec-1] Exception processing template "user/role_auth": Error resolving template [user/role_auth], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/role_auth], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-06 09:53:33 [http-nio-8099-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet]-175 -Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/role_auth], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [user/role_auth], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2020-07-06 09:54:39 [http-nio-8099-exec-9] INFO  o.z.b.c.user.RoleAuthController-30 -分页角色未授权菜单，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 09:54:40 [http-nio-8099-exec-10] INFO  o.z.b.c.user.RoleAuthController-52 -分页角色已授权菜单，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 09:58:14 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:03:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:07:52 [http-nio-8099-exec-10] INFO  o.z.b.c.user.RoleAuthController-30 -分页角色未授权菜单，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:07:53 [http-nio-8099-exec-7] INFO  o.z.b.c.user.RoleAuthController-52 -分页角色已授权菜单，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:07:54 [http-nio-8099-exec-5] INFO  o.z.b.controller.user.RoleController-29 -分页角色，参数：[{"enabled":true}]，[1]，[10]
+2020-07-06 10:07:58 [http-nio-8099-exec-4] INFO  o.z.b.c.user.RoleAuthController-30 -分页角色未授权菜单，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:07:58 [http-nio-8099-exec-10] INFO  o.z.b.c.user.RoleAuthController-52 -分页角色已授权菜单，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:08:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:09:42 [http-nio-8099-exec-4] INFO  o.z.b.c.user.RoleAuthController-74 -分页角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:09:42 [http-nio-8099-exec-7] INFO  o.z.b.c.user.RoleAuthController-96 -分页角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:10:10 [http-nio-8099-exec-3] INFO  o.z.b.c.user.RoleAuthController-96 -分页角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:10:29 [http-nio-8099-exec-1] INFO  o.z.b.c.user.RoleAuthController-74 -分页角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:10:29 [http-nio-8099-exec-7] INFO  o.z.b.c.user.RoleAuthController-96 -分页角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:12:06 [http-nio-8099-exec-7] INFO  o.z.b.controller.user.RoleController-29 -分页角色，参数：[{"enabled":true}]，[1]，[10]
+2020-07-06 10:12:10 [http-nio-8099-exec-3] INFO  o.z.b.c.user.RoleAuthController-30 -分页角色未授权菜单，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:12:10 [http-nio-8099-exec-6] INFO  o.z.b.c.user.RoleAuthController-52 -分页角色已授权菜单，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:12:47 [http-nio-8099-exec-10] INFO  o.z.b.c.user.RoleAuthController-52 -分页角色已授权菜单，参数：[{"enabled":true,"roleCode":"R003"}]，[6]，[10]
+2020-07-06 10:13:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:18:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:19:48 [http-nio-8099-exec-3] INFO  o.z.b.controller.user.RoleController-29 -分页角色，参数：[{"enabled":true}]，[1]，[10]
+2020-07-06 10:19:51 [http-nio-8099-exec-8] INFO  o.z.b.c.user.RoleAuthController-74 -分页角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:19:51 [http-nio-8099-exec-10] INFO  o.z.b.c.user.RoleAuthController-96 -分页角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:23:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:28:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:33:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:36:12 [http-nio-8099-exec-2] INFO  o.z.b.c.user.RoleAuthController-96 -分页角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:38:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:41:38 [http-nio-8099-exec-8] INFO  o.z.b.c.user.RoleAuthController-96 -分页角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:43:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:45:28 [http-nio-8099-exec-5] INFO  o.z.b.c.user.RoleAuthController-74 -分页角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:45:28 [http-nio-8099-exec-3] INFO  o.z.b.c.user.RoleAuthController-96 -分页角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:46:04 [http-nio-8099-exec-1] INFO  o.z.b.c.user.RoleAuthController-118 -角色授权权限，参数：[{"permissionCode":"A1001","roleCode":"R003"}]
+2020-07-06 10:46:04 [http-nio-8099-exec-10] INFO  o.z.b.c.user.RoleAuthController-74 -分页角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:46:07 [http-nio-8099-exec-7] INFO  o.z.b.c.user.RoleAuthController-96 -分页角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:46:15 [http-nio-8099-exec-6] INFO  o.z.b.c.user.RoleAuthController-118 -角色授权权限，参数：[{"permissionCode":"A1002","roleCode":"R003"}]
+2020-07-06 10:46:15 [http-nio-8099-exec-9] INFO  o.z.b.c.user.RoleAuthController-74 -分页角色未授权操作，参数：[{"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:46:18 [http-nio-8099-exec-2] INFO  o.z.b.c.user.RoleAuthController-96 -分页角色已授权操作，参数：[{"enabled":true,"roleCode":"R003"}]，[1]，[10]
+2020-07-06 10:48:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:53:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 10:55:03 [http-nio-8099-exec-7] INFO  o.z.b.c.user.DepartmentController-64 -获取有效部门列表
+2020-07-06 10:55:04 [http-nio-8099-exec-2] INFO  o.z.b.controller.user.UserController-33 -分页用户，参数：[org.zero.user.model.UUser@5961b1ea]，[1]，[10]
+2020-07-06 10:55:13 [http-nio-8099-exec-10] INFO  o.z.b.controller.user.UserController-33 -分页用户，参数：[org.zero.user.model.UUser@46f12777]，[1]，[10]
+2020-07-06 10:56:35 [http-nio-8099-exec-7] INFO  o.z.b.c.user.UserRoleController-28 -分页用户未授权角色，参数：[{"userId":1}]，[1]，[10]
+2020-07-06 10:56:35 [http-nio-8099-exec-2] INFO  o.z.b.c.user.UserRoleController-46 -分页用户授权角色，参数：[{"enabled":true,"userId":1}]，[1]，[10]
+2020-07-06 10:56:40 [http-nio-8099-exec-2] INFO  o.z.b.c.user.DepartmentController-29 -分页部门，参数：[org.zero.user.model.UDepartment@6a12190d]，[1]，[10]
+2020-07-06 10:57:07 [http-nio-8099-exec-3] INFO  o.z.b.c.user.DepartmentController-83 -新增部门，参数：[org.zero.user.model.UDepartment@128536ca]
+2020-07-06 10:57:07 [http-nio-8099-exec-5] INFO  o.z.b.c.user.DepartmentController-29 -分页部门，参数：[org.zero.user.model.UDepartment@44d250b0]，[1]，[10]
+2020-07-06 10:57:11 [http-nio-8099-exec-1] INFO  o.z.b.controller.user.MenuController-28 -分页菜单，参数：[{}]，[1]，[10]
+2020-07-06 10:57:30 [http-nio-8099-exec-4] INFO  o.z.b.controller.user.MenuController-46 -获取菜单，参数：[1100]
+2020-07-06 10:58:10 [http-nio-8099-exec-9] INFO  o.z.b.controller.user.AuthController-26 -分页授权操作权限，参数：[{}]，[1]，[10]
+2020-07-06 10:58:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:03:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:08:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:13:15 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:14:16 [Thread-10] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
+2020-07-06 11:14:16 [Thread-10] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594005256858, current=DOWN, previous=UP]
+2020-07-06 11:14:16 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 11:14:16 [Thread-10] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 11:14:16 [Thread-10] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 11:14:16 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 11:14:16 [Thread-10] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 11:14:16 [Thread-10] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
+2020-07-06 11:14:16 [Thread-10] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 11:14:17 [restartedMain] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 11:14:17 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=a33b7235-18ed-3993-a48c-5a542cff62c2
+2020-07-06 11:14:17 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.AuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 11:14:17 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.DepartmentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 11:14:17 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.MenuClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 11:14:17 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleAuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 11:14:17 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 11:14:17 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 11:14:17 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserRoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 11:14:17 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
+2020-07-06 11:14:17 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
+2020-07-06 11:14:17 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 11:14:17 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 11:14:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 11:14:18 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 640 ms
+2020-07-06 11:14:18 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Cannot deserialize session attribute [LOGIN_USER_MENU] for session [A2801D9662D6ACAF15881042CBBF872E]
+2020-07-06 11:14:18 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-61 -Unable to start LiveReload server
+2020-07-06 11:14:18 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 11:14:18 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 11:14:18 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 11:14:18 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
+2020-07-06 11:14:18 [restartedMain] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-06 11:14:18 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 11:14:18 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 11:14:18 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 11:14:18 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 11:14:18 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 11:14:18 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 11:14:18 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 11:14:18 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594005258641 with initial instances count: 2
+2020-07-06 11:14:18 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
+2020-07-06 11:14:18 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594005258641, current=UP, previous=STARTING]
+2020-07-06 11:14:18 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 11:14:18 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
+2020-07-06 11:14:18 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 11:14:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
+2020-07-06 11:14:18 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
+2020-07-06 11:14:18 [restartedMain] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 1.623 seconds (JVM running for 5049.606)
+2020-07-06 11:14:18 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener-63 -Condition evaluation unchanged
+2020-07-06 11:19:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:24:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:29:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:34:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:39:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:44:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:49:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:54:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 11:59:18 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:01:04 [Thread-18] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
+2020-07-06 12:01:04 [Thread-18] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594008064785, current=DOWN, previous=UP]
+2020-07-06 12:01:04 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 12:01:04 [Thread-18] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 12:01:04 [Thread-18] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 12:01:04 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 12:01:04 [Thread-18] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 12:01:04 [Thread-18] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
+2020-07-06 12:01:04 [Thread-18] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 12:01:05 [restartedMain] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 12:01:05 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=a33b7235-18ed-3993-a48c-5a542cff62c2
+2020-07-06 12:01:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.AuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 12:01:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.DepartmentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 12:01:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.MenuClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 12:01:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleAuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 12:01:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 12:01:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 12:01:05 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserRoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 12:01:05 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
+2020-07-06 12:01:05 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
+2020-07-06 12:01:05 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 12:01:05 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 12:01:05 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 12:01:05 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 516 ms
+2020-07-06 12:01:05 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-61 -Unable to start LiveReload server
+2020-07-06 12:01:06 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 12:01:06 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 12:01:06 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 12:01:06 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
+2020-07-06 12:01:06 [restartedMain] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-06 12:01:06 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 12:01:06 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 12:01:06 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 12:01:06 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 12:01:06 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 12:01:06 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 12:01:06 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 12:01:06 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594008066599 with initial instances count: 2
+2020-07-06 12:01:06 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
+2020-07-06 12:01:06 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594008066599, current=UP, previous=STARTING]
+2020-07-06 12:01:06 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 12:01:06 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
+2020-07-06 12:01:06 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 12:01:06 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
+2020-07-06 12:01:06 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
+2020-07-06 12:01:06 [restartedMain] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 1.529 seconds (JVM running for 7857.516)
+2020-07-06 12:01:06 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener-63 -Condition evaluation unchanged
+2020-07-06 12:06:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:11:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:16:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:21:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:26:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:31:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:36:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:41:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:46:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:51:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 12:56:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:01:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:06:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:11:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:16:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:21:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:26:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:31:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:36:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:41:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:46:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:51:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 13:56:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:01:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:06:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:11:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:16:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:21:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:26:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:31:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:36:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:41:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:46:06 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:51:07 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 14:56:07 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:01:07 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:06:07 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:11:07 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:13:41 [Thread-26] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
+2020-07-06 15:13:41 [Thread-26] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594019621581, current=DOWN, previous=UP]
+2020-07-06 15:13:41 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 15:13:41 [Thread-26] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 15:13:41 [Thread-26] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 15:13:41 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 15:13:41 [Thread-26] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 15:13:41 [Thread-26] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
+2020-07-06 15:13:41 [Thread-26] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 15:13:42 [restartedMain] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 15:13:42 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=a33b7235-18ed-3993-a48c-5a542cff62c2
+2020-07-06 15:13:42 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.AuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:13:42 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.DepartmentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:13:42 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.MenuClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:13:42 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleAuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:13:42 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:13:42 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:13:42 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserRoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:13:42 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
+2020-07-06 15:13:42 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
+2020-07-06 15:13:42 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 15:13:42 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 15:13:42 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 15:13:42 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 781 ms
+2020-07-06 15:13:43 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-61 -Unable to start LiveReload server
+2020-07-06 15:13:43 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 15:13:43 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 15:13:43 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 15:13:43 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
+2020-07-06 15:13:43 [restartedMain] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-06 15:13:43 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 15:13:43 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 15:13:43 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 15:13:43 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 15:13:43 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 15:13:43 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 15:13:43 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 15:13:43 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594019623910 with initial instances count: 2
+2020-07-06 15:13:43 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
+2020-07-06 15:13:43 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594019623910, current=UP, previous=STARTING]
+2020-07-06 15:13:43 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 15:13:43 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
+2020-07-06 15:13:43 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
+2020-07-06 15:13:43 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
+2020-07-06 15:13:43 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 15:13:43 [restartedMain] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 2.072 seconds (JVM running for 19414.629)
+2020-07-06 15:13:43 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener-63 -Condition evaluation unchanged
+2020-07-06 15:18:43 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:23:43 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:28:43 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:33:43 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:38:43 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:43:12 [Thread-34] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
+2020-07-06 15:43:12 [Thread-34] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594021392104, current=DOWN, previous=UP]
+2020-07-06 15:43:12 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 15:43:12 [Thread-34] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 15:43:12 [Thread-34] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 15:43:12 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 15:43:12 [Thread-34] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 15:43:12 [Thread-34] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
+2020-07-06 15:43:12 [Thread-34] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 15:43:12 [restartedMain] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 15:43:12 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=a33b7235-18ed-3993-a48c-5a542cff62c2
+2020-07-06 15:43:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.AuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:43:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.DepartmentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:43:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.MenuClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:43:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleAuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:43:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:43:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:43:12 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserRoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 15:43:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
+2020-07-06 15:43:13 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
+2020-07-06 15:43:13 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 15:43:13 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 15:43:13 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 15:43:13 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 530 ms
+2020-07-06 15:43:13 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-61 -Unable to start LiveReload server
+2020-07-06 15:43:13 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 15:43:13 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 15:43:13 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 15:43:13 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
+2020-07-06 15:43:13 [restartedMain] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-06 15:43:13 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 15:43:13 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 15:43:13 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 15:43:13 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 15:43:13 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 15:43:13 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 15:43:13 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 15:43:13 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594021393746 with initial instances count: 2
+2020-07-06 15:43:13 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
+2020-07-06 15:43:13 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594021393746, current=UP, previous=STARTING]
+2020-07-06 15:43:13 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 15:43:13 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
+2020-07-06 15:43:13 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 15:43:13 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
+2020-07-06 15:43:13 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
+2020-07-06 15:43:13 [restartedMain] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 1.514 seconds (JVM running for 21184.442)
+2020-07-06 15:43:13 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener-63 -Condition evaluation unchanged
+2020-07-06 15:48:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:53:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 15:58:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 16:03:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 16:08:13 [AsyncResolver-bootstrap-executor-0] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 16:08:28 [Thread-42] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
+2020-07-06 16:08:28 [Thread-42] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594022908978, current=DOWN, previous=UP]
+2020-07-06 16:08:28 [Thread-42] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 16:08:28 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 16:08:28 [Thread-42] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 16:08:28 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 16:08:28 [Thread-42] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 16:08:29 [Thread-42] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
+2020-07-06 16:08:29 [Thread-42] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 16:08:29 [restartedMain] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=a33b7235-18ed-3993-a48c-5a542cff62c2
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.AuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.DepartmentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.MenuClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleAuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserRoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
+2020-07-06 16:08:30 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
+2020-07-06 16:08:30 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 16:08:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 16:08:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 547 ms
+2020-07-06 16:08:30 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-61 -Unable to start LiveReload server
+2020-07-06 16:08:30 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 16:08:30 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
+2020-07-06 16:08:30 [restartedMain] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-06 16:08:30 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 16:08:30 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 16:08:30 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 16:08:30 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 16:08:30 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 16:08:30 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 16:08:30 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594022910765 with initial instances count: 2
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
+2020-07-06 16:08:30 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594022910765, current=UP, previous=STARTING]
+2020-07-06 16:08:30 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 16:08:30 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 16:08:30 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
+2020-07-06 16:08:30 [restartedMain] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 1.563 seconds (JVM running for 22701.442)
+2020-07-06 16:08:30 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener-63 -Condition evaluation unchanged
+2020-07-06 16:08:35 [Thread-50] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
+2020-07-06 16:08:35 [Thread-50] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594022915696, current=DOWN, previous=UP]
+2020-07-06 16:08:35 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 16:08:35 [Thread-50] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 16:08:35 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 16:08:35 [Thread-50] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 16:08:38 [Thread-50] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 16:08:38 [Thread-50] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
+2020-07-06 16:08:38 [Thread-50] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 16:08:39 [restartedMain] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=a33b7235-18ed-3993-a48c-5a542cff62c2
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.AuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.DepartmentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.MenuClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleAuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserRoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
+2020-07-06 16:08:39 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
+2020-07-06 16:08:39 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 16:08:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 16:08:39 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 514 ms
+2020-07-06 16:08:39 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-61 -Unable to start LiveReload server
+2020-07-06 16:08:39 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 16:08:39 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 16:08:39 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
+2020-07-06 16:08:39 [restartedMain] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-06 16:08:40 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 16:08:40 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 16:08:40 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 16:08:40 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 16:08:40 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 16:08:40 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 16:08:40 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 16:08:40 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594022920352 with initial instances count: 2
+2020-07-06 16:08:40 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
+2020-07-06 16:08:40 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594022920352, current=UP, previous=STARTING]
+2020-07-06 16:08:40 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 16:08:40 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
+2020-07-06 16:08:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
+2020-07-06 16:08:40 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
+2020-07-06 16:08:40 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 16:08:40 [restartedMain] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 1.473 seconds (JVM running for 22711.038)
+2020-07-06 16:08:40 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener-63 -Condition evaluation unchanged
+2020-07-06 16:09:13 [Thread-58] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
+2020-07-06 16:09:13 [Thread-58] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594022953094, current=DOWN, previous=UP]
+2020-07-06 16:09:13 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 16:09:13 [Thread-58] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 16:09:13 [Thread-58] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 16:09:13 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 16:09:13 [Thread-58] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 16:09:13 [Thread-58] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
+2020-07-06 16:09:13 [Thread-58] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 16:09:13 [restartedMain] INFO  org.zero.backweb.BackWebApplication-651 -No active profile set, falling back to default profiles: default
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.cloud.context.scope.GenericScope-295 -BeanFactory id=a33b7235-18ed-3993-a48c-5a542cff62c2
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.AuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.DepartmentClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.MenuClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleAuthClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.RoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker-330 -Bean 'org.zero.backweb.client.user.UserRoleClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-92 -Tomcat initialized with port(s): 8099 (http)
+2020-07-06 16:09:14 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Initializing ProtocolHandler ["http-nio-8099"]
+2020-07-06 16:09:14 [restartedMain] INFO  o.a.catalina.core.StandardService-173 -Starting service [Tomcat]
+2020-07-06 16:09:14 [restartedMain] INFO  o.a.catalina.core.StandardEngine-173 -Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-07-06 16:09:14 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/]-173 -Initializing Spring embedded WebApplicationContext
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.web.context.ContextLoader-284 -Root WebApplicationContext: initialization completed in 484 ms
+2020-07-06 16:09:14 [restartedMain] WARN  o.s.b.d.a.OptionalLiveReloadServer-61 -Unable to start LiveReload server
+2020-07-06 16:09:14 [restartedMain] WARN  c.n.c.sources.URLConfigurationSource-121 -No URLs will be polled as dynamic configuration sources.
+2020-07-06 16:09:14 [restartedMain] INFO  c.n.c.sources.URLConfigurationSource-122 -To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor-181 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping-58 -Adding welcome page template: index
+2020-07-06 16:09:14 [restartedMain] WARN  o.t.templatemode.TemplateMode-150 -[THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-06 16:09:14 [restartedMain] WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger-84 -Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it to the classpath.
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.c.n.eureka.InstanceInfoFactory-72 -Setting initial instance status as: STARTING
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-368 -Initializing Eureka in region us-east-1
+2020-07-06 16:09:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-70 -Using JSON encoding codec LegacyJacksonJson
+2020-07-06 16:09:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-71 -Using JSON decoding codec LegacyJacksonJson
+2020-07-06 16:09:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-80 -Using XML encoding codec XStreamXml
+2020-07-06 16:09:14 [restartedMain] INFO  c.n.d.p.DiscoveryJerseyProvider-81 -Using XML decoding codec XStreamXml
+2020-07-06 16:09:14 [restartedMain] INFO  c.n.d.s.r.aws.ConfigClusterResolver-43 -Resolving eureka endpoints via configuration
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-981 -Disable delta property : false
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-982 -Single vip registry refresh property : null
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-983 -Force full registry fetch : false
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-984 -Application is null : false
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-985 -Registered Applications size is zero : true
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-987 -Application version is -1: true
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1070 -Getting all instance registry info from the eureka server
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1079 -The response status is 200
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1294 -Starting heartbeat executor: renew interval is: 30
+2020-07-06 16:09:14 [restartedMain] INFO  c.n.discovery.InstanceInfoReplicator-60 -InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-468 -Discovery Client initialized at timestamp 1594022954751 with initial instances count: 2
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.c.n.e.s.EurekaServiceRegistry-41 -Registering application WEB with eureka with status UP
+2020-07-06 16:09:14 [restartedMain] INFO  c.netflix.discovery.DiscoveryClient-1330 -Saw local status change event StatusChangeEvent [timestamp=1594022954751, current=UP, previous=STARTING]
+2020-07-06 16:09:14 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 16:09:14 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Starting ProtocolHandler ["http-nio-8099"]
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer-204 -Tomcat started on port(s): 8099 (http) with context path ''
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration-145 -Updating port to 8099
+2020-07-06 16:09:14 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 16:09:14 [restartedMain] INFO  org.zero.backweb.BackWebApplication-61 -Started BackWebApplication in 1.454 seconds (JVM running for 22745.418)
+2020-07-06 16:09:14 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener-63 -Condition evaluation unchanged
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin-159 -Application shutdown requested.
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.c.n.e.s.EurekaServiceRegistry-65 -Unregistering application WEB with eureka with status DOWN
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] WARN  c.netflix.discovery.DiscoveryClient-1328 -Saw local status change event StatusChangeEvent [timestamp=1594023022251, current=DOWN, previous=UP]
+2020-07-06 16:10:22 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-847 -DiscoveryClient_WEB/YOS-01604151651:web:8099: registering service...
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor-218 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-909 -Shutting down DiscoveryClient ...
+2020-07-06 16:10:22 [DiscoveryClient-InstanceInfoReplicator-0] INFO  c.netflix.discovery.DiscoveryClient-856 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - registration status: 204
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-945 -Unregistering ...
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-947 -DiscoveryClient_WEB/YOS-01604151651:web:8099 - deregister  status: 200
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  c.netflix.discovery.DiscoveryClient-934 -Completed shut down of DiscoveryClient
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Pausing ProtocolHandler ["http-nio-8099"]
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.catalina.core.StandardService-173 -Stopping service [Tomcat]
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Stopping ProtocolHandler ["http-nio-8099"]
+2020-07-06 16:10:22 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol-173 -Destroying ProtocolHandler ["http-nio-8099"]

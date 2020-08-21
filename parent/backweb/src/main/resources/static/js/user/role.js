@@ -7,7 +7,7 @@ $(function() {
 
 function loadTable() {
 	$('#role_tb').bootstrapTable({
-		url : "/hoper/backweb/jjsRole/page",
+		url : "/hoper/backweb/role/page",
         dataType: "json",
         method: "GET",
         striped: true,//是否显示行间隔色
@@ -46,32 +46,19 @@ var columns = [
 		title : "角色名称",
 		align : "center"
 	}, {
-		field : "status",
-		title : "状态",
+		field : "enabled",
+		title : "是否启用",
 		align : "center",
-		formatter : statusForamt
-	}, {
-		field : "creator",
-		title : "创建人",
-		align : "center"
+		formatter : enabledFormat
 	}, {
 		field : "createTime",
 		title : "创建时间",
-		align : "center",
-		formatter : jsonTimeFormat
-	}, {
-		field : "lastUpdUser",
-		title : "最近更新人",
 		align : "center"
-	}, {
-		field : "lastUpdTime",
-		title : "最近更新时间",
-		align : "center",
-		formatter : jsonTimeFormat
+//		formatter : jsonTimeFormat
 	}, {
 		field : "void",
 		title : "操作",
-		align : "left",
+		align : "center",
 		formatter : operateFormat
 	}
 ];
@@ -80,19 +67,20 @@ var roleValidator = $("#role_form").validate({
 	rules : {
 		roleCode : {
 			"required" : true,
-			"utfmaxlength" : 8
+			"maxlength" : 4
 		},
 		roleName : {
 			"required" : true,
-			"utfmaxlength" : 60
+			"maxlength" : 20
 		},
-		status : "required"
+		enabled : "required"
 	}
 });
 
-var checkUpd = checkAuth("USER:UPDATE_ROLE");
-var checkEnable = checkAuth("USER:ENABLE_OR_DISABLE_ROLE");
-var checkConfig = checkAuth("USER:CONFIGURE_PERMISSION");
+var checkUpd = checkAuth("A1014");
+var checkEnable = checkAuth("A1015");
+var checkAuthMenu = checkAuth("A1021");
+var checkAuthOperate = checkAuth("A1022");
 function operateFormat(value, row, index) {
 	var s = '';
 	if (checkUpd)
@@ -100,23 +88,31 @@ function operateFormat(value, row, index) {
 			+ row.roleCode + '\')">修改</button>';
 	
 	if (checkEnable) {
-		if ("EN" == row.status) {
-			s += '&nbsp;&nbsp;<button type="button" class="btn btn-danger btn-sm" onClick="disableRole(\''
-				+ row.roleCode +'\')">注销</button>';
-		} else if ("DISA" == row.status)
-			s += '&nbsp;&nbsp;<button type="button" class="btn btn-success btn-sm" onClick="enableRole(\''
-				+ row.roleCode +'\')">激活</button>';
+		if (row.enabled)
+			s += '<button  type="button" class="btn btn-danger btn-sm tb_btn" onClick="enableOrDisable(\''
+				+ row.roleCode +'\',' + row.enabled +')">禁用</button>';
+		else
+			s += '<button type="button" class="btn btn-success btn-sm tb_btn" onClick="enableOrDisable(\''
+				+ row.roleCode +'\',' + row.enabled +')">启用</button>';
 	}
 	
-	if (checkConfig)
-		s += '&nbsp;&nbsp;<button type="button" class="btn btn-warning btn-sm" onClick="toRolePermission(\''
-			+ row.roleCode +'\', \'' + row.roleName + '\')">配置权限</button>';
+	if (checkAuthMenu)
+		s += '<button type="button" class="btn btn-warning btn-sm tb_btn" onClick="toRoleMenu(\''
+			+ row.roleCode +'\', \'' + row.roleName + '\')">授权菜单</button>';
+	
+	if (checkAuthOperate)
+		s += '<button type="button" class="btn btn-warning btn-sm tb_btn" onClick="toRoleAuth(\''
+			+ row.roleCode +'\', \'' + row.roleName + '\')">授权操作</button>';
 	return s;
 }
 
-function enableRole(roleCode) {
-	jQuery.post("/hoper/backweb/jjsRole/enable", {
-		"roleCode" : roleCode
+function enableOrDisable(roleCode, enabled) {
+	console.log(roleCode);
+	console.log(enabled);
+	
+	jQuery.post("/hoper/backweb/role/update", {
+		"roleCode" : roleCode,
+		"enabled" : !enabled
 	}, function(data) {
 		if (1 == data.code) {
 			$("#role_tb").bootstrapTable('refresh');
@@ -130,25 +126,13 @@ function enableRole(roleCode) {
 	}, "json");
 }
 
-function disableRole(roleCode) {
-	jQuery.post("/hoper/backweb/jjsRole/disable", {
-		"roleCode" : roleCode
-	}, function(data) {
-		if (1 == data.code) {
-			$("#role_tb").bootstrapTable('refresh');
-			$('#modal').modal("hide");
-			alert("SUCC");
-		} else if (0 == data.code) {
-			alert(data.msg);
-		} else {
-			alert(data);
-		}
-	}, "json");
-}
-
-function toRolePermission(roleCode, roleName) {
+function toRoleAuth(roleCode, roleName) {
 //	openNewTab(id,url,title)
-	refreshto("/hoper/backweb/user/rolePermission?roleCodeParam=" + roleCode + "&roleName=" + roleName);
+	refreshto("/hoper/backweb/user/roleAuth?roleCodeParam=" + roleCode + "&roleName=" + roleName);
+}
+
+function toRoleMenu(roleCode, roleName) {
+	refreshto("/hoper/backweb/user/roleMenu?roleCodeParam=" + roleCode + "&roleName=" + roleName);
 }
 
 function openDialog() {
@@ -159,7 +143,7 @@ function openDialog() {
 }
 
 function openUpdDialog(roleCode) {
-	jQuery.get("/hoper/backweb/jjsRole/getRole", {
+	jQuery.get("/hoper/backweb/role/fetchByPrimary", {
 		"roleCode" : roleCode
 	}, function(data) {
 		if (1 == data.code) {
@@ -184,9 +168,9 @@ function saveRole() {
 		return;
 	}
 	var json = $("#role_form").serializeJson();
-	var url = "/hoper/backweb/jjsRole/addRole";
+	var url = "/hoper/backweb/role/add";
 	if (pcg_fun.isEmpty(json.roleCode)) {
-		url = "/hoper/backweb/jjsRole/updateRole";
+		url = "/hoper/backweb/role/update";
 		json.roleCode = $("#roleCode").val();
 	}
 	console.log(json);

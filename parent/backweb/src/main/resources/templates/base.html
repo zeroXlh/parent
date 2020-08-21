@@ -48,8 +48,9 @@
 <script type="text/javascript" th:inline="javascript">
 // 当前日期缓存
 var currentDate = [[${currentDate}]];
+var currentUser = [[${session.LOGIN_USER_INFO}]];
 // 用户操作权限缓存
-var authPermissions = [[${session.authPermission}]];
+var authPermissions = [[${session.LOGIN_USER_OPERATE}]];
 
 // 产品项目缓存
 var productSubjectMapping = [[${application.productSubjectMapping}]];

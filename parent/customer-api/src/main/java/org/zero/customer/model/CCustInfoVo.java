@@ -2,11 +2,9 @@ package org.zero.customer.model;
 
 public class CCustInfoVo extends CCustInfo {
 	private CCustAccount custAccount;
+	
+	private CCustBank custBank;
 
-	private Integer pageNum;
-	
-	private Integer pageSize;
-	
 	public CCustAccount getCustAccount() {
 		return custAccount;
 	}
@@ -15,25 +13,12 @@ public class CCustInfoVo extends CCustInfo {
 		this.custAccount = custAccount;
 	}
 
-	public Integer getPageNum() {
-		return pageNum;
+	public CCustBank getCustBank() {
+		return custBank;
 	}
 
-	public void setPageNum(Integer pageNum) {
-		this.pageNum = pageNum;
-	}
-
-	public Integer getPageSize() {
-		return pageSize;
-	}
-
-	public void setPageSize(Integer pageSize) {
-		this.pageSize = pageSize;
-	}
-
-	@Override
-	public String toString() {
-		return "CCustInfoVo [custAccount=" + custAccount + "]";
+	public void setCustBank(CCustBank custBank) {
+		this.custBank = custBank;
 	}
 	
 }

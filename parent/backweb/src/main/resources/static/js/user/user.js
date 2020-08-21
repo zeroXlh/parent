@@ -3,15 +3,15 @@
  */
 var departments = {};
 $(function() {
-	var tempArray = [{"value":"ALL","text":"全部"}].concat(companyCombo);
-	pcg_fun.loadCommonData("#company_q", tempArray, "value", "text", null);
-	pcg_fun.loadCommonData("#company", tempArray, "value", "text", null);
+//	var tempArray = [{"value":"ALL","text":"全部"}].concat(companyCombo);
+//	pcg_fun.loadCommonData("#company_q", tempArray, "value", "text", null);
+//	pcg_fun.loadCommonData("#company", tempArray, "value", "text", null);
 	
-	pcg_fun.loadCommon("#department", "/hoper/backweb/product/getProducts", {
-		
-	}, "id", "period");
+//	pcg_fun.loadCommon("#department", "/hoper/backweb/product/getProducts", {
+//		
+//	}, "id", "period");
 	
-	jQuery.get("/hoper/backweb/jjsDepartment/getDepartments", {}, function(data) {
+	jQuery.get("/hoper/backweb/department/valid", {}, function(data) {
 		if (1 == data.code) {
 			var depts = data.data;
 			var html = "<option value=''>---请选择---</options>";
@@ -34,7 +34,7 @@ $(function() {
 
 function loadTable() {
 	$('#list').bootstrapTable({
-		url : "/hoper/backweb/jjsUserBack/page",
+		url : "/hoper/backweb/user/page",
         dataType: "json",
         method: "GET",
         striped: true,//是否显示行间隔色
@@ -65,6 +65,10 @@ function loadTable() {
 
 var columns = [
 	{
+		field : "userId",
+		title : "用户编号",
+		align : "center"
+	}, {
 		field : "userName",
 		title : "用户名",
 		align : "center"
@@ -75,49 +79,40 @@ var columns = [
 	}, {
 		field : "userType",
 		title : "用户类型",
-		align : "center",
-		formatter : userTypeForamt
-	}, {
-		field : "department",
-		title : "部门",
-		align : "center",
-		formatter : departmentForamt
+		align : "center"
+//		formatter : userTypeForamt
 	}, {
 		field : "phoneNo",
 		title : "手机号",
 		align : "center"
 	}, {
-		field : "status",
-		title : "状态",
-		align : "center",
-		formatter : statusForamt
+		field : "deptCode",
+		title : "部门",
+		align : "center"
+//		formatter : departmentForamt
 	}, {
 		field : "company",
 		title : "所属公司",
 		align : "center",
 		formatter : companyFormat
 	}, {
+		field : "enabled",
+		title : "是否启用",
+		align : "center",
+		formatter : enabledFormat
+	}, {
 		field : "createTime",
 		title : "创建时间",
-		align : "center",
-		formatter : jsonTimeFormat
+		align : "center"
+//		formatter : jsonTimeFormat
 	}, {
 		field : "creator",
 		title : "创建人",
 		align : "center"
 	}, {
-		field : "lastUpdateTime",
-		title : "最后更新时间",
-		align : "center",
-		formatter : jsonTimeFormat
-	}, {
-		field : "lastUpdateUser",
-		title : "最后更新人",
-		align : "center"
-	}, {
 		field : "void",
 		title : "操作",
-		align : "left",
+		align : "center",
 		formatter : operateFormat
 	}
 ];
@@ -126,11 +121,11 @@ var userValidator = $("#user_form").validate({
 	rules : {
 		userName : {
 			"required" : true,
-			"utfmaxlength" : 50
+			"maxlength" : 20
 		},
 		realname : {
 			"required" : true,
-			"utfmaxlength" : 50
+			"maxlength" : 20
 		},
 		password : "required",
 		rePassword : {
@@ -138,7 +133,7 @@ var userValidator = $("#user_form").validate({
 			equalTo : "#password"
 		},
 		userType : "required",
-//		department : "required",
+		deptCode : "required",
 		status : "required"
 	},
 	messages : {
@@ -149,38 +144,39 @@ var userValidator = $("#user_form").validate({
 	}
 });
 
-var checkUpd = checkAuth("USER:UPDATE_USER");
+var checkUpd = checkAuth("A1011");
 var checkReset = checkAuth("USER:RESET_USER");
-var checkEnable = checkAuth("USER:ENABLE_OR_DISABLE_USER");
-var checkConfig = checkAuth("USER:CONFIGURE_ROLE");
+var checkEnable = checkAuth("A1012");
+var checkConfig = checkAuth("A1020");
 function operateFormat(value, row, index) {
 	var s ='';
 	if (checkUpd)
 		s += '<button type="button" class="btn btn-info btn-sm" onClick="openUpdDialog('
-			+ row.id + ')">修改</button>';
+			+ row.userId + ')">修改</button>';
 	if(checkReset){
         s += '&nbsp;&nbsp;<button type="button" class="btn btn-success btn-sm" onClick="resetPass('
-            + row.id + ')">密码重置</button>';
+            + row.userId + ')">密码重置</button>';
 	}
 	if (checkEnable) {
-		if ("EN" == row.status)
-			s += '&nbsp;&nbsp;<button type="button" class="btn btn-danger btn-sm" onClick="disable('
-				+ row.id  + ')">注销</button>';
-		else if ("DISA" == row.status)
-			s += '&nbsp;&nbsp;<button type="button" class="btn btn-success btn-sm" onClick="enable('
-				+ row.id + ')">激活</button>';
+		if (row.enabled)
+			s += '<button type="button" class="btn btn-danger btn-sm tb_btn" onClick="enableOrDisable('
+				+ row.userId  + ',' + row.enabled +')">禁用</button>';
+		else
+			s += '<button type="button" class="btn btn-success btn-sm tb_btn" onClick="enableOrDisable('
+				+ row.userId  + ',' + row.enabled +')">启用</button>';
 	}
 	
 	if (checkConfig)
-		s += '&nbsp;&nbsp;<button type="button" class="btn btn-warning btn-sm" onClick="toUserRole('
-			+ row.id +', \'' + row.userName + '\')">配置角色</button>';
+		s += '<button type="button" class="btn btn-warning btn-sm tb_btn" onClick="toUserRole('
+			+ row.userId +', \'' + row.userName + '\')">配置角色</button>';
 	
 	return s;
 }
 
-function enable(userCode) {
-	jQuery.post("/hoper/backweb/jjsUserBack/enable", {
-		"userCode" : userCode
+function enableOrDisable(userId, enabled) {
+	jQuery.post("/hoper/backweb/user/update", {
+		"userId" : userId,
+		"enabled" : !enabled
 	}, function(data) {
 		if (1 == data.code) {
 			$("#list").bootstrapTable('refresh');
@@ -193,23 +189,8 @@ function enable(userCode) {
 	}, "json");
 }
 
-function disable(userCode) {
-	jQuery.post("/hoper/backweb/jjsUserBack/disable", {
-		"userCode" : userCode
-	}, function(data) {
-		if (1 == data.code) {
-			$("#list").bootstrapTable('refresh');
-			alert("success");
-		} else if (0 == data.code) {
-			alert(data.msg);
-		} else {
-			alert(data);
-		}
-	}, "json");
-}
-
-function toUserRole(userCode, userName) {
-	refreshto("/hoper/backweb/user/userRole?userCodeParam=" + userCode + "&userName=" + userName);
+function toUserRole(userId, userName) {
+	refreshto("/hoper/backweb/user/userRole?userIdParam=" + userId + "&userName=" + userName);
 }
 
 function openDialog() {
@@ -224,9 +205,9 @@ function openDialog() {
 	$('#modal').modal();
 }
 
-function resetPass(id) {
-    jQuery.get("/hoper/backweb/jjsUserBack/reset", {
-        "id" : id
+function resetPass(userId) {
+    jQuery.get("/hoper/backweb/user/reset", {
+        "userId" : userId
     }, function(data) {
         if (1 == data.code) {
             alert("重置成功，密码是123456");
@@ -238,9 +219,9 @@ function resetPass(id) {
     }, "json");
 };
 
-function openUpdDialog(id) {
-	jQuery.get("/hoper/backweb/jjsUserBack/getJjsUserBack", {
-		"id" : id
+function openUpdDialog(userId) {
+	jQuery.get("/hoper/backweb/user/findByPrimary", {
+		"userId" : userId
 	}, function(data) {
 		if (1 == data.code) {
 			userValidator.resetForm();
@@ -269,9 +250,9 @@ function saveUser() {
 		return;
 	}
 	var json = $("#user_form").serializeJson();
-	var url = "/hoper/backweb/jjsUserBack/update";
-	if (pcg_fun.isEmpty(json.id)) {
-		url = "/hoper/backweb/jjsUserBack/add";
+	var url = "/hoper/backweb/user/update";
+	if (pcg_fun.isEmpty(json.userId)) {
+		url = "/hoper/backweb/user/add";
 		json.password = hex_md5(json.password).toUpperCase();
 	}
 //	console.log(json);

@@ -68,7 +68,7 @@
 		var data = $("#loginForm").serialize();//获取值
 		var submitData = decodeURIComponent(data, true);//防止中文乱码
 // 		alert(submitData);
-		var url = "/hoper/backweb/login";
+		var url = "/login";
 		jQuery.post(url, submitData, function(data) {
 // 			console.log(data);
 			if (1 == data.code) {

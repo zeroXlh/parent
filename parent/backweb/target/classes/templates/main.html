@@ -39,7 +39,7 @@
 				<li class="light-blue">
 				<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 					<img class="nav-user-photo" th:src="@{~/assets/images/logo.png}" /> 
-					<span class="user-info" th:text="${session.jjsUser.userName}"><small></small> admin</span>
+					<span class="user-info" th:text="${session.LOGIN_USER_INFO.userName}"><small></small> admin</span>
 					<i class="icon-caret-down"></i>
 				</a>
 
@@ -132,7 +132,7 @@
 </body>
 <script type="text/javascript" th:inline="javascript">
 var requestHost = [[${requestHost}]];
-var menuTree = [[${session.menuTree}]];
+var menuTree = [[${session.LOGIN_USER_MENU}]];
 </script>
 <script type="text/javascript" th:src="@{~/js/main.js}"></script>
 </html>

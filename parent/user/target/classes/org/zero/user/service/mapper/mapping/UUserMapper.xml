@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zero.user.service.mapper.UUserMapper">
+  <resultMap id="BaseResultMap" type="org.zero.user.model.UUser">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="user_type" jdbcType="CHAR" property="userType" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="phone_no" jdbcType="CHAR" property="phoneNo" />
+    <result column="dept_code" jdbcType="CHAR" property="deptCode" />
+    <result column="company" jdbcType="VARCHAR" property="company" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="enabled" jdbcType="BIT" property="enabled" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_id, user_name, password, user_type, realname, phone_no, dept_code, company, 
+    create_time, creator, enabled
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from u_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectByUserName" parameterType="string" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from u_user
+    where user_name = #{userName}
+  </select>
+  <select id="selectByColumn" parameterType="uUser" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from u_user
+    <where>
+    	<if test="userId!=null">and user_id = #{userId,jdbcType=INTEGER}</if>
+    	<if test="userName!=null and userName!=''">and user_name = #{userName}</if>
+    	<if test="userType!=null and userType!=''">and user_type = #{userType}</if>
+    	<if test="realname!=null and realname!=''">and realname like concat('%', #{realname}, '%')</if>
+    	<if test="phoneNo!=null and phoneNo!=''">and phone_no = #{phoneNo}</if>
+    	<if test="deptCode!=null and deptCode!=''">and dept_code = #{deptCode}</if>
+    	<if test="company!=null and company!=''">and company = #{company}</if>
+    	<if test="enabled!=null">and enabled = #{enabled}</if>
+    </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from u_user
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.zero.user.model.UUser">
+    insert into u_user (user_id, user_name, password, 
+      user_type, realname, phone_no, 
+      dept_code, company, create_time, 
+      creator, enabled)
+    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{userType,jdbcType=CHAR}, #{realname,jdbcType=VARCHAR}, #{phoneNo,jdbcType=CHAR}, 
+      #{deptCode,jdbcType=CHAR}, #{company,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{creator,jdbcType=VARCHAR}, #{enabled,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="org.zero.user.model.UUser">
+    insert into u_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="userType != null">
+        user_type,
+      </if>
+      <if test="realname != null">
+        realname,
+      </if>
+      <if test="phoneNo != null">
+        phone_no,
+      </if>
+      <if test="deptCode != null">
+        dept_code,
+      </if>
+      <if test="company != null">
+        company,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="creator != null">
+        creator,
+      </if>
+      <if test="enabled != null">
+        enabled,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null">
+        #{userType,jdbcType=CHAR},
+      </if>
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNo != null">
+        #{phoneNo,jdbcType=CHAR},
+      </if>
+      <if test="deptCode != null">
+        #{deptCode,jdbcType=CHAR},
+      </if>
+      <if test="company != null">
+        #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creator != null">
+        #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null">
+        #{enabled,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zero.user.model.UUser">
+    update u_user
+    <set>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null">
+        user_type = #{userType,jdbcType=CHAR},
+      </if>
+      <if test="realname != null">
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNo != null">
+        phone_no = #{phoneNo,jdbcType=CHAR},
+      </if>
+      <if test="deptCode != null">
+        dept_code = #{deptCode,jdbcType=CHAR},
+      </if>
+      <if test="company != null">
+        company = #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="creator != null">
+        creator = #{creator,jdbcType=VARCHAR},
+      </if>
+      <if test="enabled != null">
+        enabled = #{enabled,jdbcType=BIT},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zero.user.model.UUser">
+    update u_user
+    set user_name = #{userName,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      user_type = #{userType,jdbcType=CHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      phone_no = #{phoneNo,jdbcType=CHAR},
+      dept_code = #{deptCode,jdbcType=CHAR},
+      company = #{company,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      creator = #{creator,jdbcType=VARCHAR},
+      enabled = #{enabled,jdbcType=BIT}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+</mapper>

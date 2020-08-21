@@ -21,7 +21,7 @@
 <!--   </settings> -->
   
   <typeHandlers>
-  	<typeHandler handler="org.zero.customer.MonthDayTypeHandler" javaType="java.time.MonthDay" />
+  	<typeHandler handler="org.zero.component.MonthDayTypeHandler" javaType="java.time.MonthDay" />
   </typeHandlers>
   
   <environments default="development">

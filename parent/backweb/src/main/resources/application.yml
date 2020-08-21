@@ -2,6 +2,7 @@ server:
   port: 8099
 
 spring:  application:    name: web
+#  mvc
     
 #  static resources locations  
 #  resources:
@@ -36,4 +37,14 @@ eureka:
 #    healthcheck:
 #      enabled: true
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: true
+
+#feign:
+#  compression:
+#    request:
+#      enabled: logging:
+  level:
+    org: 
+      zero: debug
+        
+    

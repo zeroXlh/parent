@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zero.user.service.mapper.URoleAuthMapper">
+  <resultMap id="BaseResultMap" type="org.zero.user.model.URoleAuth">
+    <id column="role_code" jdbcType="CHAR" property="roleCode" />
+    <id column="permission_code" jdbcType="CHAR" property="permissionCode" />
+    <result column="enabled" jdbcType="BIT" property="enabled" />
+  </resultMap>
+  <resultMap id="voResultMap" extends="BaseResultMap" type="uRoleAuthVo">
+    <association property="menuInfo" column="permission_code">
+    	<result column="menu_name" jdbcType="VARCHAR" property="menuName" />
+    	<result column="parent_menu" jdbcType="VARCHAR" property="parentMenu" />
+    </association>
+    <association property="operateAuth" column="permission_code">
+    	<result column="permission_name" jdbcType="VARCHAR" property="permissionName" />
+    </association>
+  </resultMap>
+  <sql id="Base_Column_List">
+    role_code, permission_code, enabled
+  </sql>
+  <sql id="join_Column_List">
+    t.role_code, t.permission_code, t.enabled
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="org.zero.user.model.URoleAuthKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from u_role_auth
+    where role_code = #{roleCode,jdbcType=CHAR}
+      and permission_code = #{permissionCode,jdbcType=CHAR}
+  </select>
+  <select id="selectAuth" parameterType="uRoleAuthVo" resultMap="voResultMap">
+    select 
+    <include refid="join_Column_List" />,
+    o.permission_name
+    from u_role_auth t,
+         u_operate_permission o
+    where t.role_code = #{roleCode,jdbcType=CHAR}
+      and o.enabled = 1
+      and t.permission_code = o.permission_code
+    <if test="permissionCode!=null and permissionCode!=''">and t.permission_code = #{permissionCode,jdbcType=CHAR}</if>
+    <if test="operateAuth!=null">
+	    <if test="operateAuth.permissionName!=null and operateAuth.permissionName!=''">and o.permission_name = #{operateAuth.permissionName}</if>      
+    </if>    
+    <if test="enabled!=null">and t.enabled = #{enabled,jdbcType=CHAR}</if>
+  </select>
+  <select id="selectNonAuth" parameterType="uRoleAuthVo" resultMap="voResultMap">
+    select permission_name, permission_code
+    from u_operate_permission o
+    where o.enabled = 1
+      and not exists(
+        select 1 from u_role_auth t
+        where t.role_code = #{roleCode,jdbcType=CHAR}
+		  and t.permission_code = o.permission_code
+      )
+    <if test="permissionCode!=null and permissionCode!=''">and permission_code = #{permissionCode,jdbcType=CHAR}</if>
+    <if test="operateAuth!=null">
+	    <if test="operateAuth.permissionName!=null and operateAuth.permissionName!=''">and o.permission_name = #{operateAuth.permissionName}</if>      
+    </if> 
+  </select>
+  <select id="selectAuthMenu" parameterType="uRoleAuthVo" resultMap="voResultMap">
+    select 
+    <include refid="join_Column_List" />,
+    o.menu_name,
+    o.parent_menu
+    from u_role_auth t,
+         u_menu_info o
+    where t.role_code = #{roleCode,jdbcType=CHAR}
+      and o.enabled = 1
+      and t.permission_code = o.permission_code
+    <if test="permissionCode!=null and permissionCode!=''">and t.permission_code = #{permissionCode,jdbcType=CHAR}</if>
+    <if test="menuInfo!=null">
+	    <if test="menuInfo.menuName!=null and menuInfo.menuName!=''">and o.menu_name = #{menuInfo.menuName}</if>    
+	    <if test="menuInfo.parentMenu!=null and menuInfo.parentMenu!=''">and o.parent_menu = #{menuInfo.parentMenu}</if>  
+    </if>  
+    <if test="enabled!=null">and t.enabled = #{enabled,jdbcType=CHAR}</if>
+  </select>
+  <select id="selectNonAuthMenu" parameterType="uRoleAuthVo" resultMap="voResultMap">
+    select menu_name, permission_code, parent_menu
+    from u_menu_info o
+    where o.enabled = 1
+      and not exists(
+        select 1 from u_role_auth t
+        where t.role_code = #{roleCode,jdbcType=CHAR}
+		  and t.permission_code = o.permission_code
+      )
+    <if test="permissionCode!=null and permissionCode!=''">and permission_code = #{permissionCode,jdbcType=CHAR}</if>
+    <if test="menuInfo!=null">
+	    <if test="menuInfo.menuName!=null and menuInfo.menuName!=''">and o.menu_name = #{menuInfo.menuName}</if>      
+	    <if test="menuInfo.parentMenu!=null and menuInfo.parentMenu!=''">and o.parent_menu = #{menuInfo.parentMenu}</if>      
+    </if>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="org.zero.user.model.URoleAuthKey">
+    delete from u_role_auth
+    where role_code = #{roleCode,jdbcType=CHAR}
+      and permission_code = #{permissionCode,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="org.zero.user.model.URoleAuth">
+    insert into u_role_auth (role_code, permission_code, enabled
+      )
+    values (#{roleCode,jdbcType=CHAR}, #{permissionCode,jdbcType=CHAR}, #{enabled,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertBatch" parameterType="list">
+    insert into u_role_auth (role_code, permission_code, enabled
+      )
+      <foreach collection="list" item="item" open="values" separator=",">
+	    (#{item.roleCode}, #{item.permissionCode}, #{item.enabled})
+      </foreach>
+  </insert>
+  <insert id="insertSelective" parameterType="org.zero.user.model.URoleAuth">
+    insert into u_role_auth
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roleCode != null">
+        role_code,
+      </if>
+      <if test="permissionCode != null">
+        permission_code,
+      </if>
+      <if test="enabled != null">
+        enabled,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roleCode != null">
+        #{roleCode,jdbcType=CHAR},
+      </if>
+      <if test="permissionCode != null">
+        #{permissionCode,jdbcType=CHAR},
+      </if>
+      <if test="enabled != null">
+        #{enabled,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zero.user.model.URoleAuth">
+    update u_role_auth
+    <set>
+      <if test="enabled != null">
+        enabled = #{enabled,jdbcType=BIT},
+      </if>
+    </set>
+    where role_code = #{roleCode,jdbcType=CHAR}
+      and permission_code = #{permissionCode,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zero.user.model.URoleAuth">
+    update u_role_auth
+    set enabled = #{enabled,jdbcType=BIT}
+    where role_code = #{roleCode,jdbcType=CHAR}
+      and permission_code = #{permissionCode,jdbcType=CHAR}
+  </update>
+</mapper>

@@ -25,7 +25,7 @@ public interface CCustInfoService {
 
 	List<CCustInfo> findByColumn(CCustInfo custInfo);
 
-	PageInfo<CCustInfoVo> page(CCustInfoVo cCustInfoVo);
+	PageInfo<CCustInfoVo> page(CCustInfoVo cCustInfoVo, Integer pageNum, Integer pageSize);
 
 	int updateByPrimaryKeySelective(Integer custId, CCustInfo custInfo) throws Exception;
 

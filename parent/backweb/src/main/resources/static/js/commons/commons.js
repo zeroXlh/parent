@@ -304,3 +304,16 @@ function genderFormat(value, row, index) {
 	return v;
 }
 
+function enabledFormat(value, row, index) {
+	if (pcg_fun.isEmpty(value))
+		return "-";
+//	var v = genderMapping[value];
+//	if (pcg_fun.isEmpty(v))
+//		return value;
+	if (true == value)
+		return "启用";
+	else if (false == value)
+		return "禁用";
+	return value;
+}
+

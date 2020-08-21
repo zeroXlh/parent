@@ -2,6 +2,8 @@ package org.zero.customer.model;
 
 import java.util.Date;
 
+import com.alibaba.fastjson.JSON;
+
 /**
  * Database Table Remarks:
  *   客户账户表
@@ -243,8 +245,7 @@ public class CCustAccount {
 
 	@Override
 	public String toString() {
-		return "CCustAccount [accountId=" + accountId + ", custId=" + custId + ", phoneNo=" + phoneNo + ", userName="
-				+ userName + ", email=" + email + ", password=" + password + ", registerTime=" + registerTime + "]";
+		return JSON.toJSONString(this);
 	}
     
 }

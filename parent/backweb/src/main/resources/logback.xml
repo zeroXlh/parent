@@ -28,15 +28,7 @@
         </layout>
     </appender>
 
-<!--     <logger name="io.undertow.request" level="DEBUG" additivity="false"> -->
-<!--         <appender-ref ref="console"/> -->
-<!--         <appender-ref ref="logFile" /> -->
-<!--     </logger> -->
-    <logger name="com.hoper.jjs.mapper" level="DEBUG" additivity="false">
-        <appender-ref ref="console"/>
-        <appender-ref ref="logFile" />
-    </logger>
-    <logger name="com.hoper" level="INFO" additivity="false">
+    <logger name="org.zero" level="debug" additivity="false">
         <appender-ref ref="console"/>
         <appender-ref ref="logFile" />
     </logger>

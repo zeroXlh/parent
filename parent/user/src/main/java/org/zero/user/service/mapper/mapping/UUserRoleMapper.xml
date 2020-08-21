@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zero.user.service.mapper.UUserRoleMapper">
+  <resultMap id="BaseResultMap" type="org.zero.user.model.UUserRole">
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <id column="role_code" jdbcType="CHAR" property="roleCode" />
+    <result column="enabled" jdbcType="BIT" property="enabled" />
+  </resultMap>
+  <resultMap id="voResultMap" extends="BaseResultMap" type="org.zero.user.model.UUserRoleVo">
+    <association property="role" column="role_code">
+    	<result column="role_name" jdbcType="VARCHAR" property="roleName" />
+    </association>
+  </resultMap>
+  <sql id="Base_Column_List">
+    user_id, role_code, enabled
+  </sql>
+  <sql id="join_Column_List">
+    t.user_id, t.role_code, t.enabled
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="uUserRoleKey" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from u_user_role
+    where user_id = #{userId,jdbcType=INTEGER}
+      and role_code = #{roleCode,jdbcType=CHAR}
+  </select>
+<!--   <select id="findByColumn" parameterType="uUserRoleVo" resultMap="BaseResultMap"> -->
+<!--     select  -->
+<!--     <include refid="join_Column_List" />, -->
+<!--     r.role_name -->
+<!--     from u_user_role t, -->
+<!--          u_role r -->
+<!--     <where> -->
+<!--     	t.role_code = r.role_code -->
+<!--     	<if test="userId!=null">and user_id = #{userId,jdbcType=INTEGER}</if> -->
+<!--     	<if test="roleCode!=null and roleCode!=''">and t.role_code = #{roleCode}</if> -->
+<!--     </where> -->
+<!--   </select> -->
+  <select id="selectAuth" parameterType="uUserRoleVo" resultMap="voResultMap">
+    select 
+    <include refid="join_Column_List" />,
+    r.role_name
+    from u_user_role t,
+         u_role r
+    <where>
+    	t.role_code = r.role_code
+    	and r.enabled = 1
+    	and user_id = #{userId,jdbcType=INTEGER}
+    	<if test="roleCode!=null and roleCode!=''">and t.role_code = #{roleCode}</if>
+    	<if test="role !=null">
+	    	<if test="role.roleName!=null and role.roleName!=''">and r.role_name like concat('%',#{role.roleName},'%')</if>
+    	</if>
+    </where>
+  </select>
+  <select id="selectNonAuth" parameterType="uUserRoleVo" resultMap="voResultMap">
+    select 
+    r.role_name, r.role_code
+    from u_role r
+    <where>
+    	r.enabled = 1
+    	and not exists (
+			select 1 from u_user_role u where 
+			r.role_code = u.role_code
+			and u.user_id = #{userId}
+		)
+    	<if test="roleCode!=null and roleCode!=''">and role_code = #{roleCode}</if>
+    	<if test="role !=null">
+	    	<if test="role.roleName!=null and role.roleName!=''">and role_name like concat('%',#{role.roleName},'%')</if>
+    	</if>
+    </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="org.zero.user.model.UUserRoleKey">
+    delete from u_user_role
+    where user_id = #{userId,jdbcType=INTEGER}
+      and role_code = #{roleCode,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="org.zero.user.model.UUserRole">
+    insert into u_user_role (user_id, role_code, enabled
+      )
+    values (#{userId,jdbcType=INTEGER}, #{roleCode,jdbcType=CHAR}, #{enabled,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertBatch" parameterType="uUserRole">
+    insert into u_user_role (user_id, role_code, enabled
+      )
+    values
+    <foreach collection="list" index="index" item="item" open="(" close=")" separator=",">
+     #{item.userId}, #{item.roleCode}, #{item.enabled}
+    </foreach>
+  </insert>
+  <insert id="insertSelective" parameterType="org.zero.user.model.UUserRole">
+    insert into u_user_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="roleCode != null">
+        role_code,
+      </if>
+      <if test="enabled != null">
+        enabled,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="roleCode != null">
+        #{roleCode,jdbcType=CHAR},
+      </if>
+      <if test="enabled != null">
+        #{enabled,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zero.user.model.UUserRole">
+    update u_user_role
+    <set>
+      <if test="enabled != null">
+        enabled = #{enabled,jdbcType=BIT},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=INTEGER}
+      and role_code = #{roleCode,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zero.user.model.UUserRole">
+    update u_user_role
+    set enabled = #{enabled,jdbcType=BIT}
+    where user_id = #{userId,jdbcType=INTEGER}
+      and role_code = #{roleCode,jdbcType=CHAR}
+  </update>
+</mapper>

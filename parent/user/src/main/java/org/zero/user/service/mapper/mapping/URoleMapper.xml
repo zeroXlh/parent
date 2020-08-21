@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zero.user.service.mapper.URoleMapper">
+  <resultMap id="BaseResultMap" type="org.zero.user.model.URole">
+    <id column="role_code" jdbcType="CHAR" property="roleCode" />
+    <result column="role_name" jdbcType="VARCHAR" property="roleName" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="enabled" jdbcType="BIT" property="enabled" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    role_code, role_name, create_time, enabled
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from u_role
+    where role_code = #{roleCode,jdbcType=CHAR}
+  </select>
+  <select id="selectByColumn" parameterType="uRole" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from u_role
+    <where>
+    	<if test="roleCode!=null and roleCode!=''">and role_code = #{roleCode}</if>
+    	<if test="roleName!=null and roleName!=''">and role_name = #{roleName}</if>
+    	<if test="enabled!=null">and enabled = #{enabled,jdbcType=BIT}</if>
+    </where>
+  </select>
+  <select id="findRestByUser" parameterType="int" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from u_role
+    where not exists (
+    	select 1 from u_user_role u
+		where t.role_code = u.role_code
+		and   u.user_id = #{userId}
+    )
+    and enabled = 1
+    order by role_code ASC
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from u_role
+    where role_code = #{roleCode,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="org.zero.user.model.URole">
+    insert into u_role (role_code, role_name, create_time, 
+      enabled)
+    values (#{roleCode,jdbcType=CHAR}, #{roleName,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{enabled,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="org.zero.user.model.URole">
+    insert into u_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roleCode != null">
+        role_code,
+      </if>
+      <if test="roleName != null">
+        role_name,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="enabled != null">
+        enabled,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roleCode != null">
+        #{roleCode,jdbcType=CHAR},
+      </if>
+      <if test="roleName != null">
+        #{roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enabled != null">
+        #{enabled,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zero.user.model.URole">
+    update u_role
+    <set>
+      <if test="roleName != null">
+        role_name = #{roleName,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enabled != null">
+        enabled = #{enabled,jdbcType=BIT},
+      </if>
+    </set>
+    where role_code = #{roleCode,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zero.user.model.URole">
+    update u_role
+    set role_name = #{roleName,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      enabled = #{enabled,jdbcType=BIT}
+    where role_code = #{roleCode,jdbcType=CHAR}
+  </update>
+</mapper>

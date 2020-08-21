@@ -2,11 +2,11 @@ package org.zero.customer.service.impl;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
+import org.springframework.transaction.annotation.Transactional;
+import org.zero.component.utils.StringUtils;
 import org.zero.customer.model.CCustAccount;
 import org.zero.customer.service.CCustAccountService;
 import org.zero.customer.service.mapper.CCustAccountMapper;
@@ -18,13 +18,14 @@ public class CCustAccountServiceImpl implements CCustAccountService {
 	private CCustAccountMapper mapper;
 
 	@Override
+	@Transactional
 	public int add(CCustAccount custAccount) throws Exception {
 		Objects.requireNonNull(custAccount);
 
-		Optional.ofNullable(findByPhone(custAccount.getPhoneNo()))
-				.orElseThrow(() -> new RuntimeException("手机号已注册：" + custAccount.getPhoneNo()));
+		if (Objects.nonNull(findByPhone(custAccount.getPhoneNo())))
+			throw new RuntimeException("手机号已注册：" + custAccount.getPhoneNo());
 
-		return mapper.insert(custAccount);
+		return mapper.insertSelective(custAccount);
 	}
 
 	@Override
@@ -35,8 +36,7 @@ public class CCustAccountServiceImpl implements CCustAccountService {
 
 	@Override
 	public CCustAccount findByPhone(String phoneNo) {
-		if (StringUtils.isEmpty(phoneNo))
-			throw new NullPointerException("phoneNo为空");
+		StringUtils.requireNonEmpty(phoneNo);
 
 		return mapper.selectByPhone(phoneNo);
 	}
@@ -47,14 +47,11 @@ public class CCustAccountServiceImpl implements CCustAccountService {
 	}
 
 	@Override
-	public int updateByPrimaryKey(Integer accountId, CCustAccount custAccount) throws Exception {
+	@Transactional
+	public int updateByPrimaryKeySelective(Integer accountId, CCustAccount custAccount) throws Exception {
 		Objects.requireNonNull(accountId);
 		Objects.requireNonNull(custAccount);
 		custAccount.setCustId(accountId);
-
-		Optional.ofNullable(custAccount.getPhoneNo()).ifPresent((p) -> {
-			Optional.ofNullable(findByPhone(p)).orElseThrow(() -> new RuntimeException("手机号已注册：" + p));
-		});
 
 		return mapper.updateByPrimaryKey(custAccount);
 	}

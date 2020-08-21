@@ -2,14 +2,14 @@
  * 
  */
 $(function() {
-	console.log(userCodeParam);
+	console.log(userIdParam);
 	loadTable();
 	loadExistsTable();
 });
 
 function loadTable() {
 	$('#non_role_tb').bootstrapTable({
-		url : "/hoper/backweb/jjsUserRole/notConfigured",
+		url : "/hoper/backweb/userRole/pageNonAuth",
         dataType: "json",
         method: "GET",
         striped: true,//是否显示行间隔色
@@ -40,7 +40,7 @@ function loadTable() {
 
 function loadExistsTable() {
 	$('#exists_tb').bootstrapTable({
-		url : "/hoper/backweb/jjsUserRole/alreadyConfigured",
+		url : "/hoper/backweb/userRole/pageAuth",
         dataType: "json",
         method: "GET",
         striped: true,//是否显示行间隔色
@@ -75,14 +75,14 @@ var columns = [
 		title : "角色编号",
 		align : "center"
 	}, {
-		field : "roleName",
+		field : "role.roleName",
 		title : "角色名称",
 		align : "center"
 	}, {
 		field : "void",
 		title : "操作",
 		align : "left",
-		formatter : configOperateFormat
+		formatter : authRoleFormat
 	}
 ];
 var existsColumns = [
@@ -91,33 +91,15 @@ var existsColumns = [
 		title : "角色编号",
 		align : "center"
 	}, {
-		field : "roleName",
+		field : "role.roleName",
 		title : "角色名称",
 		align : "center"
 	}, {
-		field : "status",
-		title : "状态",
+		field : "enabled",
+		title : "是否启用",
 		align : "center",
-		formatter : statusForamt
+		formatter : enabledFormat
 	}, {
-//		field : "creator",
-//		title : "创建人",
-//		align : "center"
-//	}, {
-//		field : "createTime",
-//		title : "创建时间",
-//		align : "center",
-//		formatter : jsonTimeForamt
-//	}, {
-//		field : "lastUpdUser",
-//		title : "最新更新人",
-//		align : "center"
-//	}, {
-//		field : "lastUpdTime",
-//		title : "最新更新时间",
-//		align : "center",
-//		formatter : jsonTimeForamt
-//	}, {
 		field : "void",
 		title : "操作",
 		align : "left",
@@ -145,7 +127,7 @@ function alreadyQueryParams(params) {
 	var json = $("#already_query_form").serializeJson();
 	json["pageNum"] = params.pageNumber;
 	json["pageSize"] = params.pageSize;
-	json["userCode"] = userCodeParam;
+	json["userId"] = userIdParam;
 	return json;
 }
 
@@ -153,34 +135,31 @@ function queryUserParams(params) {
 	var json = $("#query_form").serializeJson();
 	json["pageNum"] = params.pageNumber;
 	json["pageSize"] = params.pageSize;
-	json["userCode"] = userCodeParam;
+	json["userId"] = userIdParam;
 	return json;
 }
 
-function configOperateFormat(value, row, index) {
-	var s = '<button type="button" class="btn btn-info btn-sm" onClick="configureRole(\''
+function authRoleFormat(value, row, index) {
+	var s = '<button type="button" class="btn btn-info btn-sm" onClick="authRole(\''
 		+ row.roleCode + '\')">添加</button>';
 	return s;
 }
 
 function operateFormat(value, row, index) {
-	var s = '';
-	if ("EN" == row.status)
-		s += '<button type="button" class="btn btn-danger btn-sm" onClick="disable('
-			+ row.userCode + ',\'' + row.roleCode + '\')">注销</button>';
-	else if ("DISA" == row.status)
-		s += '<button type="button" class="btn btn-success btn-sm" onClick="enable('
-			+ row.userCode + ',\'' + row.roleCode + '\')">激活</button>';
-	return s;
+	if (row.enabled)
+		return '<button type="button" class="btn btn-danger btn-sm" onClick="enableOrDisable('
+			+ row.userId + ',\'' + row.roleCode + '\',' + row.enabled + ')">禁用</button>';
+	else
+		return '<button type="button" class="btn btn-success btn-sm" onClick="enableOrDisable('
+			+ row.userId + ',\'' + row.roleCode + '\',' + row.enabled + ')">启用</button>';
 }
 
-function configureRole(roleCode) {
-	jQuery.post("/hoper/backweb/jjsUserRole/add", {
-		"userCode" : userCodeParam,
+function authRole(roleCode) {
+	jQuery.post("/hoper/backweb/userRole/add", {
+		"userId" : userIdParam,
 		"roleCode" : roleCode
 	}, function(data) {
 		if (1 == data.code) {
-//			$("#modalLabel").text("修改用户");
 			$("#non_role_tb").bootstrapTable('refresh');
 			alert("SUCC");
 		} else if (0 == data.code) {
@@ -191,30 +170,13 @@ function configureRole(roleCode) {
 	}, "json");
 }
 
-function disable(userCode, roleCode) {
-	jQuery.post("/hoper/backweb/jjsUserRole/disable", {
-		"userCode" : userCode,
-		"roleCode" : roleCode
+function enableOrDisable(userId, roleCode, enabled) {
+	jQuery.post("/hoper/backweb/userRole/update", {
+		"userId" : userId,
+		"roleCode" : roleCode,
+		"enabled" : !enabled
 	}, function(data) {
 		if (1 == data.code) {
-//			$("#modalLabel").text("修改用户");
-			$("#exists_tb").bootstrapTable('refresh');
-			alert("SUCC");
-		} else if (0 == data.code) {
-			alert(data.msg);
-		} else {
-			alert(data);
-		}
-	}, "json");
-}
-
-function enable(userCode, roleCode) {
-	jQuery.post("/hoper/backweb/jjsUserRole/enable", {
-		"userCode" : userCode,
-		"roleCode" : roleCode
-	}, function(data) {
-		if (1 == data.code) {
-//			$("#modalLabel").text("修改用户");
 			$("#exists_tb").bootstrapTable('refresh');
 			alert("SUCC");
 		} else if (0 == data.code) {

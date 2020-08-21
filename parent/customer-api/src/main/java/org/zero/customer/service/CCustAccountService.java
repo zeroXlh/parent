@@ -5,6 +5,9 @@ import java.util.Objects;
 
 import org.zero.customer.model.CCustAccount;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+
 public interface CCustAccountService {
 	int add(CCustAccount custAccount) throws Exception;
 
@@ -15,9 +18,15 @@ public interface CCustAccountService {
 	}
 
 	CCustAccount findByPhone(String phoneNo);
-	
+
 	List<CCustAccount> findByColumn(CCustAccount custAccount);
 
-	int updateByPrimaryKey(Integer accountId, CCustAccount custAccount) throws Exception;
+	default PageInfo<CCustAccount> page(CCustAccount custAccount, Integer pageNum, Integer pageSize) {
+		PageHelper.startPage(pageNum, pageSize, "");
+		
+		return new PageInfo<>(findByColumn(custAccount));
+	}
+
+	int updateByPrimaryKeySelective(Integer accountId, CCustAccount custAccount) throws Exception;
 
 }

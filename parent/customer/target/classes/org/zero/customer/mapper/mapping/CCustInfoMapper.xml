@@ -12,11 +12,11 @@
     <result column="cert_no" jdbcType="VARCHAR" property="certNo" />
     <result column="cert_area" jdbcType="CHAR" property="certArea" />
     <result column="cust_type" jdbcType="CHAR" property="custType" />
-    <result column="already_auth" jdbcType="TINYINT" property="alreadyAuth" />
+    <result column="already_auth" jdbcType="BIT" property="alreadyAuth" />
     <result column="birth" jdbcType="DATE" property="birth" />
     <result column="gender" jdbcType="CHAR" property="gender" />
     <result column="risk_evaluat_score" jdbcType="INTEGER" property="riskEvaluatScore" />
-    <result column="is_staff" jdbcType="TINYINT" property="isStaff" />
+    <result column="is_staff" jdbcType="BIT" property="isStaff" />
     <result column="introducer" jdbcType="CHAR" property="introducer" />
     <result column="default_bank" jdbcType="INTEGER" property="defaultBank" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
@@ -70,7 +70,7 @@
     	<if test="certNo != null and certNo !=''">and t.cert_no = #{certNo,jdbcType=VARCHAR}</if>
     	<if test="certArea != null and certArea !=''">and t.cert_area = #{certArea,jdbcType=VARCHAR}</if>
     	<if test="custType != null and custType !=''">and t.cust_type = #{custType,jdbcType=VARCHAR}</if>
-    	<if test="alreadyAuth != null">and t.already_auth = #{alreadyAuth,jdbcType=TINYINT}</if>
+    	<if test="alreadyAuth != null">and t.already_auth = #{alreadyAuth,jdbcType=BIT}</if>
     	<if test="custAccount !=null">
 	    	<if test="custAccount.phoneNo != null and custAccount.phoneNo !=''">and a.phone_no = #{custAccount.phoneNo,jdbcType=VARCHAR}</if>
 	    	<if test="custAccount.userName != null and custAccount.userName !=''">and a.user_name = #{custAccount.userName,jdbcType=VARCHAR}</if>
@@ -101,9 +101,9 @@
       is_staff, introducer, default_bank, 
       create_time)
     values (#{accountId,jdbcType=INTEGER}, #{realName,jdbcType=VARCHAR}, #{certNo,jdbcType=VARCHAR}, 
-      #{certArea,jdbcType=CHAR}, #{custType,jdbcType=CHAR}, #{alreadyAuth,jdbcType=TINYINT}, 
+      #{certArea,jdbcType=CHAR}, #{custType,jdbcType=CHAR}, #{alreadyAuth,jdbcType=BIT}, 
       #{birth,jdbcType=DATE}, #{gender,jdbcType=CHAR}, #{riskEvaluatScore,jdbcType=INTEGER}, 
-      #{isStaff,jdbcType=TINYINT}, #{introducer,jdbcType=CHAR}, #{defaultBank,jdbcType=INTEGER}, 
+      #{isStaff,jdbcType=BIT}, #{introducer,jdbcType=CHAR}, #{defaultBank,jdbcType=INTEGER}, 
       #{createTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="org.zero.customer.model.CCustInfo">
@@ -173,7 +173,7 @@
         #{custType,jdbcType=CHAR},
       </if>
       <if test="alreadyAuth != null">
-        #{alreadyAuth,jdbcType=TINYINT},
+        #{alreadyAuth,jdbcType=BIT},
       </if>
       <if test="birth != null">
         #{birth,jdbcType=DATE},
@@ -185,7 +185,7 @@
         #{riskEvaluatScore,jdbcType=INTEGER},
       </if>
       <if test="isStaff != null">
-        #{isStaff,jdbcType=TINYINT},
+        #{isStaff,jdbcType=BIT},
       </if>
       <if test="introducer != null">
         #{introducer,jdbcType=CHAR},
@@ -221,7 +221,7 @@
         cust_type = #{custType,jdbcType=CHAR},
       </if>
       <if test="alreadyAuth != null">
-        already_auth = #{alreadyAuth,jdbcType=TINYINT},
+        already_auth = #{alreadyAuth,jdbcType=BIT},
       </if>
       <if test="birth != null">
         birth = #{birth,jdbcType=DATE},
@@ -233,7 +233,7 @@
         risk_evaluat_score = #{riskEvaluatScore,jdbcType=INTEGER},
       </if>
       <if test="isStaff != null">
-        is_staff = #{isStaff,jdbcType=TINYINT},
+        is_staff = #{isStaff,jdbcType=BIT},
       </if>
       <if test="introducer != null">
         introducer = #{introducer,jdbcType=CHAR},
@@ -258,11 +258,11 @@
       cert_no = #{certNo,jdbcType=VARCHAR},
       CERT_AREA = #{certArea,jdbcType=CHAR},
       cust_type = #{custType,jdbcType=CHAR},
-      already_auth = #{alreadyAuth,jdbcType=TINYINT},
+      already_auth = #{alreadyAuth,jdbcType=BIT},
       birth = #{birth,jdbcType=DATE},
       gender = #{gender,jdbcType=CHAR},
       risk_evaluat_score = #{riskEvaluatScore,jdbcType=INTEGER},
-      is_staff = #{isStaff,jdbcType=TINYINT},
+      is_staff = #{isStaff,jdbcType=BIT},
       introducer = #{introducer,jdbcType=CHAR},
       default_bank = #{defaultBank,jdbcType=INTEGER},
       create_time = #{createTime,jdbcType=TIMESTAMP}
